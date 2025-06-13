@@ -1,0 +1,57 @@
+[
+    {
+        "pergunta": "No texto “Projeto Político-Pedagógico e gestão democrática: Novos marcos para a educação de qualidade”, de 2009, Veiga afirma que “A compreensão do papel do projeto político- pedagógico (PPP) na escola e do conceito de gestão democrática que baliza seu desempenho tem sido influenciada de forma significativa pelas políticas públicas, tanto nacionais quanto internacionais. O que se espera da escola hoje é uma educação de qualidade, cujos eixos são: “o da igualdade e o da inclusão.” Para tanto, diz a autora, “O projeto pedagógico, ao se constituir em processo participativo de decisões, preocupa- -se em instaurar uma forma de organização do trabalho pedagógico que desvele os conflitos e as contradições, buscando",
+        "alternativas": [
+            "preservar a eficiência da organização burocrática”.",
+            "padronizar os resultados do desempenho dos alunos”.",
+            "eliminar as relações competitivas, corporativas e autoritárias”.",
+            "garantir o respeito e a gentileza entre os profissionais envolvidos”.",
+            "manter um relacionamento agradável entre a equipe escolar e as famílias."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "De acordo com Veiga (2009), a construção, a execução e a avaliação do projeto político-pedagógico requerem continuidade das ações, democratização do processo de tomada de decisões e",
+        "alternativas": [
+            "adoção de uma metodologia de ensino orientada \n\npara a uniformização de práticas.",
+            "instalação de uma sistemática de avaliação de cunho \n\nemancipatório.",
+            "desenvolvimento de uma prática de ensino com ênfase no controle comportamental.",
+            "implementação de um modelo de ensino com ênfase em resultados imediatos.",
+            "aplicação de uma abordagem avaliativa com ênfase no controle disciplinar."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Para Veiga (2009), “o projeto político-pedagógico, ao dar uma nova identidade à escola, contempla em suas reflexões a questão da educação de qualidade”, entendida nas suas dimensões indissociáveis. De acordo com a autora, essas dimensões indissociáveis são:",
+        "alternativas": [
+            "a formal ou técnica, a social e a política, sendo que \n\numa não está subordinada à outra; cada uma delas\n \ntem perspectivas próprias.",
+            "a corporal, a sinestésica, a oral e a fisiológica; devendo a comunidade escolar buscar a reorganização da escola de fora para dentro, considerando essas\n\n dimensões na rotina do aluno.",
+            "a territorial e a visão espacial, sendo que tanto essas \n\ndimensões, quanto a gestão democrática devem ser \n\ncompreendidas unicamente como princípios teóricos.",
+            "a histórica, a filogenética e a organizacional; visto \n\nque as avaliações externas mostram que apenas um\n\n único modelo de escola é capaz de alcançar a desejada educação de qualidade.",
+            "a financeira, a cultural, a compensatória e a equitativa, sendo que a primeira dimensão é a principal e as demais estão subordinadas a ela."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "[VUNESP - 2025] De acordo com Ilma Passos Veiga (2009), o Projeto Político-Pedagógico\n(PPP) desempenha um papel fundamental na escola ao:",
+        "alternativas": [
+            "garantir a padronização de práticas pedagógicas em todas as instituições de ensino.",
+            "limitar-se à organização administrativa, sem influenciar as ações pedagógicas.",
+            "funcionar como um documento técnico, elaborado exclusivamente pelos gestores.",
+            "priorizar objetivos nacionais sem considerar as necessidades locais.",
+            "orientar a construção coletiva e democrática de ações que promovam a qualidade da educação\ncom base nas especificidades da comunidade escolar."
+        ],
+        "correta_idx": 4
+    },
+    {
+        "pergunta": "[VUNESP - 2025] No contexto da gestão democrática, conforme apresentado por Veiga\n(2009), a participação da comunidade escolar:",
+        "alternativas": [
+            "deve ser restrita às decisões pedagógicas, deixando questões administrativas para os gestores.",
+            "é essencial para garantir a corresponsabilidade, promovendo transparência e inclusão nos \nprocessos decisórios.",
+            "deve ser mediada exclusivamente pelos diretores, assegurando maior eficiência nas decisões.",
+            "limita-se à consulta formal, sem interferência nos resultados finais do planejamento escolar.",
+            "é dispensável quando se trata de decisões de cunho técnico e financeiro."
+        ],
+        "correta_idx": 1
+    }
+]
