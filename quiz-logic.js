@@ -13,8 +13,8 @@
         ],
         legislacao: [
             // Adicione aqui seus quizzes de legislação
-            { name: "Quiz da LDB", url: "quiz_ldb.json" },
-            { name: "Quiz do ECA", url: "quiz_eca.json" }
+            { name: "Em construção", url: "quiz_ldb.json" },
+            
         ]
         // Você pode adicionar mais categorias aqui, se quiser.
     };
