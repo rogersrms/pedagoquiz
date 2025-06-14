@@ -74,23 +74,34 @@
 
     // (O resto do arquivo JavaScript continua exatamente o mesmo)
     
-    function displayQuizListForCategory(categoryKey) {
+   function displayQuizListForCategory(categoryKey) {
         const quizzes = allQuizzes[categoryKey];
-        selectionContainer.innerHTML = ''; 
+        selectionContainer.innerHTML = ''; // Limpa o contêiner
 
+        // Cria um contêiner para o botão de voltar, para alinhá-lo à esquerda
+        const backButtonContainer = document.createElement('div');
+        backButtonContainer.className = 'back-button-container';
+        
         const backButton = document.createElement('button');
         backButton.innerHTML = '‹ Voltar para Assuntos';
         backButton.className = 'btn btn-tertiary';
         backButton.addEventListener('click', displayCategoryButtons);
-        selectionContainer.appendChild(backButton);
+        
+        backButtonContainer.appendChild(backButton);
+        selectionContainer.appendChild(backButtonContainer);
+
+        // Cria um contêiner para a lista de quizzes
+        const quizListContainer = document.createElement('div');
+        quizListContainer.className = 'quiz-list-container';
 
         quizzes.forEach(quiz => {
             const quizButton = document.createElement('button');
             quizButton.textContent = quiz.name;
-            quizButton.className = 'btn btn-secondary';
+            quizButton.className = 'btn btn-secondary'; // Este botão ocupará a largura toda do seu contêiner
             quizButton.addEventListener('click', () => loadQuizFromURL(quiz.url));
-            selectionContainer.appendChild(quizButton);
+            quizListContainer.appendChild(quizButton);
         });
+        selectionContainer.appendChild(quizListContainer);
     }
 
     function loadQuizFromURL(url) {
