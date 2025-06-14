@@ -1,0 +1,57 @@
+[
+    {
+        "pergunta": "Soares (2004), em Letramento e alfabetização: as muitas facetas, afirma e defende que os termos alfabetização e letramento são dois fenômenos",
+        "alternativas": [
+            "que se confundem; dessa maneira devemos privilegiar a faceta psicológica da alfabetização, prescindindo de sua faceta linguística (fonética e fonológica) ou de métodos específicos de alfabetização.",
+            "dissociados, pois possuem diferenças e especificidades, no entanto, a aproximação dos fenômenos tem feito ocorrer no Brasil a desinvenção do letramento, quando na verdade, a alfabetização deve precedê-lo, sem substituí-lo.",
+            "que apresentam semelhanças, porém, a discussão sobre letramento e alfabetização surgiu no Brasil de modo completamente independente, o que levou a prevalência do conceito de “alfabetização” e o apagamento do “letramento”.",
+            "que se fundem, já que a alfabetização ocorre de forma natural sempre que há a interação com a língua escrita, assim, é desnecessário que haja o ensino direto e explícito do sistema grafofônico (as relações entre fonema–grafema, sílabas e som).",
+            "interdependentes, sendo que a entrada da criança no mundo da escrita ocorre simultaneamente por esses dois processos, tanto por meio da alfabetização (pela aquisição do sistema convencional de escrita) quanto pelo letramento."
+        ],
+        "correta_idx": 4
+    },
+    {
+        "pergunta": "Analise o excerto abaixo extraído do texto Letramento e alfabetização: as muitas facetas (2004) da autora Magda Soares. \n\n“Dissociar alfabetização e letramento é um equívoco. Não são processos independentes, mas interdependentes, e indissociáveis:\n \n(1) desenvolve-se no contexto de e por meio de práticas sociais de (2) , isto é, através de atividades de (3) , e este(a), por sua vez, só se pode desenvolver no contexto da e por meio da aprendizagem das relações (4) , isto é, em dependência do(a) (5) ” (SOARES, 2004, p. 14).",
+        "alternativas": [
+            "(1) O letramento • (2) leitura e de escrita • (3) alfabetização • (4) fonema-grafema • (5) do letramento",
+            "(1) A alfabetização • (2) escrita • (3) letramento • (4) som-letra • (5) da alfabetização",
+            "(1) O letramento • (2) leitura • (3) alfabetização • (4) letra-som • (5) do letramento",
+            "(1) A alfabetização • (2) leitura e de escrita • (3) letramento • (4) fonema-grafema • (5) da alfabetização",
+            "(1) A alfabetização • (2) letramento • (3) leitura e de escrita • (4) fonológicas • (5) da alfabetização"
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "No texto Letramento e alfabetização: as muitas facetas, Magda Soares afirma que, em meados dos anos 1980, em diferentes países desenvolvidos, constatou-se que a população, embora soubesse ler e escrever “[…] não dominava as habilidades de leitura e de escrita necessárias para uma participação efetiva e competente nas práticas sociais e profissionais que envolvem a língua escrita” (SOARES, 2004, p. 6). \n\nPara explicar esse fenômeno e poder superá-lo, criou-se o conceito de:",
+        "alternativas": [
+            "Iletrismo.",
+            "Alfabetização.",
+            "Alfabetização funcional.",
+            "Analfabetismo.",
+            "Letramento."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "De acordo com Soares (2004), pode-se afirmar corretamente que",
+        "alternativas": [
+            "o letramento ocorre depois que a alfabetização está\n completamente consolidada e a criança é capaz de \nler e escrever.",
+            "a alfabetização desenvolve-se no contexto de e por \nmeio de práticas sociais de leitura e de escrita.",
+            "o letramento é o aprendizado das letras do alfabeto e\n sua correspondência com os sons, ou seja, da relação grafema-fonema.",
+            "a alfabetização deve ocorrer após a criança alcançar \numa certa maturidade fisiológica, sobretudo a coordenação motora.",
+            "a alfabetização refere-se à capacidade de decifrar \nletras e formar palavras e não precisa estar associada ao letramento."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Para a área da alfabetização, a perspectiva psicogenética\n representou uma mudança significativa e alterou profundamente a concepção do processo de construção da \nrepresentação da língua escrita, pela criança. Conforme \nSoares (2004), na perspectiva psicogenética,",
+        "alternativas": [
+            "a maturidade da criança é um fator crucial para o \ninício da alfabetização, pois existem pré-requisitos \nfisiológicos e cognitivos para que ela esteja pronta \npara aprender o sistema de representação da língua \nescrita.",
+            "os erros cometidos pela criança, no processo de \naprendizagem e construção desse sistema de representação, são vistos como falhas que devem ser corrigidas pelos educadores.",
+            "a criança, antes de ser exposta a textos mais complexos, precisa dominar habilidades básicas desse \nsistema de representação, começando pelas letras, \nsílabas e palavras, de forma hierárquica.",
+            "o aluno é considerado um sujeito dependente unicamente de estímulos externos para aprender o sistema de escrita, sendo necessários materiais forjados \nartificialmente para alfabetizá-lo.",
+            "a criança passa a sujeito ativo capaz de progressivamente (re)construir esse sistema de representação, \ninteragindo com a língua escrita em seus usos e prá\nticas sociais."
+        ],
+        "correta_idx": 4
+    }
+]
