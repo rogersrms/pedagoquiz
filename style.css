@@ -127,4 +127,8 @@ body {
     display: flex;
     flex-direction: column; /* Coloca os botões de quiz em uma coluna vertical */
     gap: 15px; /* Espaço entre cada botão de quiz */
+     /* --- LINHAS ADICIONADAS --- */
+    max-height: 400px; /* Define uma altura máxima para a lista. Ajuste se desejar. */
+    overflow-y: auto;  /* Adiciona a barra de rolagem vertical QUANDO o conteúdo ultrapassar a altura máxima. */
+    padding-right: 10px;/* Adiciona um pequeno espaço à direita para a barra de rolagem não sobrepor o texto. */
 }
