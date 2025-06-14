@@ -43,6 +43,12 @@ body {
 
 /* Estilos da Tela Inicial */
 #initial-screen .app-title { font-size: 2.2rem; font-weight: 700; color: var(--primary-color); margin-bottom: 10px; }
+/* --- NOVO ESTILO ADICIONADO PARA O LOGO --- */
+.app-logo {
+    max-width: 80%; /* Garante que o logo não ultrapasse 80% da largura do contêiner */
+    height: 120px;   /* Define uma altura fixa. Ajuste este valor conforme necessário. */
+    margin-bottom: 20px; /* Cria um espaço abaixo do logo */
+}
 #initial-screen .app-subtitle { font-size: 1.2rem; color: var(--secondary-color); margin-bottom: 20px; }
 
 #preloaded-quizzes-list {
