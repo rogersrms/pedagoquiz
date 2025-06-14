@@ -117,3 +117,30 @@ body {
     background-color: #f1f1f1;
     transform: none;
 }
+
+/* --- NOVOS ESTILOS ADICIONADOS --- */
+.category-buttons {
+    display: flex;
+    flex-direction: row; /* Coloca os botões lado a lado */
+    justify-content: center;
+    gap: 20px; /* Espaço entre os botões */
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.category-buttons .btn {
+    width: auto; /* Faz o botão ter a largura do seu conteúdo */
+    padding: 15px 30px; /* Botões de categoria maiores */
+    font-size: 1.1rem;
+}
+
+#selection-container .btn-secondary {
+    width: 100%; /* Botões de quiz individuais ocupam a largura toda */
+    margin-bottom: 10px;
+}
+
+#selection-container .btn-tertiary {
+    justify-self: flex-start;
+    margin-bottom: 20px;
+    width: auto; /* Botão de voltar pequeno */
+}
