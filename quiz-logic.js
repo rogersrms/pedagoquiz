@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "VEIGA - Projeto Político-Pedagógico e Gestão Democrática", url: "Veiga_ppp.json" },
         { name: "FREIRE - Professora Sim, Tia Não", url: "Professora Sim Tia Não.json" },
         { name: "SOARES - Letramento e Alfabetização: as muitas facetas", url: "SOARES - Letramento e alfabetização.json" },
+        { name: "LEMOV - Aula nota 10 3.0", url: "lemov_aula_nota_10.json" },
         // Adicione mais quizzes aqui
     ];
     // ===============================================================
