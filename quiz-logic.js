@@ -20,7 +20,7 @@
     };
     // ===============================================================
 
-    // Mapeamento dos elementos da UI
+   // Mapeamento dos elementos da UI
     const initialScreen = document.getElementById('initial-screen');
     const quizScreen = document.getElementById('quiz-screen');
     const resultsScreen = document.getElementById('results-screen');
@@ -35,15 +35,14 @@
     const backToMenuButton = document.getElementById('back-to-menu-button');
     const selectionContainer = document.getElementById('selection-container');
 
-    // Variáveis de estado do jogo
-    let currentQuizData = []; // Armazena os dados do quiz que está sendo jogado
+    // (O resto das variáveis de estado do jogo continua igual)
+    let currentQuizData = [];
     let currentPlayQuestions = [];
     let currentQuestionIndex = 0;
     let score = 0;
     let currentCorrectAnswerText = '';
     let currentDisplayedAlternatives = [];
 
-    // Função para embaralhar arrays
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -53,32 +52,38 @@
 
     // --- LÓGICA DE NAVEGAÇÃO E CARREGAMENTO ---
 
-    // Função para mostrar os botões de categoria iniciais
+    // ----- FUNÇÃO MODIFICADA -----
+    // Função para mostrar os "cartões" de categoria iniciais
     function displayCategoryButtons() {
         selectionContainer.innerHTML = `
             <h3 class="app-subtitle">Escolha um assunto:</h3>
-            <div class="category-buttons">
-                <button id="btn-pedagogico" class="btn btn-primary">Quiz Pedagógico</button>
-                <button id="btn-legislacao" class="btn btn-primary">Legislação</button>
+            <div class="category-container">
+                <div class="category-card" id="card-pedagogico">
+                    <h4>Quiz Pedagógico</h4>
+                    <p>Teste seus conhecimentos em teorias da educação, didática e práticas pedagógicas.</p>
+                </div>
+                <div class="category-card" id="card-legislacao">
+                    <h4>Legislação</h4>
+                    <p>Questões sobre LDB, ECA, BNCC e outras normas importantes da educação.</p>
+                </div>
             </div>
         `;
-        document.getElementById('btn-pedagogico').addEventListener('click', () => displayQuizListForCategory('pedagogico'));
-        document.getElementById('btn-legislacao').addEventListener('click', () => displayQuizListForCategory('legislacao'));
+        document.getElementById('card-pedagogico').addEventListener('click', () => displayQuizListForCategory('pedagogico'));
+        document.getElementById('card-legislacao').addEventListener('click', () => displayQuizListForCategory('legislacao'));
     }
 
-    // Função para mostrar a lista de quizzes de uma categoria específica
+    // (O resto do arquivo JavaScript continua exatamente o mesmo)
+    
     function displayQuizListForCategory(categoryKey) {
         const quizzes = allQuizzes[categoryKey];
-        selectionContainer.innerHTML = ''; // Limpa o contêiner
+        selectionContainer.innerHTML = ''; 
 
-        // Adiciona um botão de "Voltar"
         const backButton = document.createElement('button');
         backButton.innerHTML = '‹ Voltar para Assuntos';
         backButton.className = 'btn btn-tertiary';
         backButton.addEventListener('click', displayCategoryButtons);
         selectionContainer.appendChild(backButton);
 
-        // Adiciona os botões de quiz
         quizzes.forEach(quiz => {
             const quizButton = document.createElement('button');
             quizButton.textContent = quiz.name;
@@ -88,7 +93,6 @@
         });
     }
 
-    // Função para carregar um quiz a partir de sua URL (arquivo .json)
     function loadQuizFromURL(url) {
         fetch(url)
             .then(response => {
@@ -103,8 +107,6 @@
             .catch(error => alert(`Não foi possível carregar o quiz: ${error.message}`));
     }
     
-    // --- LÓGICA PRINCIPAL DO JOGO ---
-
     function startQuiz() {
         showScreen('quiz-screen');
         currentPlayQuestions = [...currentQuizData]; 
@@ -174,8 +176,6 @@
         scoreText.textContent = `Sua pontuação: ${score} de ${currentPlayQuestions.length} (${percentage.toFixed(2)}%)`;
     }
 
-    // --- FUNÇÕES AUXILIARES DE UI ---
-
     function showScreen(screenId) {
         document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
         document.getElementById(screenId).classList.add('active');
@@ -183,7 +183,7 @@
 
     function resetToInitialScreen() {
         showScreen('initial-screen');
-        displayCategoryButtons(); // Volta para a tela de categorias
+        displayCategoryButtons();
     }
 
     function resetFeedbackAndButtons() {
@@ -194,7 +194,6 @@
         nextButton.classList.add('hidden');
     }
 
-    // --- Gatilhos de Eventos ---
     confirmButton.addEventListener('click', confirmAnswer);
     nextButton.addEventListener('click', nextQuestion);
     playAgainButton.addEventListener('click', startQuiz);
@@ -205,6 +204,5 @@
         }
     });
 
-    // Inicia o programa mostrando os botões de categoria
     displayCategoryButtons();
 });
