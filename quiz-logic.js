@@ -1,16 +1,23 @@
-document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
 
     // ===============================================================
-    // EDITAR ESTA LISTA PARA ADICIONAR SEUS QUIZZES
+    // ATUALIZE AQUI COM SEUS QUIZZES, SEPARADOS POR CATEGORIA
     // ===============================================================
-    const preloadedQuizzes = [
-        // { name: "NOME QUE APARECE NO BOTÃO", url: "nome_do_arquivo.json" },
-        { name: "VEIGA - Projeto Político-Pedagógico e Gestão Democrática", url: "Veiga_ppp.json" },
-        { name: "FREIRE - Professora Sim, Tia Não", url: "Professora Sim Tia Não.json" },
-        { name: "SOARES - Letramento e Alfabetização: as muitas facetas", url: "SOARES - Letramento e alfabetização.json" },
-        { name: "LEMOV - Aula nota 10 3.0", url: "lemov_aula_nota_10.json" },
-        // Adicione mais quizzes aqui
-    ];
+    const allQuizzes = {
+        pedagogico: [
+            // Adicione aqui seus quizzes pedagógicos
+            { name: "VEIGA - Projeto Político-Pedagógico e Gestão Democrática", url: "Veiga_ppp.json" },
+            { name: "FREIRE - Professora Sim, Tia Não", url: "Professora Sim Tia Não.json" },
+            { name: "SOARES - Letramento e Alfabetização: as muitas facetas", url: "SOARES - Letramento e alfabetização.json" },
+            { name: "LEMOV - Aula nota 10 3.0", url: "lemov_aula_nota_10.json" },
+        ],
+        legislacao: [
+            // Adicione aqui seus quizzes de legislação
+            { name: "Quiz da LDB", url: "quiz_ldb.json" },
+            { name: "Quiz do ECA", url: "quiz_eca.json" }
+        ]
+        // Você pode adicionar mais categorias aqui, se quiser.
+    };
     // ===============================================================
 
     // Mapeamento dos elementos da UI
@@ -25,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreText = document.getElementById('score-text');
     const playAgainButton = document.getElementById('play-again-button');
     const loadAnotherButton = document.getElementById('load-another-button');
-    const preloadedQuizzesList = document.getElementById('preloaded-quizzes-list');
     const backToMenuButton = document.getElementById('back-to-menu-button');
+    const selectionContainer = document.getElementById('selection-container');
 
     // Variáveis de estado do jogo
-    let allQuizQuestions = [];
+    let currentQuizData = []; // Armazena os dados do quiz que está sendo jogado
     let currentPlayQuestions = [];
     let currentQuestionIndex = 0;
     let score = 0;
@@ -44,52 +51,63 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Gatilhos de eventos
-    confirmButton.addEventListener('click', confirmAnswer);
-    nextButton.addEventListener('click', nextQuestion);
-    playAgainButton.addEventListener('click', startQuiz);
-    loadAnotherButton.addEventListener('click', resetToInitialScreen);
-    backToMenuButton.addEventListener('click', () => {
-        if (confirm("Tem certeza que deseja sair do quiz? Seu progresso atual será perdido.")) {
-            resetToInitialScreen();
-        }
-    });
+    // --- LÓGICA DE NAVEGAÇÃO E CARREGAMENTO ---
 
-    // Funções para carregar quizzes pré-definidos
-    function populatePreloadedQuizzes() {
-        preloadedQuizzesList.innerHTML = ''; 
-        preloadedQuizzes.forEach(quiz => {
+    // Função para mostrar os botões de categoria iniciais
+    function displayCategoryButtons() {
+        selectionContainer.innerHTML = `
+            <h3 class="app-subtitle">Escolha um assunto:</h3>
+            <div class="category-buttons">
+                <button id="btn-pedagogico" class="btn btn-primary">Quiz Pedagógico</button>
+                <button id="btn-legislacao" class="btn btn-primary">Legislação</button>
+            </div>
+        `;
+        document.getElementById('btn-pedagogico').addEventListener('click', () => displayQuizListForCategory('pedagogico'));
+        document.getElementById('btn-legislacao').addEventListener('click', () => displayQuizListForCategory('legislacao'));
+    }
+
+    // Função para mostrar a lista de quizzes de uma categoria específica
+    function displayQuizListForCategory(categoryKey) {
+        const quizzes = allQuizzes[categoryKey];
+        selectionContainer.innerHTML = ''; // Limpa o contêiner
+
+        // Adiciona um botão de "Voltar"
+        const backButton = document.createElement('button');
+        backButton.innerHTML = '‹ Voltar para Assuntos';
+        backButton.className = 'btn btn-tertiary';
+        backButton.addEventListener('click', displayCategoryButtons);
+        selectionContainer.appendChild(backButton);
+
+        // Adiciona os botões de quiz
+        quizzes.forEach(quiz => {
             const quizButton = document.createElement('button');
             quizButton.textContent = quiz.name;
-            quizButton.className = 'btn btn-primary';
+            quizButton.className = 'btn btn-secondary';
             quizButton.addEventListener('click', () => loadQuizFromURL(quiz.url));
-            preloadedQuizzesList.appendChild(quizButton);
+            selectionContainer.appendChild(quizButton);
         });
     }
 
+    // Função para carregar um quiz a partir de sua URL (arquivo .json)
     function loadQuizFromURL(url) {
         fetch(url)
             .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Arquivo não encontrado ou erro de rede (Status: ${response.status})`);
-                }
+                if (!response.ok) throw new Error(`Arquivo não encontrado ou erro de rede (Status: ${response.status})`);
                 return response.json();
             })
             .then(data => {
-                if (!Array.isArray(data) || data.length === 0) {
-                   throw new Error("O arquivo JSON está vazio ou em formato inválido.");
-                }
-                allQuizQuestions = data;
+                if (!Array.isArray(data) || data.length === 0) throw new Error("O arquivo JSON está vazio ou em formato inválido.");
+                currentQuizData = data;
                 startQuiz();
             })
-            .catch(error => {
-                alert(`Não foi possível carregar o quiz: ${error.message}`);
-            });
+            .catch(error => alert(`Não foi possível carregar o quiz: ${error.message}`));
     }
+    
+    // --- LÓGICA PRINCIPAL DO JOGO ---
 
     function startQuiz() {
         showScreen('quiz-screen');
-        currentPlayQuestions = [...allQuizQuestions]; 
+        currentPlayQuestions = [...currentQuizData]; 
         shuffle(currentPlayQuestions);
         currentQuestionIndex = -1;
         score = 0;
@@ -156,6 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
         scoreText.textContent = `Sua pontuação: ${score} de ${currentPlayQuestions.length} (${percentage.toFixed(2)}%)`;
     }
 
+    // --- FUNÇÕES AUXILIARES DE UI ---
+
     function showScreen(screenId) {
         document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
         document.getElementById(screenId).classList.add('active');
@@ -163,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function resetToInitialScreen() {
         showScreen('initial-screen');
+        displayCategoryButtons(); // Volta para a tela de categorias
     }
 
     function resetFeedbackAndButtons() {
@@ -173,6 +194,17 @@ document.addEventListener('DOMContentLoaded', () => {
         nextButton.classList.add('hidden');
     }
 
-    // Inicializa a lista de quizzes pré-carregados na tela inicial
-    populatePreloadedQuizzes();
+    // --- Gatilhos de Eventos ---
+    confirmButton.addEventListener('click', confirmAnswer);
+    nextButton.addEventListener('click', nextQuestion);
+    playAgainButton.addEventListener('click', startQuiz);
+    loadAnotherButton.addEventListener('click', resetToInitialScreen);
+    backToMenuButton.addEventListener('click', () => {
+        if (confirm("Tem certeza que deseja sair do quiz? Seu progresso atual será perdido.")) {
+            resetToInitialScreen();
+        }
+    });
+
+    // Inicia o programa mostrando os botões de categoria
+    displayCategoryButtons();
 });
