@@ -46,7 +46,7 @@ body {
 /* --- NOVO ESTILO ADICIONADO PARA O LOGO --- */
 .app-logo {
     max-width: 80%; /* Garante que o logo não ultrapasse 80% da largura do contêiner */
-    height: 60px;   /* Define uma altura fixa. Ajuste este valor conforme necessário. */
+    height: 80px;   /* Define uma altura fixa. Ajuste este valor conforme necessário. */
     margin-bottom: 20px; /* Cria um espaço abaixo do logo */
 }
 #initial-screen .app-subtitle { font-size: 1.2rem; color: var(--secondary-color); margin-bottom: 20px; }
