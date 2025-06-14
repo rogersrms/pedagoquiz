@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
     // ===============================================================
 
-    // Mapeamento dos elementos da UI
+    // Mapeamento dos elementos da UI (visuais)
     const fileInput = document.getElementById('file-input');
     const loadFileButton = document.getElementById('load-file-button');
     const initialScreen = document.getElementById('initial-screen');
@@ -27,8 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const playAgainButton = document.getElementById('play-again-button');
     const loadAnotherButton = document.getElementById('load-another-button');
     const preloadedQuizzesList = document.getElementById('preloaded-quizzes-list');
+    const backToMenuButton = document.getElementById('back-to-menu-button'); // <-- NOVO ELEMENTO
 
-    // Variáveis de estado do jogo
+    // Variáveis para controlar o estado do jogo
     let allQuizQuestions = [];
     let currentPlayQuestions = [];
     let currentQuestionIndex = 0;
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentCorrectAnswerText = '';
     let currentDisplayedAlternatives = [];
 
-    // Função para embaralhar arrays
+    // Função para embaralhar arrays (algoritmo Fisher-Yates)
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -44,9 +45,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- NOVAS FUNÇÕES PARA CARREGAR QUIZZES PRÉ-DEFINIDOS ---
+    // Gatilhos de eventos
+    loadFileButton.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', handleFileLoadFromComputer);
+    confirmButton.addEventListener('click', confirmAnswer);
+    nextButton.addEventListener('click', nextQuestion);
+    playAgainButton.addEventListener('click', startQuiz);
+    loadAnotherButton.addEventListener('click', resetToInitialScreen);
+    backToMenuButton.addEventListener('click', () => { // <-- NOVO EVENTO
+        if (confirm("Tem certeza que deseja sair do quiz? Seu progresso atual será perdido.")) {
+            resetToInitialScreen();
+        }
+    });
+
+    // Função para carregar e ler o arquivo JSON
+    function handleFileLoadFromComputer(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            try {
+                const content = e.target.result;
+                const parsedData = JSON.parse(content);
+                if (!Array.isArray(parsedData) || parsedData.length === 0) {
+                   throw new Error("O arquivo JSON está vazio ou não é um array.");
+                }
+                allQuizQuestions = parsedData;
+                startQuiz();
+            } catch (error) {
+                alert('Erro ao ler ou interpretar o arquivo JSON: ' + error.message);
+            }
+        };
+        reader.readAsText(file);
+    }
+    
+    // Funções para carregar quizzes pré-definidos
     function populatePreloadedQuizzes() {
-        preloadedQuizzesList.innerHTML = ''; // Limpa a lista
+        preloadedQuizzesList.innerHTML = ''; 
         preloadedQuizzes.forEach(quiz => {
             const quizButton = document.createElement('button');
             quizButton.textContent = quiz.name;
@@ -76,36 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    // Gatilhos de eventos
-    loadFileButton.addEventListener('click', () => fileInput.click());
-    fileInput.addEventListener('change', handleFileLoadFromComputer);
-    confirmButton.addEventListener('click', confirmAnswer);
-    nextButton.addEventListener('click', nextQuestion);
-    playAgainButton.addEventListener('click', startQuiz);
-    loadAnotherButton.addEventListener('click', resetToInitialScreen);
-
-    // Função para carregar arquivo do computador do usuário
-    function handleFileLoadFromComputer(event) {
-        const file = event.target.files[0];
-        if (!file) return;
-
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            try {
-                const content = e.target.result;
-                const parsedData = JSON.parse(content);
-                if (!Array.isArray(parsedData) || parsedData.length === 0) {
-                   throw new Error("O arquivo JSON está vazio ou não é um array.");
-                }
-                allQuizQuestions = parsedData;
-                startQuiz();
-            } catch (error) {
-                alert('Erro ao ler ou interpretar o arquivo JSON: ' + error.message);
-            }
-        };
-        reader.readAsText(file);
-    }
-    
     function startQuiz() {
         showScreen('quiz-screen');
         currentPlayQuestions = [...allQuizQuestions]; 
