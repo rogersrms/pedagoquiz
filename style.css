@@ -176,3 +176,10 @@ body {
     margin-bottom: 20px;
     width: auto;
 }
+/* --- NOVO ESTILO ADICIONADO PARA OS CRÉDITOS --- */
+.creator-credit {
+    margin-top: 40px; /* Adiciona um bom espaço acima da frase, empurrando-a para baixo */
+    font-size: 0.8rem; /* Fonte pequena e discreta */
+    color: var(--secondary-color); /* Usa uma cor secundária, mais suave */
+    text-align: center; /* Garante a centralização */
+}
