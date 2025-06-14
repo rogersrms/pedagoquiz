@@ -1,22 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
+/* --- NOVA PALETA DE CORES PASTEL --- */
 :root {
-    --primary-color: #007bff;
-    --primary-hover: #0056b3;
-    --secondary-color: #6c757d;
-    --secondary-hover: #5a6268;
-    --success-color: #28a745;
-    --danger-color: #dc3545;
-    --light-color: #f8f9fa;
-    --dark-color: #343a40;
-    --background-color: #ffffff;
-    --border-color: #dee2e6;
-    --border-radius: 8px;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --primary-color: #5d7f9a;   /* Azul Sereno */
+    --primary-hover: #4a667d;  /* Azul Sereno mais escuro */
+    --secondary-color: #7d8da1; /* Cinza-Azulado */
+    --secondary-hover: #6b7a8f;
+    --success-color: #6aaa96;   /* Verde Menta */
+    --danger-color: #e57373;    /* Rosa/Salmão Suave */
+    --light-color: #fdfaf6;    /* Bege muito claro (fundo da página) */
+    --dark-color: #3f3d56;     /* Cinza-azulado escuro (texto principal) */
+    --background-color: #ffffff; /* Fundo branco para o contêiner principal */
+    --border-color: #e0e0e0;   /* Borda cinza claro */
+    --border-radius: 12px;     /* Bordas um pouco mais arredondadas */
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Fonte mais arredondada e moderna */
     background-color: var(--light-color);
     color: var(--dark-color);
     margin: 0;
@@ -29,7 +30,7 @@ body {
 
 .app-container {
     background-color: var(--background-color);
-    padding: 30px;
+    padding: 40px; /* Mais padding interno */
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     width: 100%;
@@ -43,31 +44,40 @@ body {
 
 /* Estilos da Tela Inicial */
 #initial-screen .app-title { font-size: 2.2rem; font-weight: 700; color: var(--primary-color); margin-bottom: 10px; }
-/* --- NOVO ESTILO ADICIONADO PARA O LOGO --- */
+
 .app-logo {
-    max-width: 80%; /* Garante que o logo não ultrapasse 80% da largura do contêiner */
-    height: 150px;   /* Define uma altura fixa. Ajuste este valor conforme necessário. */
-    margin-bottom: 20px; /* Cria um espaço abaixo do logo */
+    max-width: 80%;
+    height: 120px;
+    margin-bottom: 20px;
 }
+
 #initial-screen .app-subtitle { font-size: 1.2rem; color: var(--secondary-color); margin-bottom: 20px; }
 
-#preloaded-quizzes-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 30px;
+/* Estilos dos Cartões de Categoria */
+.category-container {
+    display: flex; flex-direction: row; justify-content: center;
+    gap: 25px; margin-top: 10px; margin-bottom: 30px; flex-wrap: wrap;
 }
+.category-card {
+    border: 1px solid var(--border-color); border-radius: var(--border-radius);
+    padding: 25px; width: 250px; text-align: center; cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.category-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); }
+.category-card h4 { font-size: 1.4rem; font-weight: 700; color: var(--primary-color); margin-top: 0; margin-bottom: 10px; }
+.category-card p { font-size: 0.95rem; color: var(--secondary-color); line-height: 1.5; margin-bottom: 0; }
+
 
 /* Estilos da Tela do Quiz */
-#question-text { font-size: 1.2rem; font-weight: 500; margin-bottom: 25px; line-height: 1.4; text-align: justify; }
-#options-container { margin-top: 20px; margin-bottom: 20px; text-align: left; }
+#question-text { font-size: 1.4rem; font-weight: 500; margin-bottom: 25px; line-height: 1.5; text-align: justify; }
 
+#options-container { margin-top: 20px; margin-bottom: 20px; text-align: left; }
 .option {
-    display: flex; align-items: center; margin-bottom: 15px; background-color: var(--light-color);
+    display: flex; align-items: center; margin-bottom: 15px; background-color: #f7f9fc; /* Fundo azulado claro */
     padding: 15px; border-radius: var(--border-radius); border: 1px solid var(--border-color);
     cursor: pointer; transition: background-color 0.2s, border-color 0.2s;
 }
-.option:hover { background-color: #e9ecef; }
+.option:hover { background-color: #eef2f7; }
 .option input[type="radio"] { margin-right: 15px; width: 18px; height: 18px; flex-shrink: 0; }
 .option label { font-size: 1.1rem; flex-grow: 1; cursor: pointer; }
 
@@ -83,10 +93,10 @@ body {
 .btn {
     padding: 12px 25px; font-size: 1rem; font-weight: 500; border: none;
     border-radius: var(--border-radius); cursor: pointer;
-    transition: background-color 0.2s, color 0.2s, transform 0.1s; width: 100%;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
 }
 .btn:disabled { background-color: #e9ecef; color: var(--secondary-color); cursor: not-allowed; }
-.btn:hover:not(:disabled) { transform: translateY(-2px); }
+.btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
 
 .button-group .btn { width: auto; }
 
@@ -98,84 +108,17 @@ body {
 .btn-secondary-outline { background-color: transparent; color: var(--secondary-color); border: 2px solid var(--secondary-color); }
 .btn-secondary-outline:hover:not(:disabled) { background-color: var(--secondary-color); color: white; }
 
-.quiz-header {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 15px;
-}
-
+/* Cabeçalho do Quiz */
+.quiz-header { display: flex; justify-content: flex-start; margin-bottom: 15px; }
 .btn-tertiary {
-    background-color: transparent;
-    color: var(--secondary-color);
-    border: none;
-    padding: 5px 10px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    width: auto;
+    background-color: transparent; color: var(--secondary-color); border: none; padding: 5px 10px;
+    font-size: 0.9rem; font-weight: 500; width: auto;
 }
-.btn-tertiary:hover:not(:disabled) {
-    background-color: #f1f1f1;
-    transform: none;
-}
+.btn-tertiary:hover:not(:disabled) { background-color: #f1f1f1; transform: none; box-shadow: none; }
 
-/* ... todos os estilos anteriores ... */
+/* Créditos */
+.creator-credit { margin-top: 40px; font-size: 0.8rem; color: var(--secondary-color); text-align: center; }
 
-/* --- ESTILOS ATUALIZADOS E NOVOS PARA A TELA INICIAL --- */
-
-/* Contêiner para os cartões de categoria */
-.category-container {
-    display: flex;
-    flex-direction: row; /* Coloca os cartões lado a lado */
-    justify-content: center;
-    gap: 25px; /* Aumenta o espaço entre os cartões */
-    margin-top: 10px;
-    margin-bottom: 30px;
-    flex-wrap: wrap; /* Permite que os cartões quebrem a linha em telas pequenas */
-}
-
-/* Estilo para cada cartão de categoria */
-.category-card {
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    padding: 25px;
-    width: 250px; /* Largura de cada cartão */
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.category-card:hover {
-    transform: translateY(-5px); /* Efeito de "levantar" ao passar o mouse */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.category-card h4 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.category-card p {
-    font-size: 0.95rem;
-    color: var(--secondary-color);
-    line-height: 1.5;
-    margin-bottom: 0;
-}
-
-
-/* Ajustes nos botões de seleção de quiz (para quando a lista aparecer) */
-#selection-container .btn-secondary {
-    width: 100%; 
-    margin-bottom: 10px;
-}
-
-#selection-container .btn-tertiary {
-    justify-self: flex-start;
-    margin-bottom: 20px;
-    width: auto;
-}
 /* --- NOVO ESTILO ADICIONADO PARA OS CRÉDITOS --- */
 .creator-credit {
     margin-top: 40px; /* Adiciona um bom espaço acima da frase, empurrando-a para baixo */
