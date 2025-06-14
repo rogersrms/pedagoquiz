@@ -118,29 +118,61 @@ body {
     transform: none;
 }
 
-/* --- NOVOS ESTILOS ADICIONADOS --- */
-.category-buttons {
+/* ... todos os estilos anteriores ... */
+
+/* --- ESTILOS ATUALIZADOS E NOVOS PARA A TELA INICIAL --- */
+
+/* Contêiner para os cartões de categoria */
+.category-container {
     display: flex;
-    flex-direction: row; /* Coloca os botões lado a lado */
+    flex-direction: row; /* Coloca os cartões lado a lado */
     justify-content: center;
-    gap: 20px; /* Espaço entre os botões */
+    gap: 25px; /* Aumenta o espaço entre os cartões */
     margin-top: 10px;
     margin-bottom: 30px;
+    flex-wrap: wrap; /* Permite que os cartões quebrem a linha em telas pequenas */
 }
 
-.category-buttons .btn {
-    width: auto; /* Faz o botão ter a largura do seu conteúdo */
-    padding: 15px 30px; /* Botões de categoria maiores */
-    font-size: 1.1rem;
+/* Estilo para cada cartão de categoria */
+.category-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    width: 250px; /* Largura de cada cartão */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.category-card:hover {
+    transform: translateY(-5px); /* Efeito de "levantar" ao passar o mouse */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-card h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+
+/* Ajustes nos botões de seleção de quiz (para quando a lista aparecer) */
 #selection-container .btn-secondary {
-    width: 100%; /* Botões de quiz individuais ocupam a largura toda */
+    width: 100%; 
     margin-bottom: 10px;
 }
 
 #selection-container .btn-tertiary {
     justify-self: flex-start;
     margin-bottom: 20px;
-    width: auto; /* Botão de voltar pequeno */
+    width: auto;
 }
