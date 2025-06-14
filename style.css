@@ -59,7 +59,7 @@ body {
 }
 
 /* Estilos da Tela do Quiz */
-#question-text { font-size: 1.3rem; font-weight: 500; margin-bottom: 25px; line-height: 1.4; text-align: justify; }
+#question-text { font-size: 1.2rem; font-weight: 500; margin-bottom: 25px; line-height: 1.4; text-align: justify; }
 #options-container { margin-top: 20px; margin-bottom: 20px; text-align: left; }
 
 .option {
