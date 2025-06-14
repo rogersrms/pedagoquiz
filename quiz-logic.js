@@ -59,7 +59,7 @@
             <h3 class="app-subtitle">Escolha um assunto:</h3>
             <div class="category-container">
                 <div class="category-card" id="card-pedagogico">
-                    <h4>Quiz Pedagógico</h4>
+                    <h4>Pedagógico</h4>
                     <p>Teste seus conhecimentos em teorias da educação, didática e práticas pedagógicas.</p>
                 </div>
                 <div class="category-card" id="card-legislacao">
