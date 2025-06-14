@@ -100,3 +100,25 @@ body {
 .btn-secondary:hover:not(:disabled) { background-color: var(--secondary-hover); }
 .btn-secondary-outline { background-color: transparent; color: var(--secondary-color); border: 2px solid var(--secondary-color); }
 .btn-secondary-outline:hover:not(:disabled) { background-color: var(--secondary-color); color: white; }
+
+/* --- NOVOS ESTILOS ADICIONADOS --- */
+.quiz-header {
+    display: flex;
+    justify-content: flex-start; /* Alinha o botão à esquerda */
+    margin-bottom: 15px;
+}
+
+.btn-tertiary {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: auto; /* Garante que o botão não ocupe 100% da largura */
+}
+
+.btn-tertiary:hover:not(:disabled) {
+    background-color: #f1f1f1;
+    transform: none; /* Remove o efeito de "pulo" para este botão */
+}
