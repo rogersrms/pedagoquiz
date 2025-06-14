@@ -1,0 +1,35 @@
+[
+    {
+        "pergunta": "Paulo Freire (1997), na obra Professora sim tia não – cartas a quem ousa ensinar, escreve que “ensinar é profissão que envolve certa tarefa, certa militância, certa especificidade no seu cumprimento enquanto ser tia é viver uma relação de parentesco. Ser professora implica assumir uma profissão enquanto não se é tia por profissão”. Freire esclarece que “recusar a identificação da figura da professora com a da tia não significa, de modo algum, diminuir ou menosprezar a figura da tia, da mesma forma como aceitar a identificação não traduz nenhuma valorização à tia. Significa, pelo contrário, retirar algo fundamental à professora: sua responsabilidade profissional de que faz parte a exigência política por sua",
+        "alternativas": [
+            "isenção afetiva.”",
+            "fidelidade à ciência.”",
+            "formação permanente.”",
+            "neutralidade ideológica.”",
+            "imparcialidade avaliativa.”"
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Considerando a obra Professora sim, tia não: cartas a quem ousa ensinar (1997), de Paulo Freire, assinale a alternativa INCORRETA.",
+        "alternativas": [
+            "Educadores e educadoras progressistas devem ser perfeitos.",
+            "Sem intervenção democrática do educador ou da educadora, não há educação progressista.",
+            "Uma das qualidades indispensáveis ao melhor desempenho de professoras e professores progressistas é a coragem de lutar.",
+            "Educadoras e educadores fazem política ao fazer educação.",
+            "Educar é um ato político."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "A luta pela liberdade é um fundamento da pedagogia de Paulo Freire, como se vê em Professora sim, tia não: cartas a quem ousa ensinar (1997). Para o autor, essa luta pela liberdade como processo é possível porque, como seres humanos, somos",
+        "alternativas": [
+            "programados, mas não determinados.",
+            "individualistas, sem aceitar nenhum vínculo social.",
+            "livres de quaisquer condicionantes em nossa existência.",
+            "orientados geneticamente para a sobrevivência do \nmais forte.",
+            "livres de contradições e imersos em harmonia na \nconvivência com o outro."
+        ],
+        "correta_idx": 0
+    }
+]
