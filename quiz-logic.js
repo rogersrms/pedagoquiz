@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const preloadedQuizzes = [
         // { name: "NOME QUE APARECE NO BOTÃO", url: "nome_do_arquivo.json" },
         { name: "VEIGA-Projeto Político-Pedagógico e Gestão Democrática", url: "Veiga_ppp.json" },
-        { name: "Quiz de Ciências", url: "quiz_ciencias.json" },
+        { name: "FREIRE - Professora Sim, Tia Não", url: "Professora Sim Tia Não.json" },
         // Adicione mais quizzes aqui
     ];
     // ===============================================================
