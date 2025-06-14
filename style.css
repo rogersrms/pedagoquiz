@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-/* --- NOVA PALETA DE CORES PASTEL --- */
+/* --- PALETA DE CORES PASTEL --- */
 :root {
     --primary-color: #5d7f9a;   /* Azul Sereno */
     --primary-hover: #4a667d;  /* Azul Sereno mais escuro */
@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif; /* Fonte mais arredondada e moderna */
+    font-family: 'Poppins', sans-serif;
     background-color: var(--light-color);
     color: var(--dark-color);
     margin: 0;
@@ -30,7 +30,7 @@ body {
 
 .app-container {
     background-color: var(--background-color);
-    padding: 40px; /* Mais padding interno */
+    padding: 40px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     width: 100%;
@@ -43,8 +43,6 @@ body {
 .hidden { display: none !important; }
 
 /* Estilos da Tela Inicial */
-#initial-screen .app-title { font-size: 2.2rem; font-weight: 700; color: var(--primary-color); margin-bottom: 10px; }
-
 .app-logo {
     max-width: 80%;
     height: 120px;
@@ -67,13 +65,12 @@ body {
 .category-card h4 { font-size: 1.4rem; font-weight: 700; color: var(--primary-color); margin-top: 0; margin-bottom: 10px; }
 .category-card p { font-size: 0.95rem; color: var(--secondary-color); line-height: 1.5; margin-bottom: 0; }
 
-
 /* Estilos da Tela do Quiz */
-#question-text { font-size: 1.4rem; font-weight: 500; margin-bottom: 25px; line-height: 1.5; text-align: justify; }
+#question-text { font-size: 1.3rem; font-weight: 500; margin-bottom: 25px; line-height: 1.5; text-align: justify; }
 
 #options-container { margin-top: 20px; margin-bottom: 20px; text-align: left; }
 .option {
-    display: flex; align-items: center; margin-bottom: 15px; background-color: #f7f9fc; /* Fundo azulado claro */
+    display: flex; align-items: center; margin-bottom: 15px; background-color: #f7f9fc;
     padding: 15px; border-radius: var(--border-radius); border: 1px solid var(--border-color);
     cursor: pointer; transition: background-color 0.2s, border-color 0.2s;
 }
@@ -103,7 +100,7 @@ body {
 .btn-primary { background-color: var(--primary-color); color: white; }
 .btn-primary:hover:not(:disabled) { background-color: var(--primary-hover); }
 .btn-success { background-color: var(--success-color); color: white; }
-.btn-secondary { background-color: var(--secondary-color); color: white; }
+.btn-secondary { background-color: var(--secondary-color); color: white; width: 100%;}
 .btn-secondary:hover:not(:disabled) { background-color: var(--secondary-hover); }
 .btn-secondary-outline { background-color: transparent; color: var(--secondary-color); border: 2px solid var(--secondary-color); }
 .btn-secondary-outline:hover:not(:disabled) { background-color: var(--secondary-color); color: white; }
@@ -119,10 +116,15 @@ body {
 /* Créditos */
 .creator-credit { margin-top: 40px; font-size: 0.8rem; color: var(--secondary-color); text-align: center; }
 
-/* --- NOVO ESTILO ADICIONADO PARA OS CRÉDITOS --- */
-.creator-credit {
-    margin-top: 40px; /* Adiciona um bom espaço acima da frase, empurrando-a para baixo */
-    font-size: 0.8rem; /* Fonte pequena e discreta */
-    color: var(--secondary-color); /* Usa uma cor secundária, mais suave */
-    text-align: center; /* Garante a centralização */
+
+/* --- ESTILOS PARA ORGANIZAR A LISTA DE QUIZZES --- */
+.back-button-container {
+    text-align: left; /* Alinha o botão de voltar à esquerda */
+    margin-bottom: 20px;
+}
+
+.quiz-list-container {
+    display: flex;
+    flex-direction: column; /* Coloca os botões de quiz em uma coluna vertical */
+    gap: 15px; /* Espaço entre cada botão de quiz */
 }
