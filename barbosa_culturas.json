@@ -1,0 +1,68 @@
+[
+    {
+        "pergunta": "[VUNESP - 2025] A escola tem sido historicamente concebida como um espaço de transmissão do conhecimento acadêmico, muitas vezes ignorando os saberes trazidos pelos alunos de seus contextos familiares e sociais. No entanto, diferentes estudos apontam que a aprendizagem ocorre de forma mais eficaz quando há um diálogo entre a cultura escolar, a cultura da infância e a cultura familiar. Segundo Maria Carmen Barbosa (2007), uma escola que deseja promover uma educação de qualidade deve:",
+        "alternativas": [
+            "padronizar o ensino, garantindo que todos os alunos aprendam os mesmos conteúdos sem influência de suas vivências individuais.",
+            "reconhecer as culturas familiares e infantis como legítimas, incorporando-as ao cotidiano escolar para fortalecer a aprendizagem.",
+            "evitar a interferência da cultura familiar no ambiente escolar, pois a escola deve ser um espaço neutro e isento de influências externas.",
+            "priorizar a cultura escolar como a única referência válida para a formação dos alunos, eliminando aspectos culturais externos ao ambiente educacional.",
+            "estabelecer um perfil único de aluno ideal, garantindo que todos sigam um modelo pré-determinado de comportamento e aprendizagem."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "[VUNESP - 2025] Segundo Maria Carmen Barbosa (2007), a infância não é um conceito universal e homogêneo, mas uma experiência que varia conforme fatores históricos, sociais e culturais. Um exemplo claro dessa diversidade pode ser observado na forma como diferentes sociedades lidam com a autonomia das crianças. Em alguns países, como o Japão, crianças pequenas costumam se deslocar sozinhas para a escola, enquanto em outras culturas essa prática seria considerada inadequada ou perigosa. Esse exemplo demonstra que:",
+        "alternativas": [
+            "a infância deve ser vivida da mesma maneira em todas as sociedades, garantindo que as crianças tenham experiências homogêneas de desenvolvimento.",
+            "as concepções sobre infância são fixas e imutáveis, estabelecidas com base em critérios universais aplicáveis a todas as culturas.",
+            "a infância é uma construção social, influenciada por fatores históricos, culturais e contextuais que moldam as experiências infantis.",
+            "a cultura escolar deve ser a principal referência para definir como as crianças devem viver sua infância, desconsiderando as práticas familiares.",
+            "o conceito de infância é determinado exclusivamente pelas normas educacionais formais, sem influência de fatores sociais e históricos."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Citado por Barbosa (2007) no texto Culturas escolares, culturas de infâncias e culturas familiares, Thin (2006) defende que, para compreender as relações entre as famílias populares e a escola, é preciso levar em conta o fato de que essas relações colocam em jogo maneiras de",
+        "alternativas": [
+            "massificar.",
+            "motivar.",
+            "comunicar.",
+            "globalizar.",
+            "aculturar."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Barbosa (2007) destaca que conhecer “as novas perspectivas sobre as culturas da infância, as culturas familiares e a cultura escolar podem, certamente, nos auxiliar a pensar em um novo modelo de escolarização de qualidade para as crianças brasileiras”. A respeito desse tema, a autora cita Sarmento e afirma que esse autor",
+        "alternativas": [
+            "apresentou alguns princípios geradores das culturas da infância, e esses princípios são a interatividade, a ludicidade, a fantasia do real e a reiteração.",
+            "defende que as culturas infantis são independentes das culturas adultas e que as culturas infantis são distintas em diferentes faixas etárias.",
+            "concluiu que as culturas infantis são idênticas em todo o Planeta, e que as crianças produzem menos culturas e estão menos criativas após o acesso à internet.",
+            "afirma que para manter a qualidade da educação, é necessário a manutenção da incomunicabilidade das culturas, pois as culturas infantis são altamente massificadas.",
+            "propõe conhecer as culturas infantis para ensinar as crianças a superarem-nas, de modo que possam avançar em direção a pensamentos mais elaborados e próximos da cultura adulta."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "Maria Carmen Barbosa (2007) propõe repensar a socialização escolar da criança a partir do entrecruzamento das culturas escolares, consideradas legítimas, e suas relações com algumas culturas familiares e infantis consideradas, até hoje, ilegítimas pela escola. Citando Corsaro (1997), a partir da noção de reprodução interpretativa, Barbosa (2007) compreende que as crianças não apenas",
+        "alternativas": [
+            "reproduzem os comportamentos dos adultos, mas são obrigadas a pensar como eles.",
+            "imitam os modos de ser e agir dos adultos, mas também têm dificuldade de pensar de forma autônoma.",
+            "copiam a cultura do grupo a que pertencem, mas também são pouco críticas quanto à cultura de países estrangeiros.",
+            "internalizam a cultura, mas também contribuem ativamente para a mudança cultural de toda a sociedade.",
+            "interpretam a cultura sob a ótica das gerações passadas, mas também têm dificuldade de promover a renovação cultural."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "Barbosa (2007) afirma que a escola é o espaço de confronto ou entretecimento de culturas pessoais de crianças e adultos e de culturas sociais legítimas e não legítimas. E que é “preciso romper com o silêncio sobre as diferentes culturas e dar-lhes visibilidade e reconhecimento. Fazer dialogar, interagir, comunicar as culturas, desmoronar atitudes etnocêntricas, criando um espaço intercultural”.\n\nAo longo do texto, é correto afirmar que a autora defende que",
+        "alternativas": [
+            "todas as crianças possuem a mesma cultura de infância, e isso independe da etnia, gênero, idade, classe social ou local de origem.",
+            "o capital cultural de uma família é somente transmitido pelos pais, por isso, a ausência desses genitores na escola é considerada uma forma de negligência.",
+            "as crianças constroem culturas infantis, e que, o desenvolvimento das crianças não é algo individual: é um processo cultural e coletivo.",
+            "os grupos familiares, de mesma classe social, têm uma cultura homogênea e por isso não cabe transmitir a cultura “alta” na escola.",
+            "a apropriação da cultura é uma via de mão única, a geração mais velha transmite os modelos culturais prontos, e as crianças os imita."
+        ],
+        "correta_idx": 2
+    }
+]
