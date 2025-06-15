@@ -1,37 +1,25 @@
-    document.addEventListener('DOMContentLoaded', () => {
+   document.addEventListener('DOMContentLoaded', () => {
 
-   // --- NOVA FUNÇÃO PARA ATUALIZAR O CONTADOR ---
+    // Função para atualizar o contador de visualizações
     function updateVisitorCount() {
-        const namespace = 'pedagoquiz.rodrigosousa'; // IMPORTANTE: Use um nome único e seu aqui!
+        const namespace = 'pedagoquiz.rodrigosousa'; // Nome único para seu site
         const countElement = document.getElementById('visitor-count-badge');
 
         if (countElement) {
-            // A API retorna um SVG, mas podemos pegar o valor do contador de outra forma
-            // Ou simplesmente usar a imagem que eles fornecem.
-            // Para simplicidade, vamos usar a imagem gerada por eles.
-            
             const badgeUrl = `https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fpedagoquiz.com%2F${namespace}&countColor=%237d8da1&label=Visitantes`;
-
             const badgeImage = document.createElement('img');
             badgeImage.src = badgeUrl;
-            
-            // Substitui o "Carregando..." pela imagem do contador
             countElement.innerHTML = '';
             countElement.appendChild(badgeImage);
         }
     }
-
-    // Chama a função para carregar o contador quando a página carrega
-    updateVisitorCount();    
-
-   
+    updateVisitorCount();
 
     // ===============================================================
-    // ATUALIZE AQUI COM SEUS QUIZZES, SEPARADOS POR CATEGORIA
+    // LISTA DE QUIZZES
     // ===============================================================
     const allQuizzes = {
         pedagogico: [
-            // Adicione aqui seus quizzes pedagógicos
             { name: "VEIGA - Projeto Político-Pedagógico e Gestão Democrática", url: "Veiga_ppp.json" },
             { name: "FREIRE - Professora Sim, Tia Não", url: "Professora Sim Tia Não.json" },
             { name: "SOARES - Letramento e Alfabetização: as muitas facetas", url: "SOARES - Letramento e alfabetização.json" },
@@ -39,15 +27,12 @@
             { name: "BARBOSA - Culturas escolares, culturas de infância e culturas familiares", url: "barbosa_culturas.json" },
         ],
         legislacao: [
-            // Adicione aqui seus quizzes de legislação
             { name: "Em construção", url: "quiz_ldb.json" },
-            
         ]
-        // Você pode adicionar mais categorias aqui, se quiser.
     };
     // ===============================================================
 
-   // Mapeamento dos elementos da UI
+    // Mapeamento dos elementos da UI
     const initialScreen = document.getElementById('initial-screen');
     const quizScreen = document.getElementById('quiz-screen');
     const resultsScreen = document.getElementById('results-screen');
@@ -62,7 +47,7 @@
     const backToMenuButton = document.getElementById('back-to-menu-button');
     const selectionContainer = document.getElementById('selection-container');
 
-    // (O resto das variáveis de estado do jogo continua igual)
+    // Variáveis de estado do jogo
     let currentQuizData = [];
     let currentPlayQuestions = [];
     let currentQuestionIndex = 0;
@@ -70,6 +55,7 @@
     let currentCorrectAnswerText = '';
     let currentDisplayedAlternatives = [];
 
+    // Função para embaralhar arrays
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -79,8 +65,6 @@
 
     // --- LÓGICA DE NAVEGAÇÃO E CARREGAMENTO ---
 
-    // ----- FUNÇÃO MODIFICADA -----
-    // Função para mostrar os "cartões" de categoria iniciais
     function displayCategoryButtons() {
         selectionContainer.innerHTML = `
             <h3 class="app-subtitle">Escolha um assunto:</h3>
@@ -99,32 +83,23 @@
         document.getElementById('card-legislacao').addEventListener('click', () => displayQuizListForCategory('legislacao'));
     }
 
-    // (O resto do arquivo JavaScript continua exatamente o mesmo)
-    
-   function displayQuizListForCategory(categoryKey) {
+    function displayQuizListForCategory(categoryKey) {
         const quizzes = allQuizzes[categoryKey];
-        selectionContainer.innerHTML = ''; // Limpa o contêiner
-
-        // Cria um contêiner para o botão de voltar, para alinhá-lo à esquerda
+        selectionContainer.innerHTML = '';
         const backButtonContainer = document.createElement('div');
         backButtonContainer.className = 'back-button-container';
-        
         const backButton = document.createElement('button');
         backButton.innerHTML = '‹ Voltar para Assuntos';
         backButton.className = 'btn btn-tertiary';
         backButton.addEventListener('click', displayCategoryButtons);
-        
         backButtonContainer.appendChild(backButton);
         selectionContainer.appendChild(backButtonContainer);
-
-        // Cria um contêiner para a lista de quizzes
         const quizListContainer = document.createElement('div');
         quizListContainer.className = 'quiz-list-container';
-
         quizzes.forEach(quiz => {
             const quizButton = document.createElement('button');
             quizButton.textContent = quiz.name;
-            quizButton.className = 'btn btn-secondary'; // Este botão ocupará a largura toda do seu contêiner
+            quizButton.className = 'btn btn-secondary';
             quizButton.addEventListener('click', () => loadQuizFromURL(quiz.url));
             quizListContainer.appendChild(quizButton);
         });
@@ -145,6 +120,8 @@
             .catch(error => alert(`Não foi possível carregar o quiz: ${error.message}`));
     }
     
+    // --- LÓGICA PRINCIPAL DO JOGO ---
+
     function startQuiz() {
         showScreen('quiz-screen');
         currentPlayQuestions = [...currentQuizData]; 
@@ -214,6 +191,8 @@
         scoreText.textContent = `Sua pontuação: ${score} de ${currentPlayQuestions.length} (${percentage.toFixed(2)}%)`;
     }
 
+    // --- FUNÇÕES AUXILIARES DE UI ---
+
     function showScreen(screenId) {
         document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
         document.getElementById(screenId).classList.add('active');
@@ -232,6 +211,7 @@
         nextButton.classList.add('hidden');
     }
 
+    // --- Gatilhos de Eventos ---
     confirmButton.addEventListener('click', confirmAnswer);
     nextButton.addEventListener('click', nextQuestion);
     playAgainButton.addEventListener('click', startQuiz);
@@ -242,5 +222,6 @@
         }
     });
 
+    // Inicia o programa mostrando os botões de categoria
     displayCategoryButtons();
 });
