@@ -10,6 +10,7 @@
             { name: "FREIRE - Professora Sim, Tia Não", url: "Professora Sim Tia Não.json" },
             { name: "SOARES - Letramento e Alfabetização: as muitas facetas", url: "SOARES - Letramento e alfabetização.json" },
             { name: "LEMOV - Aula nota 10 3.0", url: "lemov_aula_nota_10.json" },
+            { name: "BARBOSA - Culturas escolares, culturas de infância e culturas familiares", url: "barbosa_culturas.json" },
         ],
         legislacao: [
             // Adicione aqui seus quizzes de legislação
