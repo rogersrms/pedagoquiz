@@ -1,28 +1,20 @@
-// A função principal é envolvida em um evento que garante que todo o HTML foi carregado.
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ===============================================================
     // 1. DEFINIR OS QUIZZES DISPONÍVEIS
-    // ===============================================================
     const allQuizzes = {
         pedagogico: [
-            // Seus quizzes pedagógicos
             { name: "VEIGA - Projeto Político-Pedagógico e Gestão Democrática", url: "Veiga_ppp.json" },
             { name: "FREIRE - Professora Sim, Tia Não", url: "Professora Sim Tia Não.json" },
             { name: "SOARES - Letramento e Alfabetização: as muitas facetas", url: "SOARES - Letramento e alfabetização.json" },
             { name: "LEMOV - Aula nota 10 3.0", url: "lemov_aula_nota_10.json" },
             { name: "BARBOSA - Culturas escolares, culturas de infância e culturas familiares", url: "barbosa_culturas.json" },
-            { name: "BENEVIDES - Educação para a democracia", url: "benevides_epd.json" },
         ],
         legislacao: [
-            // Seus quizzes de legislação
             { name: "Em construção", url: "quiz_ldb.json" },
         ]
     };
 
-    // ===============================================================
-    // 2. MAPEAMENTO DE TODOS OS ELEMENTOS DA UI (VISUAIS)
-    // ===============================================================
+    // 2. MAPEAMENTO DE TODOS OS ELEMENTOS DA UI
     const initialScreen = document.getElementById('initial-screen');
     const quizScreen = document.getElementById('quiz-screen');
     const resultsScreen = document.getElementById('results-screen');
@@ -37,10 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadAnotherButton = document.getElementById('load-another-button');
     const backToMenuButton = document.getElementById('back-to-menu-button');
     const countElement = document.getElementById('visitor-count-badge');
+    const randomQuizButton = document.getElementById('random-quiz-button');
 
-    // ===============================================================
     // 3. VARIÁVEIS DE ESTADO DO JOGO
-    // ===============================================================
     let currentQuizData = [];
     let currentPlayQuestions = [];
     let currentQuestionIndex = 0;
@@ -48,10 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentCorrectAnswerText = '';
     let currentDisplayedAlternatives = [];
 
-    // ===============================================================
     // 4. DEFINIÇÃO DE TODAS AS FUNÇÕES
-    // ===============================================================
-
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -60,9 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showScreen(screenId) {
-        document.querySelectorAll('.screen').forEach(screen => {
-            screen.classList.remove('active');
-        });
+        document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
         document.getElementById(screenId).classList.add('active');
     }
 
@@ -77,11 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentQuizData = data;
                 startQuiz();
             })
-            .catch(error => {
-                alert(`Não foi possível carregar o quiz: ${error.message}\nVerifique se o nome do arquivo .json está correto e se ele está na mesma pasta do index.html.`);
-            });
+            .catch(error => alert(`Não foi possível carregar o quiz: ${error.message}\nVerifique se o nome do arquivo .json está correto e se ele está na mesma pasta do index.html.`));
     }
-    
+
     function displayQuizListForCategory(categoryKey) {
         const quizzes = allQuizzes[categoryKey];
         selectionContainer.innerHTML = '';
@@ -128,9 +112,47 @@ document.addEventListener('DOMContentLoaded', () => {
         displayCategoryButtons();
     }
 
+    async function startRandomSuperQuiz() {
+        randomQuizButton.disabled = true;
+        randomQuizButton.textContent = "Gerando quiz...";
+        const allQuizUrls = Object.values(allQuizzes).flat().map(quiz => quiz.url);
+
+        try {
+            const allFetches = allQuizUrls.map(url => fetch(url).then(res => {
+                if (!res.ok) {
+                    console.warn(`Aviso: Não foi possível carregar o quiz ${url}. Ele será ignorado.`);
+                    return [];
+                }
+                return res.json();
+            }).catch(error => {
+                console.warn(`Erro ao buscar ${url}:`, error);
+                return []; // Ignora arquivos que falham no fetch
+            }));
+            
+            const results = await Promise.all(allFetches);
+            const megaPoolOfQuestions = results.flat();
+            
+            if (megaPoolOfQuestions.length === 0) {
+                alert("Não foi possível carregar nenhuma pergunta para o quiz aleatório.");
+                return;
+            }
+
+            shuffle(megaPoolOfQuestions);
+            const randomQuizSelection = megaPoolOfQuestions.slice(0, 20);
+            currentQuizData = randomQuizSelection;
+            startQuiz();
+
+        } catch (error) {
+            alert("Ocorreu um erro ao gerar o quiz aleatório: " + error.message);
+        } finally {
+            randomQuizButton.disabled = false;
+            randomQuizButton.textContent = "Surpreenda-me! (Quiz Aleatório)";
+        }
+    }
+
     function startQuiz() {
         showScreen('quiz-screen');
-        currentPlayQuestions = [...currentQuizData]; 
+        currentPlayQuestions = [...currentQuizData];
         shuffle(currentPlayQuestions);
         currentQuestionIndex = -1;
         score = 0;
@@ -144,7 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
         currentCorrectAnswerText = questionData.alternativas[questionData.correta_idx];
         currentDisplayedAlternatives = [...questionData.alternativas];
         shuffle(currentDisplayedAlternatives);
-        
         optionsContainer.innerHTML = '';
         currentDisplayedAlternatives.forEach((alt, index) => {
             const optionId = `option${index}`;
@@ -158,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
             optionsContainer.appendChild(optionDiv);
         });
     }
-    
+
     function confirmAnswer() {
         const selectedRadio = document.querySelector('input[name="answer"]:checked');
         if (!selectedRadio) return;
@@ -173,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
             feedbackText.className = 'feedback incorrect';
             selectedRadio.parentElement.style.borderColor = 'var(--danger-color)';
             const correctRadioInput = document.querySelector(`input[value="${CSS.escape(currentCorrectAnswerText)}"]`);
-            if(correctRadioInput) {
+            if (correctRadioInput) {
                 correctRadioInput.parentElement.style.backgroundColor = '#d4edda';
             }
         }
@@ -211,17 +232,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const badgeUrl = `https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fpedagoquiz.com%2F${namespace}&countColor=%237d8da1&label=Visitantes`;
             const badgeImage = document.createElement('img');
             badgeImage.src = badgeUrl;
-            badgeImage.alt = 'Contador de Visitantes'; // Adiciona texto alternativo
+            badgeImage.alt = 'Contador de Visitantes';
             countElement.innerHTML = '';
             countElement.appendChild(badgeImage);
         }
     }
 
-    // ===============================================================
     // 5. INICIALIZAÇÃO DO PROGRAMA
-    // ===============================================================
-
-    // Adiciona os gatilhos de eventos aos botões principais
     confirmButton.addEventListener('click', confirmAnswer);
     nextButton.addEventListener('click', nextQuestion);
     playAgainButton.addEventListener('click', startQuiz);
@@ -231,8 +248,8 @@ document.addEventListener('DOMContentLoaded', () => {
             resetToInitialScreen();
         }
     });
+    randomQuizButton.addEventListener('click', startRandomSuperQuiz);
 
-    // Inicia o programa
     updateVisitorCount();
     displayCategoryButtons();
 });
