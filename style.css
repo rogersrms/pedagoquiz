@@ -132,3 +132,8 @@ body {
     overflow-y: auto;  /* Adiciona a barra de rolagem vertical QUANDO o conteúdo ultrapassar a altura máxima. */
     padding-right: 10px;/* Adiciona um pequeno espaço à direita para a barra de rolagem não sobrepor o texto. */
 }
+.visitor-counter {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #a0a0a0;
+}
