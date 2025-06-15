@@ -1,10 +1,12 @@
- document.addEventListener('DOMContentLoaded', () => {
+// A função principal é envolvida em um evento que garante que todo o HTML foi carregado.
+document.addEventListener('DOMContentLoaded', () => {
 
     // ===============================================================
     // 1. DEFINIR OS QUIZZES DISPONÍVEIS
     // ===============================================================
     const allQuizzes = {
         pedagogico: [
+            // Seus quizzes pedagógicos
             { name: "VEIGA - Projeto Político-Pedagógico e Gestão Democrática", url: "Veiga_ppp.json" },
             { name: "FREIRE - Professora Sim, Tia Não", url: "Professora Sim Tia Não.json" },
             { name: "SOARES - Letramento e Alfabetização: as muitas facetas", url: "SOARES - Letramento e alfabetização.json" },
@@ -12,6 +14,7 @@
             { name: "BARBOSA - Culturas escolares, culturas de infância e culturas familiares", url: "barbosa_culturas.json" },
         ],
         legislacao: [
+            // Seus quizzes de legislação
             { name: "Em construção", url: "quiz_ldb.json" },
         ]
     };
@@ -48,7 +51,6 @@
     // 4. DEFINIÇÃO DE TODAS AS FUNÇÕES
     // ===============================================================
 
-    // Função para embaralhar arrays
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -56,13 +58,13 @@
         }
     }
 
-    // Função para mostrar uma tela específica e esconder as outras
     function showScreen(screenId) {
-        document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
+        document.querySelectorAll('.screen').forEach(screen => {
+            screen.classList.remove('active');
+        });
         document.getElementById(screenId).classList.add('active');
     }
 
-    // Função para carregar um quiz a partir de um arquivo .json
     function loadQuizFromURL(url) {
         fetch(url)
             .then(response => {
@@ -74,10 +76,11 @@
                 currentQuizData = data;
                 startQuiz();
             })
-            .catch(error => alert(`Não foi possível carregar o quiz: ${error.message}`));
+            .catch(error => {
+                alert(`Não foi possível carregar o quiz: ${error.message}\nVerifique se o nome do arquivo .json está correto e se ele está na mesma pasta do index.html.`);
+            });
     }
     
-    // Função para mostrar a lista de quizzes de uma categoria
     function displayQuizListForCategory(categoryKey) {
         const quizzes = allQuizzes[categoryKey];
         selectionContainer.innerHTML = '';
@@ -101,7 +104,6 @@
         selectionContainer.appendChild(quizListContainer);
     }
 
-    // Função para mostrar os cartões de categoria na tela inicial
     function displayCategoryButtons() {
         selectionContainer.innerHTML = `
             <h3 class="app-subtitle">Escolha um assunto:</h3>
@@ -120,13 +122,10 @@
         document.getElementById('card-legislacao').addEventListener('click', () => displayQuizListForCategory('legislacao'));
     }
 
-    // Função para voltar para a tela inicial (seleção de categorias)
     function resetToInitialScreen() {
         showScreen('initial-screen');
         displayCategoryButtons();
     }
-
-    // --- Funções do Jogo ---
 
     function startQuiz() {
         showScreen('quiz-screen');
@@ -205,21 +204,23 @@
         nextButton.classList.add('hidden');
     }
 
-    // Função para o contador de visitas
     function updateVisitorCount() {
         const namespace = 'pedagoquiz.rodrigosousa';
         if (countElement) {
             const badgeUrl = `https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fpedagoquiz.com%2F${namespace}&countColor=%237d8da1&label=Visitantes`;
             const badgeImage = document.createElement('img');
             badgeImage.src = badgeUrl;
+            badgeImage.alt = 'Contador de Visitantes'; // Adiciona texto alternativo
             countElement.innerHTML = '';
             countElement.appendChild(badgeImage);
         }
     }
 
     // ===============================================================
-    // 5. INICIALIZAÇÃO DO PROGRAMA E GATILHOS DE EVENTOS
+    // 5. INICIALIZAÇÃO DO PROGRAMA
     // ===============================================================
+
+    // Adiciona os gatilhos de eventos aos botões principais
     confirmButton.addEventListener('click', confirmAnswer);
     nextButton.addEventListener('click', nextQuestion);
     playAgainButton.addEventListener('click', startQuiz);
@@ -233,4 +234,4 @@
     // Inicia o programa
     updateVisitorCount();
     displayCategoryButtons();
-}); 
+});
