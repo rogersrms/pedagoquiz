@@ -1,5 +1,27 @@
     document.addEventListener('DOMContentLoaded', () => {
 
+        // Função para atualizar o contador de visualizações
+    function updateVisitorCount() {
+        const namespace = 'pedagoquiz-rodrigo'; // Um nome único para seu site
+        const key = 'visits'; // Um nome para o contador
+        const countElement = document.getElementById('visitor-count'); // O elemento HTML que mostrará o número
+
+        if (countElement) {
+            // A API 'hit' incrementa e retorna o novo valor
+            fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+                .then(response => response.json())
+                .then(data => {
+                    countElement.textContent = data.value;
+                })
+                .catch(error => {
+                    console.error("Erro ao carregar o contador:", error);
+                    countElement.textContent = 'N/A';
+                });
+        }
+    }
+
+    updateVisitorCount(); // Chama a função quando a página carrega
+
     // ===============================================================
     // ATUALIZE AQUI COM SEUS QUIZZES, SEPARADOS POR CATEGORIA
     // ===============================================================
