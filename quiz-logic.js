@@ -1,26 +1,30 @@
     document.addEventListener('DOMContentLoaded', () => {
 
-        // Função para atualizar o contador de visualizações
+   // --- NOVA FUNÇÃO PARA ATUALIZAR O CONTADOR ---
     function updateVisitorCount() {
-        const namespace = 'pedagoquiz-rodrigo'; // Um nome único para seu site
-        const key = 'visits'; // Um nome para o contador
-        const countElement = document.getElementById('visitor-count'); // O elemento HTML que mostrará o número
+        const namespace = 'pedagoquiz.rodrigosousa'; // IMPORTANTE: Use um nome único e seu aqui!
+        const countElement = document.getElementById('visitor-count-badge');
 
         if (countElement) {
-            // A API 'hit' incrementa e retorna o novo valor
-            fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-                .then(response => response.json())
-                .then(data => {
-                    countElement.textContent = data.value;
-                })
-                .catch(error => {
-                    console.error("Erro ao carregar o contador:", error);
-                    countElement.textContent = 'N/A';
-                });
+            // A API retorna um SVG, mas podemos pegar o valor do contador de outra forma
+            // Ou simplesmente usar a imagem que eles fornecem.
+            // Para simplicidade, vamos usar a imagem gerada por eles.
+            
+            const badgeUrl = `https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fpedagoquiz.com%2F${namespace}&countColor=%237d8da1`;
+
+            const badgeImage = document.createElement('img');
+            badgeImage.src = badgeUrl;
+            
+            // Substitui o "Carregando..." pela imagem do contador
+            countElement.innerHTML = '';
+            countElement.appendChild(badgeImage);
         }
     }
 
-    updateVisitorCount(); // Chama a função quando a página carrega
+    // Chama a função para carregar o contador quando a página carrega
+    updateVisitorCount();    
+
+   
 
     // ===============================================================
     // ATUALIZE AQUI COM SEUS QUIZZES, SEPARADOS POR CATEGORIA
