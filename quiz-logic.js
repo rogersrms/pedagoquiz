@@ -1,22 +1,7 @@
-   document.addEventListener('DOMContentLoaded', () => {
-
-    // Função para atualizar o contador de visualizações
-    function updateVisitorCount() {
-        const namespace = 'pedagoquiz.rodrigosousa'; // Nome único para seu site
-        const countElement = document.getElementById('visitor-count-badge');
-
-        if (countElement) {
-            const badgeUrl = `https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fpedagoquiz.com%2F${namespace}&countColor=%237d8da1&label=Visitantes`;
-            const badgeImage = document.createElement('img');
-            badgeImage.src = badgeUrl;
-            countElement.innerHTML = '';
-            countElement.appendChild(badgeImage);
-        }
-    }
-    updateVisitorCount();
+ document.addEventListener('DOMContentLoaded', () => {
 
     // ===============================================================
-    // LISTA DE QUIZZES
+    // 1. DEFINIR OS QUIZZES DISPONÍVEIS
     // ===============================================================
     const allQuizzes = {
         pedagogico: [
@@ -30,12 +15,14 @@
             { name: "Em construção", url: "quiz_ldb.json" },
         ]
     };
-    // ===============================================================
 
-    // Mapeamento dos elementos da UI
+    // ===============================================================
+    // 2. MAPEAMENTO DE TODOS OS ELEMENTOS DA UI (VISUAIS)
+    // ===============================================================
     const initialScreen = document.getElementById('initial-screen');
     const quizScreen = document.getElementById('quiz-screen');
     const resultsScreen = document.getElementById('results-screen');
+    const selectionContainer = document.getElementById('selection-container');
     const questionText = document.getElementById('question-text');
     const optionsContainer = document.getElementById('options-container');
     const feedbackText = document.getElementById('feedback-text');
@@ -45,15 +32,21 @@
     const playAgainButton = document.getElementById('play-again-button');
     const loadAnotherButton = document.getElementById('load-another-button');
     const backToMenuButton = document.getElementById('back-to-menu-button');
-    const selectionContainer = document.getElementById('selection-container');
+    const countElement = document.getElementById('visitor-count-badge');
 
-    // Variáveis de estado do jogo
+    // ===============================================================
+    // 3. VARIÁVEIS DE ESTADO DO JOGO
+    // ===============================================================
     let currentQuizData = [];
     let currentPlayQuestions = [];
     let currentQuestionIndex = 0;
     let score = 0;
     let currentCorrectAnswerText = '';
     let currentDisplayedAlternatives = [];
+
+    // ===============================================================
+    // 4. DEFINIÇÃO DE TODAS AS FUNÇÕES
+    // ===============================================================
 
     // Função para embaralhar arrays
     function shuffle(array) {
@@ -63,26 +56,28 @@
         }
     }
 
-    // --- LÓGICA DE NAVEGAÇÃO E CARREGAMENTO ---
-
-    function displayCategoryButtons() {
-        selectionContainer.innerHTML = `
-            <h3 class="app-subtitle">Escolha um assunto:</h3>
-            <div class="category-container">
-                <div class="category-card" id="card-pedagogico">
-                    <h4>Pedagógico</h4>
-                    <p>Teste seus conhecimentos em teorias da educação, didática e práticas pedagógicas.</p>
-                </div>
-                <div class="category-card" id="card-legislacao">
-                    <h4>Legislação</h4>
-                    <p>Questões sobre LDB, ECA, BNCC e outras normas importantes da educação.</p>
-                </div>
-            </div>
-        `;
-        document.getElementById('card-pedagogico').addEventListener('click', () => displayQuizListForCategory('pedagogico'));
-        document.getElementById('card-legislacao').addEventListener('click', () => displayQuizListForCategory('legislacao'));
+    // Função para mostrar uma tela específica e esconder as outras
+    function showScreen(screenId) {
+        document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
+        document.getElementById(screenId).classList.add('active');
     }
 
+    // Função para carregar um quiz a partir de um arquivo .json
+    function loadQuizFromURL(url) {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) throw new Error(`Arquivo não encontrado ou erro de rede (Status: ${response.status})`);
+                return response.json();
+            })
+            .then(data => {
+                if (!Array.isArray(data) || data.length === 0) throw new Error("O arquivo JSON está vazio ou em formato inválido.");
+                currentQuizData = data;
+                startQuiz();
+            })
+            .catch(error => alert(`Não foi possível carregar o quiz: ${error.message}`));
+    }
+    
+    // Função para mostrar a lista de quizzes de uma categoria
     function displayQuizListForCategory(categoryKey) {
         const quizzes = allQuizzes[categoryKey];
         selectionContainer.innerHTML = '';
@@ -106,21 +101,32 @@
         selectionContainer.appendChild(quizListContainer);
     }
 
-    function loadQuizFromURL(url) {
-        fetch(url)
-            .then(response => {
-                if (!response.ok) throw new Error(`Arquivo não encontrado ou erro de rede (Status: ${response.status})`);
-                return response.json();
-            })
-            .then(data => {
-                if (!Array.isArray(data) || data.length === 0) throw new Error("O arquivo JSON está vazio ou em formato inválido.");
-                currentQuizData = data;
-                startQuiz();
-            })
-            .catch(error => alert(`Não foi possível carregar o quiz: ${error.message}`));
+    // Função para mostrar os cartões de categoria na tela inicial
+    function displayCategoryButtons() {
+        selectionContainer.innerHTML = `
+            <h3 class="app-subtitle">Escolha um assunto:</h3>
+            <div class="category-container">
+                <div class="category-card" id="card-pedagogico">
+                    <h4>Pedagógico</h4>
+                    <p>Teste seus conhecimentos em teorias da educação, didática e práticas pedagógicas.</p>
+                </div>
+                <div class="category-card" id="card-legislacao">
+                    <h4>Legislação</h4>
+                    <p>Questões sobre LDB, ECA, BNCC e outras normas importantes da educação.</p>
+                </div>
+            </div>
+        `;
+        document.getElementById('card-pedagogico').addEventListener('click', () => displayQuizListForCategory('pedagogico'));
+        document.getElementById('card-legislacao').addEventListener('click', () => displayQuizListForCategory('legislacao'));
     }
-    
-    // --- LÓGICA PRINCIPAL DO JOGO ---
+
+    // Função para voltar para a tela inicial (seleção de categorias)
+    function resetToInitialScreen() {
+        showScreen('initial-screen');
+        displayCategoryButtons();
+    }
+
+    // --- Funções do Jogo ---
 
     function startQuiz() {
         showScreen('quiz-screen');
@@ -132,6 +138,7 @@
     }
 
     function displayCurrentQuestion() {
+        resetFeedbackAndButtons();
         const questionData = currentPlayQuestions[currentQuestionIndex];
         questionText.innerHTML = `Pergunta ${currentQuestionIndex + 1}/${currentPlayQuestions.length}:<br><br>${questionData.pergunta}`;
         currentCorrectAnswerText = questionData.alternativas[questionData.correta_idx];
@@ -150,7 +157,6 @@
             });
             optionsContainer.appendChild(optionDiv);
         });
-        resetFeedbackAndButtons();
     }
     
     function confirmAnswer() {
@@ -191,18 +197,6 @@
         scoreText.textContent = `Sua pontuação: ${score} de ${currentPlayQuestions.length} (${percentage.toFixed(2)}%)`;
     }
 
-    // --- FUNÇÕES AUXILIARES DE UI ---
-
-    function showScreen(screenId) {
-        document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
-        document.getElementById(screenId).classList.add('active');
-    }
-
-    function resetToInitialScreen() {
-        showScreen('initial-screen');
-        displayCategoryButtons();
-    }
-
     function resetFeedbackAndButtons() {
         feedbackText.textContent = '';
         feedbackText.className = 'feedback';
@@ -211,7 +205,21 @@
         nextButton.classList.add('hidden');
     }
 
-    // --- Gatilhos de Eventos ---
+    // Função para o contador de visitas
+    function updateVisitorCount() {
+        const namespace = 'pedagoquiz.rodrigosousa';
+        if (countElement) {
+            const badgeUrl = `https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fpedagoquiz.com%2F${namespace}&countColor=%237d8da1&label=Visitantes`;
+            const badgeImage = document.createElement('img');
+            badgeImage.src = badgeUrl;
+            countElement.innerHTML = '';
+            countElement.appendChild(badgeImage);
+        }
+    }
+
+    // ===============================================================
+    // 5. INICIALIZAÇÃO DO PROGRAMA E GATILHOS DE EVENTOS
+    // ===============================================================
     confirmButton.addEventListener('click', confirmAnswer);
     nextButton.addEventListener('click', nextQuestion);
     playAgainButton.addEventListener('click', startQuiz);
@@ -222,6 +230,7 @@
         }
     });
 
-    // Inicia o programa mostrando os botões de categoria
+    // Inicia o programa
+    updateVisitorCount();
     displayCategoryButtons();
-});
+}); 
