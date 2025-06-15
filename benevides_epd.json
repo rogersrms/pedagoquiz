@@ -1,0 +1,145 @@
+[
+    {
+        "pergunta": "Benevides recorda, em Educação para a democracia, que esta se ocupa não apenas da formação de governados, mas também da educação dos governantes, preparando-os “para o julgamento político necessário à tomada de decisões”. Na trilha da autora, a educação nesse contexto deve se fundar",
+        "alternativas": [
+            "na tradição antiga de merecimento individual à liberdade de participação na esfera pública, que tem como metáfora a Ágora.",
+            "na instrução cívica sobre o ensino da organização do Estado; dos deveres do cidadão; e dos expedientes legais ou burocráticos para a mútua cobrança.",
+            "nos valores republicanos de respeito às leis; respeito ao bem público; e sentido de responsabilidade no exercício do poder.",
+            "na tradição democrática americana de livre associação, em que o Estado evita a intervenção na vida social de seus diferentes agentes.",
+            "no papel de facilitação da informação política aos indivíduos, independentemente do regime vigente, para adesão política ao Estado e às suas leis."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "A escola pode ser o grande instrumento para a formação democrática. Conforme Benevides (1996), educação para a democracia (EPD) comporta duas dimensões:",
+        "alternativas": [
+            "a formação para os valores republicanos e democráticos e a formação para a tomada de decisões políticas em todos os níveis.",
+            "a capacitação para os princípios comunitários e democráticos e a conscientização sobre as questões morais \n\nem diferentes esferas.",
+            "a preparação para os valores democráticos e cívicos e a capacitação para a implementação de decisões econômicas em todos os setores.",
+            "a habilitação para os valores sociais e republicanos e \n\na conscientização sobre as decisões administrativas\n\n em todas as esferas",
+            "a capacitação para os valores culturais e republicanos e a capacitação para a gestão de conflitos políticos em todos os setores."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "Benevides (1996) conceitua a educação para a democracia (EPD), destacando seus elementos constitutivos. Um deles é a educação moral, que se vincula a uma didática de valores democráticos e republicanos, cuja formação depende fundamentalmente",
+        "alternativas": [
+            "do componente emocional.",
+            "tanto de sentimentos quanto de razão.",
+            "da aprendizagem intelectual.",
+            "tanto da religião quanto da família.",
+            "do ensino legal e normativo da cidadania."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Qual é o principal motivo que levou Benevides (1996) a escolher o tema da \"educação para a democracia\"?",
+        "alternativas": [
+            "O avanço da tecnologia nas escolas e sua relação com a política.",
+            "A necessidade de comparar o sistema educacional brasileiro com o francês.",
+            "A realidade brasileira, marcada por uma persistente cultura política oligárquica e pela redução de direitos durante o regime militar.",
+            "A influência do pensamento de Norberto Bobbio na educação latino-americana.",
+            "O crescente interesse acadêmico pela filosofia política da Grécia Antiga."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Segundo Benevides (1996), como a \"educação para a cidadania\" é frequentemente tratada no sistema de ensino brasileiro?",
+        "alternativas": [
+            "Como a disciplina mais importante do currículo, com prioridade sobre as demais.",
+            "Como um mero ornamento retórico ou confundida com civismo, sem um compromisso explícito com a prática democrática.",
+            "Como uma preparação eficaz para a participação política ativa dos jovens.",
+            "Como um sinônimo perfeito de \"educação para a democracia\".",
+            "Como um programa bem-sucedido que transformou súditos em cidadãos ativos."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Benevides (1996) cita a crítica de Norberto Bobbio a uma das \"promessas não cumpridas\" para a consolidação do ideal democrático. A que promessa ele se refere?",
+        "alternativas": [
+            "Ao fracasso em universalizar o acesso à escola para todos.",
+            "Ao relativo fracasso da educação para a cidadania, entendida como a transformação do súdito em cidadão.",
+            "À incapacidade de garantir a alternância de poder nos regimes modernos.",
+            "À falta de transparência dos governos, mesmo em regimes democráticos.",
+            "Ao desrespeito sistemático aos direitos das minorias."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "De acordo com Benevides (1996), quais são os três elementos indispensáveis e interdependentes para a compreensão da Educação para a Democracia (EPD)?",
+        "alternativas": [
+            "A democratização do ensino, a educação democrática e a instrução cívica.",
+            "A formação intelectual e a informação, a educação moral e a educação do comportamento.",
+            "O ensino das ciências exatas, o ensino religioso e a educação física.",
+            "A participação em partidos políticos, a militância em sindicatos e o engajamento em movimentos sociais.",
+            "O respeito às leis, o respeito ao bem público e o acatamento da vontade da maioria."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Qual o papel pedagógico da literatura no processo de humanização, segundo a citação de Antonio Candido no texto Educação para a democracia?",
+        "alternativas": [
+            "Desenvolver principalmente a capacidade de memorização e interpretação de textos complexos.",
+            "Confirmar os valores que a sociedade preconiza, sem questioná-los.",
+            "Tornar o ser humano mais compreensivo e aberto para a natureza, a sociedade e o semelhante, desenvolvendo a quota de humanidade.",
+            "Preparar os alunos exclusivamente para os exames vestibulares na área de linguagens.",
+            "Ensinar a organização do Estado e os deveres formais do cidadão."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Benevides (1996) afirma que a Educação para a Democracia (EPD) não se confunde com \"democratização do ensino\" nem com \"educação democrática\". Qual a relação que ela estabelece entre esses conceitos?",
+        "alternativas": [
+            "A EPD é um sinônimo de \"educação democrática\".",
+            "A \"democratização do ensino\" é um pressuposto para a EPD, e a \"educação democrática\" é um meio necessário, mas não suficiente, para alcançá-la.",
+            "A \"educação democrática\" é o objetivo final, enquanto a EPD é apenas o primeiro passo.",
+            "Os três conceitos são completamente independentes e não possuem relação entre si.",
+            "A EPD só é possível se não houver \"democratização do ensino\", para focar na formação de elites"
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "O texto 'Educação para a democracia' apresenta a tese de Montesquieu sobre as \"leis da educação\". Qual é a relação fundamental que Montesquieu estabelece?",
+        "alternativas": [
+            "Uma relação entre o desenvolvimento econômico de um país e seu sistema educacional.",
+            "Uma relação entre as crenças religiosas de um povo e as leis da educação.",
+            "Uma relação indispensável entre o tipo de regime político e o sistema educacional, sendo impossível uma república sem uma educação republicana.",
+            "Uma relação de oposição entre as \"leis da educação\" e as leis do Estado.",
+            "Uma relação de dependência entre a educação familiar e a educação escolar."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Ao discutir os valores republicanos, Benevides (1996) explica o conceito de \"responsabilidade\" em política. Quais são os dois significados desse termo, conforme a língua inglesa?",
+        "alternativas": [
+            "Accountability (o dever de prestar contas) e responsibility (a sujeição de todos às sanções legais).",
+            "Duty (o dever moral de agir) e obligation (a obrigação imposta pela lei).",
+            "Trust (a confiança do povo) e power (o exercício da autoridade).",
+            "Leadership (a capacidade de liderar) e management (a habilidade de gerenciar).",
+            "Rights (os direitos do governante) e duties (os deveres do governante)."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "Qual é a diferença fundamental entre a virtude da \"tolerância\" e a da \"solidariedade\", segundo a análise de Benevides (1996)?",
+        "alternativas": [
+            "A tolerância é uma virtude ativa, enquanto a solidariedade é passiva.",
+            "A tolerância se aplica apenas a questões políticas, enquanto a solidariedade se aplica a questões sociais.",
+            "A tolerância é a aceitação passiva da diferença, enquanto a solidariedade é uma virtude ativa que exige uma ação positiva para o enfrentamento das diferenças injustas.",
+            "A tolerância é um valor exclusivo das democracias modernas, enquanto a solidariedade já existia na antiguidade clássica.",
+            "Não há diferença significativa; ambas são virtudes passivas de aceitação do outro."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Benevides (1996) discute o \"principal paradoxo da democracia\". Como esse paradoxo é descrito no texto?",
+        "alternativas": [
+            "A democracia exige leis, mas as leis podem limitar a liberdade, que é um pilar da democracia.",
+            "A democracia precisa de cidadãos ativos, mas os governantes muitas vezes preferem cidadãos passivos.",
+            "A democracia não existe sem uma educação apropriada do povo, mas a formação de cidadãos democráticos supõe a preexistência de educadores já democráticos.",
+            "A democracia preza pela vontade da maioria, mas precisa constantemente proteger os direitos das minorias, gerando um conflito.",
+            "A democracia necessita da participação popular, mas a apatia política dos cidadãos é crescente."
+        ],
+        "correta_idx": 2
+    }
+]
