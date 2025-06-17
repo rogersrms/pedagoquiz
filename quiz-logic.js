@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: "LEMOV - Aula nota 10 3.0", url: "lemov_aula_nota_10.json" },
             { name: "BARBOSA - Culturas escolares, culturas de infância e culturas familiares", url: "barbosa_culturas.json" },
             { name: "BENEVIDES - Educação para a democracia", url: "benevides_epd.json" },
+            { name: "AINSCOW - Tornar a educação inclusiva", url: "ainscow_eduinclus.json" },
         ],
         legislacao: [
             { name: "Em construção", url: "quiz_ldb.json" },
