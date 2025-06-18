@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: "AINSCOW - Tornar a educação inclusiva", url: "ainscow_eduinclus.json" },
             { name: "SASSERON - Alfabetização científica", url: "sasseron_alfabcien.json" },
             { name: "BERBEL - As metodologias ativas e a promoção da autonomia de estudantes", url: "berbel_metodologias.json" },
+            { name: "LA TAILLE - Piaget, Vygotsky e Wallon: teorias psicogenéticas em discussão", url: "lataille_piaget_vigotsky_walon.json" },
         ],
         legislacao: [
             { name: "Em construção", url: "quiz_ldb.json" },
