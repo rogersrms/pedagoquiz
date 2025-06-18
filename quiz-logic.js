@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: "BENEVIDES - Educação para a democracia", url: "benevides_epd.json" },
             { name: "AINSCOW - Tornar a educação inclusiva", url: "ainscow_eduinclus.json" },
             { name: "SASSERON - Alfabetização científica", url: "sasseron_alfabcien.json" },
+            { name: "BERBEL - As metodologias ativas e a promoção da autonomia de estudantes", url: "berbel_metodologias.json" },
         ],
         legislacao: [
             { name: "Em construção", url: "quiz_ldb.json" },
