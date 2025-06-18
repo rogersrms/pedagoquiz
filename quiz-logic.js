@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function displayQuizListForCategory(categoryKey) {
         const quizzes = allQuizzes[categoryKey];
+        quizzes.sort((a, b) => a.name.localeCompare(b.name));
         selectionContainer.innerHTML = '';
         const backButtonContainer = document.createElement('div');
         backButtonContainer.className = 'back-button-container';
