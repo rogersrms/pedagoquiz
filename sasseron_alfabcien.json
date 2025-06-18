@@ -1,0 +1,57 @@
+[
+    {
+        "pergunta": "No artigo Alfabetização científica: uma revisão bibliográfica (2011), Sasseron e Carvalho apresentam uma revisão bibliográfica sobre o conceito de Alfabetização Científica e destacam algumas habilidades que, conforme Gerard Fourez, são necessárias para que uma pessoa seja considerada alfabetizada cientificamente. Uma das habilidades propostas envolve a necessidade de um ensino que possibilite aos alunos perceber os benefícios e malefícios provenientes das inovações científicas e tecnológicas e, na medida do possível, estabelecer julgamentos quanto a eles.\nA habilidade em questão é:",
+        "alternativas": [
+            "Conhecer os principais conceitos, hipóteses e teorias científicas e ser capaz de aplicá-los.",
+            "Reconhecer também os limites da utilidade das ciências e das tecnologias para o progresso do bem-estar humano.",
+            "Compreender que a sociedade exerce controle sobre as ciências e as tecnologias por meio do viés das subvenções que a elas concede.",
+            "Apreciar as ciências e as tecnologias pela estimulação intelectual que elas suscitam.",
+            "Compreender que a produção dos saberes científicos depende, ao mesmo tempo, de processos de pesquisas e de conceitos teóricos."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Segundo Sasseron e Carvalho, há “uma preocupação crescente, ao longo dos anos, em colocar a alfabetização científica como objetivo central do ensino de ciências em toda a formação básica”. \nTendo em vista que, nesse contexto, as autoras destacam diversas habilidades necessárias para que uma pessoa seja classificada como alfabetizada cientificamente, considere as habilidades a seguir.\n\nI. Utilizar os conceitos científicos e ser capaz de integrar valores e tomar decisões responsáveis no dia a dia.\n\nII. Reconhecer a origem da ciência e compreender a estabilidade do saber científico.\n\nIII. Reconhecer os limites da utilidade das ciências e das tecnologias para o progresso do bem-estar humano.\n\nApresentam habilidades necessárias para que uma pessoa seja classificada como alfabetizada cientificamente",
+        "alternativas": [
+            "I e II, apenas.",
+            "I, apenas.",
+            "I e III, apenas.",
+            "II e III, apenas.",
+            "I, II e III."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Em um mundo cada vez mais impactado por avanços científicos e tecnológicos, é essencial que os cidadãos sejam capazes de interpretar criticamente as informações que recebem. No entanto, muitas vezes, a ciência é percebida como um conjunto de verdades absolutas, e não como um conhecimento em constante evolução. Segundo Lúcia Sasseron (2011), a alfabetização científica desempenha um papel fundamental na formação de cidadãos críticos, pois permite que:",
+        "alternativas": [
+            "as pessoas compreendam que o conhecimento científico é provisório, sujeito a revisões e aprimoramentos ao longo do tempo.",
+            "a sociedade controle o desenvolvimento científico, garantindo que apenas descobertas previamente aprovadas sejam aceitas como verdades definitivas.",
+            "o conhecimento científico seja disseminado de forma homogênea, garantindo que todos os indivíduos cheguem às mesmas conclusões a partir de uma única fonte de informação.",
+            "as opiniões pessoais sejam sempre priorizadas no debate científico, independentemente de embasamento técnico ou comprovação empírica.",
+            "a ciência seja ensinada de forma linear e dogmática, reforçando a ideia de que suas descobertas são imutáveis e permanentes."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "De acordo com Lúcia Sasseron (2011), a alfabetização científica envolve não apenas a compreensão de conceitos científicos, mas também a análise crítica dos impactos da ciência e da tecnologia na sociedade. Um exemplo clássico citado pela autora é o da invenção da geladeira. Embora tenha representado um grande avanço para a conservação de alimentos, sua fabricação inicial emitia gases que prejudicavam a camada de ozônio. Esse exemplo ilustra:",
+        "alternativas": [
+            "a necessidade de eliminar qualquer inovação tecnológica que possa causar impactos ambientais, independentemente de seus benefícios.",
+            "a impossibilidade de equilibrar avanços científicos e desenvolvimento sustentável, já que toda inovação resulta em consequências irreversíveis.",
+            "a importância de avaliar criticamente os impactos das inovações científicas e buscar soluções para minimizar seus efeitos negativos.",
+            "a ideia de que os benefícios das descobertas científicas sempre superam seus malefícios, tornando desnecessário qualquer tipo de regulação ou controle.",
+            "a irrelevância da alfabetização científica no cotidiano, uma vez que as decisões sobre inovações tecnológicas devem ser tomadas apenas por especialistas."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Ao tematizar a alfabetização científica, Sasseron e Carvalho (2011) observam um pressuposto que assumem para o ensino de Ciências. Para as autoras, deve-se partir de",
+        "alternativas": [
+            "ideias de senso comum e bastante concretas para gradualmente se estabelecer a abstração científica, isto é, a rejeição dos saberes sociais por aqueles que resultam dos procedimentos e descobertas da Ciência.",
+            "uma racionalidade crítica em direção a uma racionalidade instrumental sobre o mundo, pois esta é mais adequada à lógica objetiva e aplicada dos conhecimentos científicos",
+            "atividades problematizadoras que integrem diferentes áreas da vida, reconhecendo a presença das ciências e seus produtos no cotidiano e, portanto, sua estreita relação com nossa vida.",
+            "um reconhecimento do lugar das ciências como produtoras de certezas humanas, isto é, da superioridade desses saberes ante os demais, dado o rigor metodológico com que são gerados.",
+            "teorias, textos e fontes científicos, apresentados desde o início da escolarização, permitindo uma formação de ponta, conforme se demanda no contexto de intensa inovação tecnológica da atualidade."
+        ],
+        "correta_idx": 2
+    }
+]
