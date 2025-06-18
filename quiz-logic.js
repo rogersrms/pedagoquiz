@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: "BARBOSA - Culturas escolares, culturas de infância e culturas familiares", url: "barbosa_culturas.json" },
             { name: "BENEVIDES - Educação para a democracia", url: "benevides_epd.json" },
             { name: "AINSCOW - Tornar a educação inclusiva", url: "ainscow_eduinclus.json" },
+            { name: "SASSERON - Alfabetização científica", url: "sasseron_alfabcien.json" },
         ],
         legislacao: [
             { name: "Em construção", url: "quiz_ldb.json" },
