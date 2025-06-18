@@ -31,5 +31,49 @@
             "livres de contradições e imersos em harmonia na \nconvivência com o outro."
         ],
         "correta_idx": 0
+    },
+    {
+        "pergunta": "Segundo Paulo Freire, ensinar exige rigorosidade metódica, pesquisa, respeito aos saberes dos educandos, criticidade, estética e ética, corporeificação das palavras pelo exemplo, risco, aceitação do novo e rejeição a qualquer forma de discriminação. Essas exigências demonstram que a prática docente:",
+        "alternativas": [
+            "deve ser neutra para garantir o aprendizado de todos.",
+            "requer uma preparação técnica desvinculada de um compromisso político.",
+            "é uma atividade complexa que ultrapassa o simples repasse de informações.",
+            "deve priorizar a afetividade, mesmo que isso comprometa a autoridade do professor.",
+            "foca-se exclusivamente no conteúdo, sendo as demais exigências secundárias."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Em uma das cartas de \"Professora, sim; tia, não\", Paulo Freire aborda o medo que muitos professores sentem, especialmente no primeiro dia de aula. Para o autor, a postura do educador diante desse medo deve ser a de:",
+        "alternativas": [
+            "escondê-lo a todo custo para não demonstrar fraqueza e não perder a autoridade.",
+            "reconhecê-lo como um sentimento legítimo e transformá-lo em coragem e desafio.",
+            "desistir da profissão, pois o medo é um sinal inequívoco de incapacidade para a docência.",
+            "transferir a responsabilidade para a coordenação pedagógica, solicitando acompanhamento contínuo.",
+            "ignorá-lo completamente, focando apenas no planejamento técnico da aula."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Ao criticar a ideia de que “ensinar é transferir conhecimento”, Paulo Freire, em suas reflexões presentes em “Professora, sim; tia, não”, defende que a verdadeira aprendizagem ocorre quando:",
+        "alternativas": [
+            "o aluno memoriza e repete com exatidão o conhecimento exposto pelo professor.",
+            "o professor consegue depositar a maior quantidade de conteúdo no tempo disponível de aula.",
+            "o educador cria as possibilidades para a produção ou a construção do conhecimento pelo educando.",
+            "as avaliações são padronizadas e medem a capacidade de absorção de fatos e datas.",
+            "a prática está completamente separada da teoria, que deve ser estudada apenas na universidade."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Paulo Freire insiste na coerência que deve haver entre o discurso e a prática do educador. Segundo os princípios defendidos em “Professora, sim; tia, não”, um professor que defende a democracia mas adota posturas autoritárias em sala de aula:",
+        "alternativas": [
+            "está exercendo sua autoridade de forma correta e necessária para manter a disciplina.",
+            "demonstra um desequilíbrio que invalida seu testemunho e compromete a formação ética dos alunos.",
+            "age de forma estratégica, pois o discurso democrático é apenas uma teoria.",
+            "entende que os alunos não têm maturidade para vivenciar processos democráticos.",
+            "cumpre seu papel de ensinar o conteúdo, que é mais importante que as atitudes."
+        ],
+        "correta_idx": 1
     }
 ]
