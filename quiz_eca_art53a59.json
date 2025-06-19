@@ -1,0 +1,90 @@
+[
+    {
+        "pergunta": "(Adaptada de VUNESP) O Art. 53 do ECA assegura à criança e ao adolescente o direito à educação. Qual das seguintes garantias NÃO está listada neste artigo?",
+        "alternativas": [
+            "Igualdade de condições para o acesso e permanência na escola.",
+            "Direito de ser respeitado por seus educadores.",
+            "Direito de organização e participação em entidades estudantis.",
+            "Acesso à escola pública e gratuita, próxima de sua residência.",
+            "Garantia de receber um salário-educação a partir do ensino fundamental."
+        ],
+        "correta_idx": 4
+    },
+    {
+        "pergunta": "O Art. 53-A do ECA estabelece que é dever da instituição de ensino, clubes e agremiações recreativas assegurar medidas de conscientização, prevenção e enfrentamento ao(à):",
+        "alternativas": [
+            "Evasão escolar.",
+            "Violência sexual contra crianças e adolescentes.",
+            "Uso e dependência de drogas ilícitas.",
+            "Uso não autorizado da imagem de crianças e adolescentes.",
+            "Abuso e exploração sexual da criança e do adolescente."
+        ],
+        "correta_idx": 4
+    },
+    {
+        "pergunta": "(Adaptada de FGV) O Art. 54 do ECA detalha o dever do Estado em assegurar o atendimento à criança e ao adolescente. Qual das seguintes ações NÃO é uma incumbência do Estado, segundo este artigo?",
+        "alternativas": [
+            "Ensino fundamental, obrigatório e gratuito, inclusive para os que a ele não tiveram acesso na idade própria.",
+            "Atendimento educacional especializado aos portadores de deficiência, preferencialmente na rede regular de ensino.",
+            "Fornecimento de transporte escolar gratuito para todos os alunos da rede privada.",
+            "Atendimento em creche e pré-escola às crianças de zero a cinco anos de idade.",
+            "Oferta de ensino noturno regular, adequado às condições do adolescente trabalhador."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Segundo o Art. 55 do ECA, a quem os pais ou responsável têm a obrigação de matricular seus filhos ou pupilos?",
+        "alternativas": [
+            "Na rede regular de ensino.",
+            "Em uma escola de tempo integral.",
+            "Na escola mais próxima de seu local de trabalho.",
+            "Em qualquer instituição que ofereça atividades de reforço.",
+            "Na rede particular de ensino, se tiverem condições."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "O Art. 56 do ECA determina que os dirigentes de estabelecimentos de ensino fundamental comuniquem ao Conselho Tutelar os casos de maus-tratos. Quais outras situações devem ser obrigatoriamente comunicadas?",
+        "alternativas": [
+            "Apenas os casos de evasão escolar.",
+            "Apenas os casos de repetência contínua.",
+            "Reiteração de faltas injustificadas, evasão escolar (esgotados os recursos da escola) e elevados níveis de repetência.",
+            "Dificuldades de socialização e conflitos entre colegas.",
+            "Suspeita de trabalho infantil e baixo rendimento em avaliações."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "O Art. 57 do ECA, ao tratar do poder público na área da educação, afirma que este estimulará pesquisas e novas propostas relativas a:",
+        "alternativas": [
+            "Calendário, seriação, currículo, metodologia, didática e avaliação, com vistas à inserção de crianças e adolescentes excluídos.",
+            "Apenas a construção de novas escolas em áreas rurais.",
+            "Exclusivamente a avaliação do desempenho dos professores.",
+            "Somente a criação de novas metodologias de ensino a distância.",
+            "A elaboração de um currículo único e padronizado para todo o país."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "O Art. 58 do ECA garante o respeito aos valores culturais, artísticos e históricos do contexto social da criança. O que este artigo também garante a eles?",
+        "alternativas": [
+            "A liberdade de não participar de atividades culturais da escola.",
+            "A liberdade da criação e o acesso às fontes de cultura.",
+            "O acesso a eventos culturais apenas de sua região de origem.",
+            "A prioridade na carreira artística em detrimento da educação formal.",
+            "A obrigatoriedade de seguir os mesmos valores culturais de seus educadores."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "O Art. 59 do ECA estabelece que os Municípios, com apoio dos Estados e da União, deverão estimular programações culturais, esportivas e de lazer. Essas programações devem ser voltadas para qual público?",
+        "alternativas": [
+            "Apenas para o público adulto, que financia tais atividades.",
+            "Apenas para crianças de até 6 anos.",
+            "Para a infância e a juventude.",
+            "Exclusivamente para adolescentes em cumprimento de medida socioeducativa.",
+            "Para toda a comunidade, sem distinção de faixa etária."
+        ],
+        "correta_idx": 2
+    }
+]
