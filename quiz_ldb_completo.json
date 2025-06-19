@@ -1,0 +1,442 @@
+[
+    {
+        "pergunta": "(VUNESP - 2023) De acordo com o Art. 3º da Lei de Diretrizes e Bases da Educação Nacional (LDB), o ensino será ministrado com base em alguns princípios. Um desses princípios é:",
+        "alternativas": [
+            "a valorização da experiência extraescolar.",
+            "a prioridade do ensino público em detrimento do privado.",
+            "a gestão exclusivamente centralizada nos sistemas de ensino.",
+            "a vinculação obrigatória entre a educação escolar, o trabalho e as práticas religiosas.",
+            "a padronização total dos currículos, sem considerar as diferenças regionais."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "(FGV - 2022) A Lei nº 9.394/96 (LDB) estabelece que a educação básica é formada por:",
+        "alternativas": [
+            "Educação infantil, ensino fundamental e ensino médio.",
+            "Ensino fundamental, ensino médio e ensino superior.",
+            "Educação infantil, ensino fundamental e educação profissional.",
+            "Ensino fundamental I, ensino fundamental II e ensino médio.",
+            "Creches, pré-escolas e ensino fundamental."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "(IBFC - 2023) Sobre a avaliação da aprendizagem no ensino fundamental e no ensino médio, a LDB estabelece que:",
+        "alternativas": [
+            "os aspectos qualitativos devem prevalecer sobre os quantitativos, e os resultados ao longo do período sobre os de eventuais provas finais.",
+            "a avaliação deve ser exclusivamente classificatória, visando selecionar os alunos mais aptos.",
+            "a recuperação de estudos é opcional, cabendo à escola decidir se oferece ou não.",
+            "os aspectos quantitativos e as notas de provas finais devem ter peso maior.",
+            "a avaliação deve ser realizada apenas uma vez por semestre, de forma unificada."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "(FCC - 2022) Os currículos da educação básica, segundo a LDB, devem ter uma base nacional comum e ser complementados por:",
+        "alternativas": [
+            "uma parte diversificada, definida obrigatoriamente pelo Ministério da Educação.",
+            "uma parte diversificada, exigida pelas características regionais e locais da sociedade, da cultura, da economia и dos educandos.",
+            "uma parte opcional, escolhida livremente por cada professor.",
+            "um conjunto de disciplinas fixas que não podem ser alteradas.",
+            "um componente focado exclusivamente no ensino religioso obrigatório."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(CESPE/CEBRASPE - 2023) Conforme a LDB, a formação de docentes para atuar na educação básica far-se-á em:",
+        "alternativas": [
+            "nível médio, na modalidade Normal, para todas as etapas da educação básica.",
+            "nível superior, em curso de licenciatura, de graduação plena, admitida como formação mínima para a educação infantil e anos iniciais do fundamental, a modalidade Normal de nível médio.",
+            "exclusivamente em cursos de pós-graduação lato sensu (especialização).",
+            "qualquer curso de nível superior, com complementação pedagógica.",
+            "cursos de bacharelado, sendo a licenciatura opcional."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(FUNDATEC - 2023) Sobre o controle de frequência na educação básica, segundo a LDB, a exigência mínima para aprovação é de:",
+        "alternativas": [
+            "50% do total de horas letivas.",
+            "60% do total de horas letivas.",
+            "70% do total de horas letivas.",
+            "75% do total de horas letivas.",
+            "85% do total de horas letivas."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "(Quadrix - 2022) De acordo com o Art. 13 da LDB, é uma das incumbências dos docentes:",
+        "alternativas": [
+            "elaborar e cumprir plano de trabalho, segundo a proposta pedagógica do estabelecimento de ensino.",
+            "prover meios para a recuperação dos alunos, sem a colaboração da escola.",
+            "assegurar o cumprimento dos dias letivos, sendo esta uma função exclusiva da direção.",
+            "informar os pais apenas sobre a frequência e o rendimento dos alunos.",
+            "definir a proposta pedagógica da escola de forma isolada."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "(AOCP - 2023) O Art. 58 da LDB define a Educação Especial como a modalidade de educação escolar oferecida preferencialmente:",
+        "alternativas": [
+            "em classes e escolas especiais.",
+            "em centros de atendimento educacional especializado.",
+            "na rede regular de ensino para educandos com deficiência, TGD e altas habilidades ou superdotação.",
+            "em instituições filantrópicas e confessionais parceiras.",
+            "na modalidade de ensino a distância (EAD)."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(FGV - 2021) O atendimento educacional especializado gratuito aos educandos com deficiência, TGD e altas habilidades, transversal a todos os níveis, é conhecido como:",
+        "alternativas": [
+            "Sala de Recursos Multifuncionais.",
+            "Atendimento Educacional Especializado (AEE).",
+            "Classe Hospitalar.",
+            "Educação de Jovens e Adultos (EJA).",
+            "Ensino Itinerante."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Instituto Consulplan - 2023) Segundo o Art. 22 da LDB, quais são as finalidades da educação básica?",
+        "alternativas": [
+            "Desenvolver o educando para o mercado de trabalho.",
+            "Garantir a formação religiosa e moral do educando.",
+            "Desenvolver o educando, assegurar-lhe a formação comum indispensável para a cidadania e fornecer-lhe meios para progredir no trabalho e em estudos posteriores.",
+            "Preparar o educando exclusivamente para o acesso ao ensino superior.",
+            "Assegurar o desenvolvimento da capacidade de memorização para avaliações externas."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(FGV - 2023) De acordo com a LDB, a União, os Estados, o Distrito Federal e os Municípios organizarão seus sistemas de ensino em regime de:",
+        "alternativas": [
+            "competição.",
+            "subordinação hierárquica.",
+            "colaboração.",
+            "autonomia completa e isolada.",
+            "centralização federal."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(IBADE - 2022) Além da língua portuguesa e da matemática, que outro componente curricular é obrigatório em toda a educação básica, segundo a LDB?",
+        "alternativas": [
+            "Ensino religioso.",
+            "Artes, especialmente em suas expressões regionais.",
+            "Educação física, integrada à proposta pedagógica da escola.",
+            "O estudo da história e cultura afro-brasileira e indígena.",
+            "Sociologia e Filosofia."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Quadrix - 2023) Conforme o Art. 32 da LDB, o ensino fundamental obrigatório, com duração de 9 anos, inicia-se aos:",
+        "alternativas": [
+            "4 (quatro) anos de idade.",
+            "5 (cinco) anos de idade.",
+            "6 (seis) anos de idade.",
+            "7 (sete) anos de idade.",
+            "8 (oito) anos de idade."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(FEPESE - 2023) De acordo com o Art. 12 da LDB, qual é uma das incumbências dos estabelecimentos de ensino?",
+        "alternativas": [
+            "Elaborar e executar sua proposta pedagógica.",
+            "Autorizar e supervisionar os estabelecimentos de seu sistema.",
+            "Baixar normas complementares para seu sistema de ensino.",
+            "Assumir o transporte escolar dos alunos.",
+            "Realizar a avaliação da educação nacional."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "(Avança SP - 2022) O Art. 4º da LDB garante a educação infantil gratuita às crianças de:",
+        "alternativas": [
+            "a partir do nascimento até os 6 anos.",
+            "a partir dos 2 anos até os 5 anos.",
+            "de 0 a 3 anos em creches.",
+            "até os 5 anos de idade.",
+            "apenas aos 4 e 5 anos na pré-escola."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "(Instituto Consulplan - 2023) Qual a carga horária mínima anual na educação básica, segundo a LDB?",
+        "alternativas": [
+            "720 horas em 200 dias.",
+            "800 horas em 200 dias.",
+            "800 horas em 180 dias.",
+            "1000 horas em 200 dias.",
+            "1200 horas em 220 dias."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(FCC - 2023) O Art. 26-A da LDB torna obrigatório o estudo de qual temática nos ensinos fundamental e médio?",
+        "alternativas": [
+            "Educação financeira.",
+            "História e cultura afro-brasileira e indígena.",
+            "Programação e robótica.",
+            "Educação para o trânsito.",
+            "Prevenção ao uso de drogas."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(FGV - 2022) Qual ente federativo tem a incumbência de baixar normas gerais sobre cursos de graduação e pós-graduação?",
+        "alternativas": [
+            "Os Municípios.",
+            "Os Estados e o Distrito Federal.",
+            "A União.",
+            "Os Conselhos Escolares.",
+            "As Secretarias Estaduais."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(VUNESP - 2023) Uma das finalidades do Ensino Médio, conforme o Art. 35 da LDB, é:",
+        "alternativas": [
+            "a preparação básica para o trabalho e a cidadania do educando, para continuar aprendendo.",
+            "o aprofundamento dos conhecimentos do ensino infantil.",
+            "a garantia de uma formação profissional técnica obrigatória.",
+            "o pleno domínio da leitura, escrita e cálculo.",
+            "a preparação exclusiva para o ensino superior."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "(CESPE/CEBRASPE - 2022) A EJA, segundo a LDB, terá exames supletivos no nível de conclusão do ensino fundamental para os maiores de:",
+        "alternativas": [
+            "14 anos.",
+            "15 anos.",
+            "16 anos.",
+            "17 anos.",
+            "18 anos."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(FGV - 2023) O Art. 59 da LDB assegura aos educandos com altas habilidades ou superdotação:",
+        "alternativas": [
+            "aceleração para concluir em menor tempo o programa escolar.",
+            "classes especiais obrigatórias.",
+            "terminalidade específica.",
+            "um currículo funcional.",
+            "professores sem especialização."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "(FCC - 2022) A Educação Profissional e Tecnológica, segundo a LDB, abrange quais tipos de cursos?",
+        "alternativas": [
+            "Formação inicial e continuada, técnico de nível médio e tecnológico de graduação e pós-graduação.",
+            "Apenas qualificação profissional e graduação tecnológica.",
+            "Apenas técnico de nível médio e especialização.",
+            "Ensino médio regular e bacharelado.",
+            "Aprendizagem industrial e mestrado."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "(VUNESP - 2022) Segundo o Art. 11 da LDB, qual é a principal incumbência dos Municípios?",
+        "alternativas": [
+            "Autorizar cursos de educação superior.",
+            "Baixar normas gerais para a graduação.",
+            "Oferecer a educação infantil e, com prioridade, o ensino fundamental.",
+            "Oferecer, com prioridade, o ensino médio.",
+            "Executar as políticas educacionais nacionais."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(CESPE/CEBRASPE - 2023) A escola pode reclassificar os alunos, inclusive os transferidos, com base em quê?",
+        "alternativas": [
+            "Apenas na idade do aluno.",
+            "Apenas no resultado de avaliações de desempenho.",
+            "Na condição socioeconômica da família.",
+            "No histórico escolar, sem necessidade de avaliação.",
+            "Nas normas curriculares gerais, para posicioná-lo em série compatível com seu desenvolvimento."
+        ],
+        "correta_idx": 4
+    },
+    {
+        "pergunta": "(AOCP - 2022) Qual das alternativas NÃO corresponde a um curso de educação superior, segundo o Art. 44 da LDB?",
+        "alternativas": [
+            "Cursos sequenciais por campo de saber.",
+            "Cursos de graduação.",
+            "Cursos de pós-graduação.",
+            "Cursos de educação profissional técnica de nível médio.",
+            "Cursos de extensão."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "(Instituto Consulplan - 2023) A educação básica (fundamental e médio) pode ser organizada de que forma?",
+        "alternativas": [
+            "Exclusivamente por séries anuais.",
+            "Apenas por ciclos.",
+            "Por séries, ciclos, grupos não seriados, com base na idade, competência, entre outros critérios.",
+            "A critério exclusivo do professor.",
+            "De forma padronizada em todo o país."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(FUNDATEC - 2023) Uma das incumbências dos Estados, segundo o Art. 10 da LDB, é:",
+        "alternativas": [
+            "organizar, manter e desenvolver os órgãos e instituições oficiais dos seus sistemas de ensino.",
+            "oferecer a educação infantil como prioridade.",
+            "exercer função redistributiva e supletiva.",
+            "coletar e disseminar informações sobre a educação.",
+            "autorizar todas as instituições de ensino do país."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "(FGV - 2022) Considera-se jornada de tempo integral, para a LDB, aquela com duração igual ou superior a:",
+        "alternativas": [
+            "6 horas diárias.",
+            "7 horas diárias.",
+            "8 horas diárias.",
+            "9 horas diárias.",
+            "10 horas diárias."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(FCC - 2023) Qual é a finalidade da educação infantil, de acordo com o Art. 29 da LDB?",
+        "alternativas": [
+            "A alfabetização da criança até os 5 anos.",
+            "A preparação para o ingresso no ensino fundamental.",
+            "O desenvolvimento integral da criança de até 5 anos, em seus aspectos físico, psicológico, intelectual e social.",
+            "A guarda e o cuidado das crianças.",
+            "O desenvolvimento de habilidades para avaliações nacionais."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Quadrix - 2022) O acesso à educação básica obrigatória é um direito público subjetivo. Isso significa que:",
+        "alternativas": [
+            "o poder público não pode ser responsabilizado judicialmente.",
+            "qualquer cidadão, grupo ou o Ministério Público pode acionar o poder público para exigi-lo.",
+            "apenas os pais podem solicitar a vaga.",
+            "o direito se aplica apenas a quem paga impostos.",
+            "a gratuidade depende da condição financeira."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de Consulplan) O Art. 61 da LDB considera como profissionais da educação escolar básica, entre outros:",
+        "alternativas": [
+            "Apenas professores e diretores.",
+            "Professores, pedagogos e administradores.",
+            "Professores habilitados em nível médio ou superior para a docência na educação básica.",
+            "Profissionais com notório saber, mesmo sem formação pedagógica.",
+            "Todos os funcionários da escola, incluindo limpeza."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de IBADE) Segundo o Art. 80 da LDB, qual característica se aplica à Educação a Distância (EAD)?",
+        "alternativas": [
+            "O Poder Público incentivará seu desenvolvimento por meio de rádio e TV.",
+            "Só pode ser ofertada para o Ensino Superior.",
+            "A avaliação dos alunos é opcional.",
+            "Substitui completamente a necessidade de momentos presenciais.",
+            "Seu currículo é diferente do presencial."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) O ensino é livre à iniciativa privada, desde que atenda a condições. Qual é uma delas?",
+        "alternativas": [
+            "Cumprimento das normas gerais da educação nacional e do respectivo sistema de ensino.",
+            "Oferta de bolsas para no mínimo 50% dos alunos.",
+            "Apresentar resultados superiores aos da rede pública.",
+            "Atuar exclusivamente em níveis não ofertados pelo poder público.",
+            "Ter autorização direta do MEC para todos os níveis."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "(Adaptada de FGV) Os planos de carreira dos profissionais da educação, segundo o Art. 67 da LDB, devem assegurar:",
+        "alternativas": [
+            "ingresso exclusivamente por indicação.",
+            "progressão funcional baseada apenas no tempo de serviço.",
+            "piso salarial profissional e condições adequadas de trabalho.",
+            "jornada de trabalho sem limite máximo de horas.",
+            "avaliação de desempenho realizada unicamente pelos alunos."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de FCC) O currículo do ensino médio, conforme o Art. 36 da LDB, incluirá obrigatoriamente estudos e práticas de:",
+        "alternativas": [
+            "duas línguas estrangeiras.",
+            "Filosofia e Sociologia.",
+            "formação técnica específica.",
+            "história da arte mundial.",
+            "empreendedorismo."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de CESPE/CEBRASPE) O Art. 69 da LDB estabelece que a União aplicará anualmente em educação, nunca menos de:",
+        "alternativas": [
+            "25% da receita resultante de impostos.",
+            "18%, no mínimo, da receita resultante de impostos.",
+            "15% da receita de impostos.",
+            "20% da arrecadação total.",
+            "30% do Fundo de Participação dos Estados."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de FUNDATEC) O Art. 14 da LDB determina que a gestão democrática do ensino público deve se basear, entre outros, no seguinte princípio:",
+        "alternativas": [
+            "escolha dos diretores por concurso público.",
+            "participação exclusiva dos professores no projeto pedagógico.",
+            "centralização das decisões nas secretarias de educação.",
+            "participação dos profissionais na elaboração do projeto pedagógico e da comunidade em conselhos escolares.",
+            "autonomia total da escola para definir seu currículo."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "(Adaptada de Quadrix) O Art. 37 da LDB estabelece que a Educação de Jovens e Adultos (EJA) deve articular-se preferencialmente com:",
+        "alternativas": [
+            "o ensino superior.",
+            "a educação especial.",
+            "a educação profissional.",
+            "a educação infantil.",
+            "os programas de assistência social."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de Instituto Consulplan) Qual dos critérios abaixo está de acordo com a verificação do rendimento escolar prevista na LDB?",
+        "alternativas": [
+            "Possibilidade de avanço nos cursos e nas séries mediante verificação do aprendizado.",
+            "Obrigatoriedade de provas finais para definir a aprovação.",
+            "Avaliação focada apenas no resultado final.",
+            "Proibição da aceleração de estudos.",
+            "Aproveitamento de estudos apenas se realizados na mesma escola."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) Os diplomas de cursos superiores reconhecidos e registrados, segundo o Art. 48 da LDB, terão validade:",
+        "alternativas": [
+            "apenas no estado da instituição.",
+            "em todo o território nacional.",
+            "por um período de dez anos.",
+            "apenas para atividades acadêmicas.",
+            "internacional, com reconhecimento automático."
+        ],
+        "correta_idx": 1
+    }
+]
