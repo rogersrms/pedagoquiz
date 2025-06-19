@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         legislacao: [
             { name: "LDB", url: "quiz_ldb_completo.json" },
+            { name: "ECA - Artigos 15 a 18-B", url: "quiz_eca_art15a18.json" }
         ]
     };
 
