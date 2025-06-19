@@ -1,0 +1,112 @@
+[
+    {
+        "pergunta": "(Adaptada de VUNESP - 2023) O artigo 15 do ECA afirma que a criança e o adolescente têm direito à liberdade, ao respeito e à dignidade como pessoas humanas em processo de desenvolvimento e como:",
+        "alternativas": [
+            "futuros cidadãos produtivos.",
+            "membros dependentes da família e da sociedade.",
+            "aprendizes das normas sociais vigentes.",
+            "sujeitos de direitos civis, humanos e sociais garantidos na Constituição e nas leis.",
+            "indivíduos sob tutela especial do Estado até a maioridade."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "O Art. 16 do ECA detalha os aspectos que compreendem o direito à liberdade. Qual das alternativas abaixo NÃO corresponde a um dos incisos deste artigo?",
+        "alternativas": [
+            "Ir, vir e estar nos logradouros públicos e espaços comunitários, ressalvadas as restrições legais.",
+            "Participar da vida familiar e comunitária, sem discriminação.",
+            "Obter permissão para frequentar qualquer evento ou local, independentemente da faixa etária.",
+            "Brincar, praticar esportes e divertir-se.",
+            "Buscar refúgio, auxílio e orientação."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de FGV - 2022) O direito ao respeito, previsto no Art. 17 do ECA, consiste na inviolabilidade da integridade física, psíquica e moral da criança e do adolescente. Este direito abrange a preservação de quais aspectos?",
+        "alternativas": [
+            "Apenas da imagem e da identidade, para protegê-los da exposição na mídia.",
+            "Da imagem, da identidade, da autonomia, dos valores, ideias e crenças, dos espaços e objetos pessoais.",
+            "Apenas da autonomia, garantindo que possam tomar todas as decisões por si mesmos.",
+            "Principalmente dos espaços e objetos pessoais, para ensinar sobre propriedade privada.",
+            "Dos valores e crenças da família, que devem ser seguidos sem questionamento pela criança."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de IBFC - 2023) O Art. 18 do ECA estabelece que é dever de todos zelar pela dignidade da criança e do adolescente. De que forma isso deve ser feito, segundo o artigo?",
+        "alternativas": [
+            "Denunciando as famílias que não conseguem prover o sustento material adequado.",
+            "Pondo-os a salvo de qualquer tratamento desumano, violento, aterrorizante, vexatório ou constrangedor.",
+            "Ensinando-os a se defenderem sozinhos de situações de risco.",
+            "Comunicando ao Conselho Tutelar apenas os casos de violência física grave.",
+            "Evitando que tenham acesso a informações sobre violência e maus-tratos para protegê-los."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "A Lei nº 13.010/2014, conhecida como 'Lei Menino Bernardo', alterou o ECA para incluir os artigos 18-A e 18-B. Qual é o direito fundamental que o Art. 18-A estabelece?",
+        "alternativas": [
+            "O direito de serem matriculados em escolas particulares de qualidade.",
+            "O direito de receberem educação e cuidados sem o uso de castigo físico ou de tratamento cruel ou degradante.",
+            "O direito de acesso irrestrito à internet e redes sociais.",
+            "O direito de escolherem com qual genitor irão morar em caso de separação.",
+            "O direito de não serem responsabilizados por ato infracional antes dos 16 anos."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Conforme a definição do Art. 18-A do ECA, o que se entende por 'tratamento cruel ou degradante'?",
+        "alternativas": [
+            "A ação punitiva que causa lesão física na criança.",
+            "Negar alimentos à criança como forma de disciplina.",
+            "Qualquer forma de correção que os pais considerem necessária para a boa educação.",
+            "A conduta ou forma cruel de tratamento que humilhe, ameace gravemente ou ridicularize a criança ou o adolescente.",
+            "A aplicação de tarefas domésticas como forma de castigo."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "O Art. 18-B do ECA estabelece as obrigações dos pais, responsáveis e qualquer pessoa encarregada de cuidar de crianças. Diante de uma situação de castigo físico ou tratamento cruel, qual é o encaminhamento previsto por este artigo?",
+        "alternativas": [
+            "Aplicação de multa imediata, a ser paga pelos agressores.",
+            "Apreensão da criança e encaminhamento direto para acolhimento institucional.",
+            "Encaminhamento para programa oficial ou comunitário de proteção à família e acompanhamento psicológico ou psiquiátrico.",
+            "Prisão em flagrante do agressor, independentemente da gravidade da lesão.",
+            "Advertência verbal pelo Conselho Tutelar, sem outras providências."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "O direito de opinião e expressão, garantido pelo Art. 16 do ECA, significa que a criança e o adolescente podem:",
+        "alternativas": [
+            "Expressar suas ideias livremente, mas apenas em casa e na escola.",
+            "Publicar qualquer conteúdo na internet sem supervisão ou consequências legais.",
+            "Manifestar suas opiniões em qualquer assunto que lhes diga respeito, sendo estas consideradas no âmbito familiar, escolar e social.",
+            "Faltar com o respeito aos mais velhos ao expressar suas opiniões.",
+            "Escolher não se comunicar, recusando-se a participar de atividades de socialização."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Analisando o conjunto dos artigos 15 a 18-B, qual princípio do ECA é reforçado por eles?",
+        "alternativas": [
+            "O princípio da responsabilidade exclusiva do Estado.",
+            "O princípio do poder familiar absoluto sobre os filhos.",
+            "O princípio da dignidade da pessoa humana, aplicado à condição peculiar de pessoa em desenvolvimento.",
+            "O princípio da intervenção mínima na vida familiar.",
+            "O princípio da punição como principal forma de correção."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "A quem o Art. 18-B do ECA direciona as medidas de proteção em caso de castigo físico ou tratamento degradante?",
+        "alternativas": [
+            "Apenas aos pais biológicos da criança.",
+            "Apenas aos professores e funcionários da escola.",
+            "Aos pais, aos integrantes da família ampliada, aos responsáveis, aos agentes públicos executores de medidas socioeducativas ou a qualquer pessoa encarregada de cuidar de crianças e adolescentes.",
+            "Apenas aos agentes públicos, como policiais e conselheiros tutelares.",
+            "Apenas aos responsáveis legais que detenham a guarda judicial da criança."
+        ],
+        "correta_idx": 2
+    }
+]
