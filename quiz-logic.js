@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const allQuizzes = {
         pedagogico: [
             { name: "FERREIRO - Reflexões sobre a Alfabetização", url: "quiz_ferreiro_alfabetizacao.json" },
+            { name: "BACICH - Metodologias ativas para uma educação inovadora", url: "quiz_bacich_metodologias.json" },
             { name: "VEIGA - Projeto Político-Pedagógico e Gestão Democrática", url: "Veiga_ppp.json" },
             { name: "FREIRE - Professora Sim, Tia Não", url: "Professora Sim Tia Não.json" },
             { name: "SOARES - Letramento e Alfabetização: as muitas facetas", url: "SOARES - Letramento e alfabetização.json" },
