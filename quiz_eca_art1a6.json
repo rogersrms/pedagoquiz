@@ -1,0 +1,112 @@
+[
+    {
+        "pergunta": "(Adaptada de VUNESP) O Art. 1º do Estatuto da Criança e do Adolescente estabelece sobre o que esta Lei dispõe. De acordo com o artigo, a lei dispõe sobre:",
+        "alternativas": [
+            "A proteção parcial da criança e do adolescente.",
+            "Os direitos e deveres apenas dos adolescentes em conflito com a lei.",
+            "A proteção integral à criança e ao adolescente.",
+            "As obrigações financeiras da família para com a criança.",
+            "As normas para o funcionamento das escolas de educação infantil."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Conforme o Art. 2º do ECA, como são definidas as faixas etárias de criança e adolescente?",
+        "alternativas": [
+            "Criança até dez anos incompletos, e adolescente entre dez e dezoito anos.",
+            "Criança até doze anos incompletos, e adolescente entre doze e dezoito anos.",
+            "Criança até doze anos completos, e adolescente entre treze e dezoito anos incompletos.",
+            "Criança até dez anos completos, e adolescente entre onze e dezesseis anos.",
+            "Criança e adolescente são considerados a mesma faixa etária, até os dezesseis anos."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de FGV) O Art. 3º do ECA afirma que a criança e o adolescente gozam de todos os direitos fundamentais inerentes à pessoa humana. O objetivo deste artigo é assegurar-lhes, por lei ou por outros meios:",
+        "alternativas": [
+            "Apenas as oportunidades necessárias para a sobrevivência básica.",
+            "Oportunidades e facilidades, a fim de lhes facultar o desenvolvimento físico, mental, moral, espiritual e social, em condições de liberdade e de dignidade.",
+            "Tratamento diferenciado em relação aos adultos, com menos deveres e responsabilidades.",
+            "Acesso prioritário a bens de consumo e serviços privados.",
+            "O direito de escolher não frequentar a escola, caso assim desejem."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de IBFC) O Art. 4º do ECA estabelece o dever da família, da comunidade, da sociedade em geral e do poder público de assegurar, com absoluta prioridade, a efetivação dos direitos da criança e do adolescente. A garantia de prioridade compreende, entre outros:",
+        "alternativas": [
+            "Preferência na formulação e na execução das políticas sociais públicas.",
+            "Atendimento preferencial apenas em serviços de saúde privados.",
+            "Destinação de recursos públicos apenas quando houver verba excedente.",
+            "Primazia de receber proteção apenas em casos de calamidade pública.",
+            "Precedência de atendimento apenas para crianças, excluindo os adolescentes."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "O Art. 5º do ECA determina que nenhuma criança ou adolescente será objeto de qualquer forma de negligência, discriminação, etc. A quem a lei atribui o dever de punir qualquer atentado, por ação ou omissão, aos seus direitos fundamentais?",
+        "alternativas": [
+            "Apenas aos pais ou responsáveis legais.",
+            "Apenas ao Conselho Tutelar.",
+            "Apenas ao Poder Judiciário.",
+            "A qualquer pessoa, na forma da lei.",
+            "Apenas aos professores e gestores escolares."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "(Adaptada de CESPE/CEBRASPE) De acordo com o Art. 6º do ECA, na interpretação desta Lei, o que deve ser levado em conta?",
+        "alternativas": [
+            "Os fins sociais a que ela se dirige, as exigências do bem comum, os direitos e deveres individuais e coletivos, e a condição peculiar da criança e do adolescente como pessoas em desenvolvimento.",
+            "Apenas a condição peculiar da criança e do adolescente como pessoas em desenvolvimento, desconsiderando os fins sociais.",
+            "Prioritariamente as exigências do bem comum, mesmo que isso restrinja os direitos individuais da criança.",
+            "Apenas os direitos e deveres individuais e coletivos, conforme a Constituição Federal.",
+            "A interpretação literal de cada artigo, sem considerar os fins sociais aos quais a lei se dirige."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "O parágrafo único do Art. 2º do ECA estabelece uma exceção sobre a aplicação da lei. A quem o Estatuto se aplica excepcionalmente?",
+        "alternativas": [
+            "Aos jovens entre dezoito e vinte e quatro anos que ainda estejam estudando.",
+            "Aos pais e responsáveis, nos casos de crimes contra os filhos.",
+            "Apenas às crianças indígenas e quilombolas, que possuem legislação própria.",
+            "Às pessoas entre dezoito e vinte e um anos de idade, nos casos expressos em lei.",
+            "Aos adolescentes que já são legalmente emancipados."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "O princípio da 'absoluta prioridade', estabelecido no Art. 4º do ECA, significa que crianças e adolescentes devem ter precedência no atendimento em quais serviços?",
+        "alternativas": [
+            "Apenas em serviços públicos de saúde.",
+            "Em todos os serviços privados, como lojas e cinemas.",
+            "Apenas em serviços de relevância pública, como transporte.",
+            "Nos serviços públicos ou de relevância pública.",
+            "Apenas nos serviços oferecidos por ONGs e entidades filantrópicas."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "Qual das afirmações abaixo melhor reflete a mudança de paradigma introduzida pelo Art. 3º do ECA em relação à legislação anterior (o Código de Menores)?",
+        "alternativas": [
+            "A criança passou a ser vista como um adulto em miniatura, com as mesmas responsabilidades.",
+            "A criança e o adolescente deixaram de ser vistos como 'objetos' de intervenção do Estado (em 'situação irregular') e passaram a ser reconhecidos como sujeitos de direitos, merecedores de proteção integral.",
+            "A lei passou a focar apenas nos adolescentes em conflito com a lei, ignorando as crianças.",
+            "A responsabilidade pela criança passou a ser exclusivamente do Estado, isentando a família.",
+            "O novo estatuto manteve a mesma doutrina do Código de Menores, apenas atualizando os termos."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "A garantia de 'destinação privilegiada de recursos públicos', conforme o Art. 4º do ECA, implica que:",
+        "alternativas": [
+            "As áreas relacionadas à proteção da infância e juventude devem ter preferência no planejamento e execução dos orçamentos.",
+            "Todo o orçamento público deve ser destinado exclusivamente para a área da infância.",
+            "As escolas particulares devem receber recursos públicos para garantir a inclusão.",
+            "As famílias com crianças devem receber um subsídio financeiro direto do governo.",
+            "Os recursos devem ser destinados apenas após o atendimento de todas as outras demandas da administração pública."
+        ],
+        "correta_idx": 0
+    }
+]
