@@ -1,0 +1,90 @@
+[
+    {
+        "pergunta": "(Adaptada de FGV) O artigo 131 do ECA define o Conselho Tutelar. De acordo com a lei, qual é a natureza e a principal função deste órgão?",
+        "alternativas": [
+            "É um órgão jurisdicional, encarregado de julgar atos infracionais.",
+            "É um órgão de segurança pública, responsável por executar mandados.",
+            "É um órgão subordinado à prefeitura, responsável pela gestão financeira.",
+            "É um órgão temporário, convocado apenas em situações de calamidade.",
+            "É um órgão permanente e autônomo, não jurisdicional, encarregado de zelar pelos direitos da criança e do adolescente."
+        ],
+        "correta_idx": 4
+    },
+    {
+        "pergunta": "O Art. 132 do ECA estabelece a composição dos Conselhos Tutelares. Conforme a lei, em cada Município haverá, no mínimo:",
+        "alternativas": [
+            "Um Conselho Tutelar, composto de três membros.",
+            "Um Conselho Tutelar, composto de cinco membros, escolhidos pela população local.",
+            "Dois Conselhos Tutelares, um para crianças e outro para adolescentes.",
+            "Um Conselho Tutelar a cada cem mil habitantes.",
+            "O número de Conselhos será definido pelo Poder Judiciário."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) O Art. 133 do ECA lista os requisitos para se candidatar à função de membro do Conselho Tutelar. Qual alternativa NÃO é um requisito?",
+        "alternativas": [
+            "Reconhecida idoneidade moral.",
+            "Ser filiado a um partido político e ter experiência em campanhas.",
+            "Idade superior a vinte e um anos.",
+            "Residir no município.",
+            "Ter concluído o ensino médio."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "O Art. 134 do ECA trata do processo de escolha dos membros do Conselho Tutelar. A lei estabelece que o processo ocorrerá em data unificada a cada quatro anos, em qual momento?",
+        "alternativas": [
+            "No primeiro domingo do mês de outubro do ano da eleição presidencial.",
+            "No primeiro domingo do mês de outubro do ano subsequente ao da eleição presidencial.",
+            "Anualmente, no primeiro domingo de dezembro.",
+            "Junto com as eleições municipais para prefeito e vereador.",
+            "A cada cinco anos, em data definida por lei municipal."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de FCC) O Art. 135 do ECA aborda os impedimentos para servir no mesmo Conselho Tutelar. De acordo com a lei, quem está impedido de servir no mesmo conselho?",
+        "alternativas": [
+            "Marido e mulher, ascendentes e descendentes, sogro e genro ou nora, irmãos, cunhados, tio e sobrinho, padrasto ou madrasta e enteado.",
+            "Apenas marido e mulher, e pais e filhos.",
+            "Vizinhos que residam na mesma rua.",
+            "Pessoas que tenham trabalhado juntas em outra função na prefeitura.",
+            "Amigos íntimos e pessoas com relação de compadrio."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "(Adaptada de CESPE/CEBRASPE) Qual das seguintes ações é uma atribuição do Conselho Tutelar, conforme o Art. 136 do ECA?",
+        "alternativas": [
+            "Conceder a guarda provisória de uma criança.",
+            "Determinar a internação de um adolescente.",
+            "Atender e aconselhar os pais ou responsável, aplicando as medidas previstas no Art. 129, I a VII.",
+            "Decretar a perda do poder familiar.",
+            "Julgar processos e expedir sentenças."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "O descumprimento injustificado de uma deliberação do Conselho Tutelar, conforme o Art. 136, pode levar a autoridade judiciária a aplicar qual sanção?",
+        "alternativas": [
+            "Uma medida socioeducativa aos pais.",
+            "A prisão imediata dos pais ou responsáveis.",
+            "A aplicação de uma multa, conforme previsto no Art. 249 do ECA.",
+            "A perda automática do direito de visita aos filhos.",
+            "A obrigatoriedade de matricular a criança em escola particular."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "O Art. 137 do ECA estabelece que as decisões do Conselho Tutelar somente poderão ser revistas por qual autoridade?",
+        "alternativas": [
+            "Pelo Prefeito Municipal.",
+            "Pelo Ministério Público.",
+            "Pela autoridade judiciária, a pedido de quem tenha legítimo interesse.",
+            "Pela Assembleia Legislativa do Estado.",
+            "Por um colegiado de todos os conselheiros do município."
+        ],
+        "correta_idx": 2
+    }
+]
