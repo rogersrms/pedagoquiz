@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: "BACICH - Metodologias ativas para uma educação inovadora", url: "quiz_bacich_metodologias.json" },
             { name: "VEIGA - Projeto Político-Pedagógico e Gestão Democrática", url: "Veiga_ppp.json" },
             { name: "FREIRE - Professora Sim, Tia Não", url: "Professora Sim Tia Não.json" },
+            { name: "CAROLYN - As Cem Linguagens da Criança", url: "quiz_reggio_emilia.json" },
             { name: "SOARES - Letramento e Alfabetização: as muitas facetas", url: "SOARES - Letramento e alfabetização.json" },
             { name: "LEMOV - Aula nota 10 3.0", url: "lemov_aula_nota_10.json" },
             { name: "BARBOSA - Culturas escolares, culturas de infância e culturas familiares", url: "barbosa_culturas.json" },
