@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: "LA TAILLE - Piaget, Vygotsky e Wallon: teorias psicogenéticas em discussão", url: "lataille_piaget_vigotsky_walon.json" },
         ],
         legislacao: [
-            { name: "Em construção", url: "quiz_ldb.json" },
+            { name: "LDB", url: "quiz_ldb_completo.json" },
         ]
     };
 
