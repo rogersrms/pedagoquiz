@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: "CAROLYN - As Cem Linguagens da Criança", url: "quiz_reggio_emilia.json" },
             { name: "SOARES - Letramento e Alfabetização: as muitas facetas", url: "SOARES - Letramento e alfabetização.json" },
             { name: "LEMOV - Aula nota 10 3.0", url: "lemov_aula_nota_10.json" },
+            { name: "CARVALHO - Sucesso e fracasso escolar: uma questão de gênero", url: "quiz_carvalho_genero.json" },
             { name: "BARBOSA - Culturas escolares, culturas de infância e culturas familiares", url: "barbosa_culturas.json" },
             { name: "BENEVIDES - Educação para a democracia", url: "benevides_epd.json" },
             { name: "AINSCOW - Tornar a educação inclusiva", url: "ainscow_eduinclus.json" },
