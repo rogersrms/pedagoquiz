@@ -1,0 +1,167 @@
+[
+    {
+        "pergunta": "(Adaptada de VUNESP) Emília Ferreiro, em 'Reflexões sobre a Alfabetização', critica a visão tradicional do processo de alfabetização. Para a autora, um dos maiores equívocos dessa visão é considerar a criança como:",
+        "alternativas": [
+            "Um sujeito ativo que constrói seu próprio conhecimento sobre a escrita.",
+            "Um ser social que aprende através da interação com os outros e com a cultura escrita.",
+            "Uma 'tábula rasa' ou uma 'folha em branco', que aprende de forma passiva através da repetição e memorização.",
+            "Um indivíduo com hipóteses próprias e inteligentes sobre o funcionamento do sistema de escrita.",
+            "Alguém que já possui um vasto conhecimento sobre a linguagem antes de chegar à escola."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de FGV) A obra de Emília Ferreiro descreve diferentes níveis psicogenéticos. Qual alternativa descreve corretamente a hipótese silábica?",
+        "alternativas": [
+            "A criança escreve usando apenas uma letra para representar cada palavra.",
+            "A criança já compreendeu o sistema alfabético e escreve convencionalmente.",
+            "A criança utiliza uma letra para representar cada sílaba sonora da palavra.",
+            "A criança diferencia letras de outros desenhos, mas ainda não as utiliza para escrever.",
+            "A criança acredita que para escrever uma palavra é preciso um número mínimo de três letras."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de FCC) Segundo os estudos de Emília Ferreiro, qual é o conflito cognitivo que geralmente leva a criança a passar da hipótese silábica para a silábico-alfabética?",
+        "alternativas": [
+            "O conflito de perceber que os adultos usam muito mais letras para escrever a mesma palavra.",
+            "A dificuldade em ler o que ela mesma escreveu e perceber a ambiguidade.",
+            "A insistência do professor para que ela use todas as letras do alfabeto.",
+            "A percepção de que sua hipótese entra em conflito com a quantidade mínima de letras.",
+            "O esgotamento de suas ideias, que a leva a buscar um novo modelo."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "Qual o papel do professor no processo de alfabetização, de acordo com a perspectiva construtivista de Emília Ferreiro?",
+        "alternativas": [
+            "Transmitir o conhecimento das letras e sílabas de forma sistemática e repetitiva.",
+            "Corrigir imediatamente todos os 'erros' da criança para que ela não fixe a escrita incorreta.",
+            "Atuar como um mediador, propondo problemas e situações desafiadoras para a criança refletir e avançar em suas hipóteses.",
+            "Deixar a criança aprender sozinha, sem qualquer tipo de intervenção.",
+            "Aplicar testes padronizados para medir o nível exato de cada aluno."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Qual das práticas pedagógicas abaixo é INCOMPATÍVEL com as ideias de Emília Ferreiro sobre a alfabetização?",
+        "alternativas": [
+            "Utilizar o nome das crianças como uma fonte de informação estável para reflexão.",
+            "Promover a produção de textos espontâneos pelas crianças.",
+            "Focar o ensino exclusivamente na cópia de famílias silábicas descontextualizadas.",
+            "Realizar atividades de leitura de diferentes gêneros textuais para a turma.",
+            "Organizar a sala em duplas produtivas com crianças em diferentes níveis de hipótese."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Na perspectiva psicogenética de Emília Ferreiro, qual é a principal característica da hipótese pré-silábica?",
+        "alternativas": [
+            "A criança já utiliza letras para representar sílabas, mas de forma inconsistente.",
+            "A criança utiliza uma escrita com quantidade variável de letras e estabelece uma distinção entre o desenho e a escrita.",
+            "A criança compreende que a escrita representa a fala, mas ainda não consegue segmentar as palavras.",
+            "A criança escreve usando apenas vogais para representar as palavras.",
+            "A criança já domina a correspondência entre grafemas e fonemas."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de IBFC) A hipótese que se caracteriza pelo conflito entre a lógica silábica e a lógica alfabética é a:",
+        "alternativas": [
+            "Pré-silábica.",
+            "Silábico-alfabética.",
+            "Silábica com valor sonoro.",
+            "Alfabética.",
+            "Pictográfica."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Do ponto de vista da psicogênese da língua escrita, os chamados 'erros' que as crianças cometem são vistos como:",
+        "alternativas": [
+            "Desvios que devem ser imediatamente corrigidos.",
+            "Indicadores de falta de atenção ou de dificuldades de aprendizagem.",
+            "Provas da incapacidade da criança de compreender o sistema sem instrução direta.",
+            "Erros construtivos, que revelam a lógica e as hipóteses inteligentes que a criança está utilizando.",
+            "Um problema causado pela exposição a textos não adequados."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "Emília Ferreiro defende que a escola, no processo de alfabetização, deve proporcionar um ambiente que seja, acima de tudo:",
+        "alternativas": [
+            "Silencioso e focado no trabalho individual.",
+            "Padronizado, onde todas as crianças realizam as mesmas atividades.",
+            "Alfabetizador, ou seja, rico em interações com a língua escrita em suas diversas funções sociais.",
+            "Focado na oralidade, deixando o texto escrito para etapas posteriores.",
+            "Baseado em recompensas e punições para estimular a aprendizagem."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de FEPESE) Dentro da hipótese silábica, qual é a diferença entre a escrita silábica SEM e COM valor sonoro convencional?",
+        "alternativas": [
+            "Na primeira, usa-se qualquer letra para a sílaba; na segunda, usa-se uma letra que corresponde ao som da sílaba (geralmente a vogal).",
+            "Na primeira, a criança usa apenas consoantes; na segunda, apenas vogais.",
+            "Na primeira, usa-se uma letra por palavra; na segunda, uma letra por sílaba.",
+            "Na primeira, a criança já compreende o sistema; na segunda, ela regride.",
+            "Não há diferença significativa entre as duas."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "Qual é a crítica de Emília Ferreiro à ideia de 'prontidão' para a alfabetização?",
+        "alternativas": [
+            "Ela concorda que as crianças precisam atingir uma idade mental específica e passar por treinos motores.",
+            "Ela argumenta que o conceito é equivocado, pois as crianças pensam sobre a escrita desde muito cedo, não existindo um ponto zero.",
+            "Ela acredita que a 'prontidão' existe, mas que só pode ser medida através de testes de QI.",
+            "Ela defende que a 'prontidão' é responsabilidade exclusiva da família.",
+            "Ela propõe que a 'prontidão' seja substituída por um período de caligrafia intensiva."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Na hipótese de escrita alfabética, que desafios a criança ainda enfrenta, mesmo já tendo compreendido a base do sistema?",
+        "alternativas": [
+            "O desafio de entender que a escrita representa os sons da fala.",
+            "O desafio de usar uma letra para cada sílaba.",
+            "Os desafios relacionados às questões ortográficas e às irregularidades da língua.",
+            "A dificuldade em diferenciar letras de números e desenhos.",
+            "A necessidade de usar um número mínimo de letras para que a escrita seja 'legível'."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "A metodologia de pesquisa de Emília Ferreiro para entender como as crianças aprendem a escrever é conhecida como:",
+        "alternativas": [
+            "Método fônico global.",
+            "Método de observação participante.",
+            "Método clínico piagetiano ou de exploração do erro.",
+            "Análise de discurso textual.",
+            "Pesquisa-ação colaborativa."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Emília Ferreiro defende que a alfabetização deve ocorrer dentro de um contexto de letramento. Isso significa que:",
+        "alternativas": [
+            "A criança deve primeiro decorar todo o alfabeto para depois ter contato com textos reais.",
+            "O ato de codificar e decodificar letras e sons deve ser o foco exclusivo das aulas.",
+            "A aprendizagem do sistema de escrita deve acontecer de forma integrada com as práticas sociais de leitura e escrita.",
+            "Letramento e alfabetização são processos separados e devem ser trabalhados em momentos distintos.",
+            "Apenas crianças de famílias letradas conseguem se alfabetizar de forma eficaz."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Uma criança escreve 'MIA' para 'minhoca' e 'LUA' para 'lua'. Em qual hipótese de escrita ela provavelmente se encontra?",
+        "alternativas": [
+            "Pré-silábica, pois usa letras aleatórias.",
+            "Silábico-alfabética, pois mistura as duas lógicas.",
+            "Silábica com valor sonoro, pois usa uma letra (a vogal) para representar cada sílaba.",
+            "Silábica sem valor sonoro, pois as letras não correspondem aos sons.",
+            "Alfabética, com alguns erros ortográficos."
+        ],
+        "correta_idx": 2
+    }
+]
