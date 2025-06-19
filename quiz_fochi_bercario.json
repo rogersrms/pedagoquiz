@@ -1,0 +1,167 @@
+[
+    {
+        "pergunta": "(Adaptada de VUNESP) Paulo Fochi, em 'Afinal, o que os bebês fazem no berçário?', critica uma visão comum sobre o trabalho pedagógico com bebês. Qual é um dos principais equívocos a serem superados?",
+        "alternativas": [
+            "Considerar o berçário principalmente como um espaço de estimulação precoce para acelerar o desenvolvimento.",
+            "Ver o berçário como um lugar de cuidados assistencialistas, focado apenas na higiene, alimentação e sono, subestimando a capacidade de aprendizagem dos bebês.",
+            "Priorizar a documentação pedagógica em detrimento do cuidado físico e afetivo com os bebês.",
+            "Focar excessivamente em atividades lúdicas, deixando de lado a preparação para a alfabetização.",
+            "Acreditar que os bebês aprendem melhor de forma individual e silenciosa, sem interação."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) Para Paulo Fochi, a prática pedagógica no berçário deve se basear na observação e na escuta atenta. Qual ferramenta metodológica o autor destaca como fundamental para dar visibilidade a essas experiências?",
+        "alternativas": [
+            "A aplicação de testes de desenvolvimento padronizados.",
+            "A elaboração de um currículo fixo com atividades diárias pré-definidas.",
+            "O uso de um diário de classe para registrar apenas os horários de sono e alimentação.",
+            "A documentação pedagógica, que envolve registrar, interpretar e compartilhar as experiências vividas pelos bebês.",
+            "A criação de portfólios contendo apenas as produções artísticas das crianças."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "Na perspectiva de Paulo Fochi, como o professor do berçário deve organizar os espaços e os materiais?",
+        "alternativas": [
+            "Com o máximo de brinquedos industrializados e coloridos para manter os bebês entretidos.",
+            "De forma estática e segura, com poucos objetos para evitar acidentes.",
+            "Com foco em materiais estruturados e apostilas, para iniciar o ensino formal o mais cedo possível.",
+            "Organizando 'cantos' de atividades fixos, onde cada bebê permanece por um período determinado.",
+            "Como um 'cenário' de investigação, oferecendo materiais não estruturados e de largo alcance que convidem à exploração."
+        ],
+        "correta_idx": 4
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) Qual das afirmações abaixo melhor descreve a concepção de 'bebê' na obra de Paulo Fochi?",
+        "alternativas": [
+            "Um ser frágil e incapaz, totalmente dependente do adulto.",
+            "Um 'aluno' em miniatura que precisa ser preparado para as demandas do ensino fundamental.",
+            "Um sujeito potente, ativo, curioso, competente e produtor de cultura, que investiga e constrói conhecimento.",
+            "Um indivíduo que se desenvolve em etapas fixas e previsíveis.",
+            "Um ser que aprende principalmente pela imitação de modelos corretos."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Em 'Afinal, o que os bebês fazem no berçário?', a rotina é um elemento importante. Como ela deve ser compreendida na prática pedagógica, segundo Fochi?",
+        "alternativas": [
+            "Como um cronograma rígido de horários que deve ser seguido à risca.",
+            "Como um momento de interrupção da aprendizagem, focado apenas nos cuidados básicos.",
+            "Como uma estrutura flexível que oferece segurança, mas que também é um momento rico em interações e aprendizagens.",
+            "Como uma responsabilidade exclusiva dos auxiliares de desenvolvimento infantil.",
+            "Como algo a ser evitado, pois a ausência de rotina estimula mais a criatividade."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) Na perspectiva de Paulo Fochi, o planejamento do professor de berçário deve ser:",
+        "alternativas": [
+            "Rígido e baseado em uma sequência de atividades que todos devem completar.",
+            "Focado em fichas de avaliação para medir o progresso em relação a metas pré-definidas.",
+            "Flexível, partindo da observação atenta das iniciativas e interesses dos bebês para propor contextos que enriqueçam suas experiências.",
+            "Elaborado semanalmente e entregue aos pais para que eles repliquem as atividades em casa.",
+            "Desnecessário, pois a aprendizagem dos bebês é totalmente espontânea."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Paulo Fochi, alinhado à abordagem de Emmi Pikler, valoriza a autonomia do bebê. No contexto do berçário, como essa valorização se manifesta na prática?",
+        "alternativas": [
+            "Deixando o bebê chorar sem consolo para que aprenda a se acalmar sozinho.",
+            "Colocando o bebê em posições que ele ainda não alcança por conta própria.",
+            "Permitindo que o bebê se movimente livremente em um espaço seguro e explore em seu próprio ritmo.",
+            "Oferecendo apenas brinquedos que emitam luzes e sons para guiar a atenção.",
+            "Acelerando a introdução alimentar com utensílios para que o bebê abandone a exploração com as mãos."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Qual é o papel do 'erro' ou do 'inesperado' na prática pedagógica defendida por Paulo Fochi?",
+        "alternativas": [
+            "O erro deve ser evitado a todo custo, planejando ambientes à prova de falhas.",
+            "O inesperado é uma interrupção do planejamento e deve ser contornado rapidamente.",
+            "O erro da criança deve ser corrigido imediatamente pelo professor.",
+            "O inesperado e as tentativas dos bebês são parte da investigação, devendo ser acolhidos e observados pelo professor.",
+            "O erro é um sinal de que o planejamento do professor falhou."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) Paulo Fochi enfatiza a importância das interações no berçário. De acordo com sua perspectiva, as interações mais ricas são aquelas:",
+        "alternativas": [
+            "que ocorrem apenas entre o professor e um único bebê por vez.",
+            "que acontecem entre os bebês, sem nenhuma mediação do adulto.",
+            "que o professor promove entre os bebês, observando e documentando como eles aprendem uns com os outros.",
+            "que se baseiam na instrução verbal do professor, que explica como brincar.",
+            "que são mediadas por telas e brinquedos eletrônicos."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Qual afirmação melhor representa a visão de Fochi sobre a organização do tempo no berçário?",
+        "alternativas": [
+            "O tempo deve ser cronometrado e dividido em blocos fixos de 15 minutos por atividade.",
+            "O tempo dos bebês é visto como um tempo lento, de exploração e repetição, que deve ser respeitado, evitando a pressa.",
+            "O tempo no berçário deve ser preenchido ao máximo com atividades dirigidas.",
+            "O tempo do cuidado e o tempo do brincar são completamente separados.",
+            "O tempo deve ser organizado da mesma forma para todos os bebês."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "A documentação pedagógica, na abordagem de Fochi, serve a múltiplos propósitos. Qual das alternativas NÃO é uma finalidade da documentação pedagógica?",
+        "alternativas": [
+            "Dar visibilidade aos processos de aprendizagem e às competências dos bebês.",
+            "Servir como instrumento de avaliação e reflexão para a prática do professor.",
+            "Funcionar como uma forma de comunicação com as famílias.",
+            "Criar um ranking de desenvolvimento para comparar os bebês da turma.",
+            "Construir uma memória pedagógica da turma e da instituição."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "Paulo Fochi critica a ideia de 'estimulação' no berçário. Por que ele vê esse termo com ressalvas?",
+        "alternativas": [
+            "Porque ele acredita que os bebês não precisam de nenhum estímulo externo.",
+            "Porque o termo 'estimulação' frequentemente pressupõe um adulto ativo que 'estimula' um bebê passivo, em vez de focar na iniciativa que parte do próprio bebê.",
+            "Porque ele prefere o termo 'treinamento', mais adequado para habilidades motoras.",
+            "Porque a estimulação só pode ser realizada por fisioterapeutas.",
+            "Porque a estimulação está associada apenas a atividades com música e cores."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) Ao refletir sobre o que os bebês fazem no berçário, Paulo Fochi argumenta que eles estão constantemente engajados em uma atividade fundamental. Que atividade é essa?",
+        "alternativas": [
+            "Competição por brinquedos e pela atenção do adulto.",
+            "Repetição de padrões ensinados pelos professores.",
+            "Socialização com o objetivo de formar amizades.",
+            "Investigação e pesquisa sobre o mundo físico e social ao seu redor.",
+            "Preparação para a linguagem escrita e matemática."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "Qual o papel das famílias na abordagem pedagógica proposta por Paulo Fochi?",
+        "alternativas": [
+            "As famílias devem apenas receber relatórios sobre o desenvolvimento dos filhos.",
+            "As famílias são vistas como parceiras, e a documentação pedagógica é uma forma de criar diálogo e valorizar a continuidade entre casa e berçário.",
+            "As famílias devem ensinar em casa as mesmas atividades da escola.",
+            "As famílias são vistas como clientes, sem participação no projeto pedagógico.",
+            "A participação das famílias se restringe a eventos festivos."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Se um professor de berçário seguisse as ideias de Paulo Fochi, qual seria sua principal preocupação ao planejar o dia?",
+        "alternativas": [
+            "Garantir que todos aprendam a mesma cor e forma geométrica.",
+            "Cumprir um cronograma de atividades de um livro didático.",
+            "Organizar o espaço, os materiais e as interações para provocar a curiosidade e sustentar as investigações que emergem das próprias crianças.",
+            "Treinar os bebês para que atinjam os marcos do desenvolvimento antes do tempo.",
+            "Manter todos os bebês limpos, bem alimentados e em silêncio."
+        ],
+        "correta_idx": 2
+    }
+]
