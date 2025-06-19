@@ -1,0 +1,222 @@
+[
+    {
+        "pergunta": "(Adaptada de VUNESP) Marília Pinto de Carvalho, em sua análise sobre o desempenho escolar de meninos e meninas, critica as explicações mais comuns para o 'fracasso' dos meninos. Qual é a tese central da autora?",
+        "alternativas": [
+            "Os meninos fracassam porque são biologicamente menos aptos para as atividades escolares.",
+            "O problema está na 'feminização do magistério', pois as professoras não sabem lidar com meninos.",
+            "O 'fracasso' dos meninos está relacionado ao fato de que o modelo de 'bom aluno' (comportado, quieto, dócil) entra em conflito com o modelo de masculinidade hegemônica.",
+            "As meninas têm mais sucesso porque recebem mais atenção e privilégios dos professores.",
+            "O fracasso escolar masculino é um mito, pois na vida adulta eles ocupam os melhores cargos."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Segundo a perspectiva de Marília Pinto de Carvalho, o que significa dizer que a cultura escolar valoriza um 'aluno feminilizado'?",
+        "alternativas": [
+            "Que a escola incentiva os meninos a adotarem comportamentos e gostos considerados femininos.",
+            "Que o currículo escolar prioriza temas de interesse exclusivo das meninas.",
+            "Que a escola exige e recompensa atitudes como ficar quieto, ser caprichoso e obediente, que são estereotipicamente associadas ao gênero feminino.",
+            "Que a maioria do corpo docente é composta por mulheres.",
+            "Que as atividades propostas são mais fáceis para as meninas do que para os meninos."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de FCC) Marília Pinto de Carvalho aponta para um paradoxo quando analisa as estatísticas de gênero e educação. Qual é o 'paradoxo do sucesso escolar feminino'?",
+        "alternativas": [
+            "Embora as meninas tenham um desempenho escolar superior, essa vantagem não se traduz em igualdade no mercado de trabalho e na sociedade.",
+            "As meninas têm sucesso na escola, mas demonstram mais desinteresse pelas aulas do que os meninos.",
+            "Quanto mais as meninas estudam, menores são suas chances de construir uma carreira de sucesso.",
+            "As escolas com maioria de meninas apresentam piores índices de desempenho.",
+            "O sucesso escolar das meninas depende diretamente do fracasso dos meninos."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "Como a autora critica a explicação do fracasso escolar masculino pela 'crise da masculinidade'?",
+        "alternativas": [
+            "Ela nega que exista uma crise da masculinidade na sociedade.",
+            "Ela argumenta que essa explicação é simplista e culpabiliza os meninos, ignorando o papel da instituição escolar na produção das desigualdades.",
+            "Ela concorda que a crise da masculinidade é a única causa, mas propõe que a escola se adapte.",
+            "Ela afirma que a 'crise da masculinidade' afeta apenas meninos de classes sociais altas.",
+            "Ela acredita que a escola já superou essa crise ao se tornar mais acolhedora."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Qual das seguintes práticas seria uma consequência de uma leitura equivocada dos problemas de gênero na escola, segundo a perspectiva de Carvalho?",
+        "alternativas": [
+            "Propor atividades que desafiem estereótipos de gênero.",
+            "Criar 'clubes do bolinha' ou atividades exclusivas para meninos, com regras mais 'duras' e competitivas.",
+            "Refletir com os alunos sobre como as expectativas de comportamento são diferentes para meninos e meninas.",
+            "Organizar a sala de forma flexível, permitindo mais movimento.",
+            "Analisar os materiais didáticos para identificar representações estereotipadas."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "O que significa dizer que o 'ofício de aluno' possui um viés de gênero, na visão de Marília Pinto de Carvalho?",
+        "alternativas": [
+            "Que apenas um gênero é capaz de aprender o conteúdo.",
+            "Que as competências e comportamentos exigidos para ser um 'bom aluno' são socialmente construídos como mais adequados às meninas.",
+            "Que meninos e meninas aprendem em ritmos biologicamente diferentes.",
+            "Que os meninos têm mais dificuldade em humanas e as meninas em exatas.",
+            "Que o 'ofício de aluno' é uma profissão que deve ser remunerada."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "A análise de Marília Pinto de Carvalho sobre o gênero na escola sugere que a instituição escolar:",
+        "alternativas": [
+            "É um espaço neutro, onde as desigualdades de gênero da sociedade não se reproduzem.",
+            "É um agente ativo na produção e reprodução das desigualdades de gênero, mesmo de forma não intencional.",
+            "Já superou completamente o machismo e hoje favorece as meninas.",
+            "É a única instituição capaz de resolver a desigualdade de gênero.",
+            "Reproduz apenas as desigualdades de classe social."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Qual a importância de analisar a interação entre gênero, raça e classe social, segundo a perspectiva sociológica de Carvalho?",
+        "alternativas": [
+            "Não é importante, pois o gênero é o único fator explicativo.",
+            "É fundamental, pois o 'fracasso escolar dos meninos' não é homogêneo, afetando de forma diferente meninos negros e brancos, pobres e ricos.",
+            "É importante apenas para cumprir a legislação educacional.",
+            "Serve para provar que a raça é mais determinante que o gênero.",
+            "Ajuda a criar estatísticas, mas não tem impacto na prática pedagógica."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Se um professor quisesse aplicar as reflexões de Marília Pinto de Carvalho, qual atitude deveria tomar?",
+        "alternativas": [
+            "Ignorar os comportamentos disruptivos dos meninos, considerando-os 'normais'.",
+            "Questionar suas próprias expectativas de comportamento e avaliar se não está valorizando mais a docilidade do que a participação.",
+            "Dar mais atenção às meninas, pois são naturalmente mais esforçadas.",
+            "Separar meninos e meninas em atividades diferentes.",
+            "Aumentar a lição de casa para os meninos para forçá-los a serem organizados."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Por que a autora critica a ideia da 'feminização do magistério' como causa do problema do fracasso escolar masculino?",
+        "alternativas": [
+            "Porque ela acredita que os professores homens são igualmente ruins em lidar com meninos.",
+            "Porque os homens não se interessam pela profissão docente.",
+            "Porque essa visão ignora que professores de ambos os gêneros estão imersos na mesma cultura escolar que valoriza um modelo 'feminilizado' de aluno.",
+            "Porque pesquisas mostram que os meninos têm melhor desempenho com professoras.",
+            "Porque ela defende que a profissão docente deveria ser exclusiva das mulheres."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "O que significa o conceito de 'masculinidade hegemônica' no contexto da análise de Carvalho sobre a escola?",
+        "alternativas": [
+            "Um modelo ideal de masculinidade que a escola deveria ensinar.",
+            "O padrão cultural dominante de 'ser homem' (associado à força, aversão ao que é 'feminino'), que entra em choque com as normas escolares.",
+            "A ideia de que os meninos devem sempre ser os líderes em atividades.",
+            "Um tipo de masculinidade que tem mais sucesso acadêmico.",
+            "O comportamento agressivo dos meninos, que deve ser punido."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Por que a dificuldade dos meninos com a organização e o capricho é relevante na análise de Carvalho?",
+        "alternativas": [
+            "Porque prova que eles são biologicamente menos capazes.",
+            "Porque são habilidades secundárias que não deveriam ser avaliadas.",
+            "Porque a escola supervaloriza esses aspectos formais, e a falta deles é frequentemente interpretada como desleixo ou indisciplina.",
+            "Porque é um problema que só pode ser resolvido em casa.",
+            "Porque demonstra que os meninos não gostam da escola."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "A 'docilização dos corpos', conceito que pode ser associado à análise de Carvalho, refere-se a:",
+        "alternativas": [
+            "Um processo de tornar a escola mais agradável.",
+            "A exigência de que os corpos dos alunos permaneçam quietos e contidos, o que conflita com uma vivência corporal mais expansiva.",
+            "Uma metodologia para ensinar os alunos a serem mais gentis.",
+            "O treinamento para que os alunos aceitem a autoridade sem questionar.",
+            "Uma crítica à falta de atividades físicas nas escolas."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Qual afirmação sobre o desempenho escolar de meninos e meninas é apoiada pela pesquisa de Marília Pinto de Carvalho?",
+        "alternativas": [
+            "As diferenças de desempenho são naturais e imutáveis.",
+            "As meninas são mais inteligentes que os meninos.",
+            "As diferenças de desempenho são socialmente construídas, e a escola tem um papel central nessa construção.",
+            "Os meninos fracassam mais porque se dedicam a esportes.",
+            "O problema do fracasso escolar masculino é exclusivo do Brasil."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "A autora sugere que, para muitos meninos, ser um 'bom aluno' pode significar:",
+        "alternativas": [
+            "Um risco à sua identidade de gênero masculina, podendo ser alvo de zombarias por parte dos colegas.",
+            "O caminho mais rápido para a popularidade.",
+            "Uma garantia de sucesso profissional futuro.",
+            "A única forma de ganhar o respeito dos professores.",
+            "Uma demonstração de força e competitividade."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "O que seria uma 'pedagogia sensível ao gênero', inspirada nas reflexões de Carvalho?",
+        "alternativas": [
+            "Uma pedagogia que ensina conteúdos diferentes para meninos e meninas.",
+            "Uma prática que reconhece e questiona ativamente os estereótipos de gênero, criando espaços para múltiplas formas de ser menino e menina.",
+            "Uma pedagogia focada em ajudar apenas os meninos.",
+            "A separação de meninos e meninas em salas diferentes.",
+            "A adoção de um currículo neutro que ignore o gênero."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "A crítica de Carvalho ao foco excessivo nas dificuldades dos meninos também serve para alertar sobre:",
+        "alternativas": [
+            "A necessidade de dar mais privilégios às meninas.",
+            "O risco de ignorar os problemas que as meninas ainda enfrentam, como o assédio e a persistência da desigualdade social.",
+            "A ideia de que as meninas não precisam mais de políticas de incentivo.",
+            "O fato de que os meninos não precisam de atenção especial.",
+            "A urgência em criar um sistema de cotas de gênero para aprovação."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Qual é a relação entre 'agência' e 'gênero' na escola, segundo a perspectiva da autora?",
+        "alternativas": [
+            "A escola desestimula qualquer tipo de agência dos alunos.",
+            "A 'agência' dos meninos, muitas vezes expressa como indisciplina, é punida, enquanto a 'agência' das meninas, se for silenciosa, é recompensada.",
+            "Apenas os meninos demonstram ter agência na sala de aula.",
+            "A escola promove igualmente a agência de meninos e meninas.",
+            "Agência e gênero são conceitos que não se relacionam na escola."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "A solução para o 'fracasso escolar masculino', na visão de Marília Pinto de Carvalho, passa por:",
+        "alternativas": [
+            "Tornar a escola mais 'masculina', com mais competição.",
+            "Culpabilizar as famílias pela forma como educam seus filhos.",
+            "Medicar os meninos considerados 'hiperativos'.",
+            "Repensar a cultura escolar, os critérios de avaliação e o que se entende por 'bom aluno', tornando a escola mais inclusiva.",
+            "Contratar exclusivamente professores homens para dar aula para meninos."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "O trabalho de Marília Pinto de Carvalho contribui para a sociologia da educação ao:",
+        "alternativas": [
+            "Oferecer um método infalível para garantir o sucesso dos meninos.",
+            "Provar que as diferenças de gênero no desempenho são puramente biológicas.",
+            "Desnaturalizar o sucesso e o fracasso escolar, mostrando como são produzidos socialmente através das relações de gênero na escola.",
+            "Concluir que a escola não tem papel na formação de identidades de gênero.",
+            "Defender que a melhor escola é aquela que não leva em conta as diferenças."
+        ],
+        "correta_idx": 2
+    }
+]
