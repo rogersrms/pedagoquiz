@@ -1,0 +1,222 @@
+[
+    {
+        "pergunta": "(Adaptada de VUNESP) Lilian Bacich, ao discutir as metodologias ativas, propõe uma mudança fundamental no papel do professor e do aluno. Qual alternativa melhor descreve essa mudança?",
+        "alternativas": [
+            "O professor se torna o único detentor do conhecimento, e o aluno, um receptor passivo.",
+            "O aluno passa a ser o protagonista de seu próprio aprendizado, e o professor assume o papel de mediador, curador e designer de experiências.",
+            "O foco se desloca para o uso da tecnologia, que substitui a necessidade da interação humana.",
+            "O aluno se torna responsável por ensinar o conteúdo para seus colegas, enquanto o professor apenas avalia.",
+            "O professor mantém seu papel de transmissor, mas utiliza jogos digitais para tornar a aula mais divertida."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Uma das metodologias ativas mais discutidas por Lilian Bacich é o Ensino Híbrido (Blended Learning). Qual é a principal característica dessa abordagem?",
+        "alternativas": [
+            "Utilizar exclusivamente a tecnologia para substituir as aulas presenciais.",
+            "Separar os alunos em dois grupos: um que estuda online e outro presencialmente.",
+            "Integrar, de forma intencional, momentos de aprendizagem online com momentos presenciais, nos quais o aluno tem algum controle sobre o tempo, lugar, caminho ou ritmo.",
+            "Aplicar provas e avaliações exclusivamente por meio de plataformas digitais.",
+            "Permitir que os alunos usem seus celulares para pesquisar o conteúdo durante a aula."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) No livro 'Metodologias Ativas', um dos modelos de Ensino Híbrido é a 'Sala de Aula Invertida'. Como funciona este modelo?",
+        "alternativas": [
+            "Os alunos recebem o conteúdo em casa (vídeos, textos) e o tempo em sala é usado para atividades práticas, discussões e tirar dúvidas.",
+            "O professor ensina de costas para os alunos para que eles foquem no quadro.",
+            "Os alunos do período da manhã trocam de sala com os do período da tarde.",
+            "As avaliações são feitas antes da explicação do conteúdo para testar o conhecimento prévio.",
+            "Os alunos ensinam o conteúdo uns aos outros, e o professor apenas assiste."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "Lilian Bacich discute a Aprendizagem Baseada em Projetos (PBL). Qual é o ponto de partida para um trabalho com essa metodologia?",
+        "alternativas": [
+            "Um capítulo do livro didático que deve ser resumido.",
+            "Uma questão norteadora ou um problema complexo e relevante, que levará a uma investigação para construir um produto final.",
+            "Uma lista de exercícios de fixação para serem resolvidos em grupo.",
+            "Uma prova diagnóstica para avaliar o conhecimento prévio da turma.",
+            "A escolha de um tema livre pelos alunos, sem a necessidade de um produto final."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) Ao abordar as metodologias ativas, o que significa a 'curadoria de conteúdo' realizada pelo professor?",
+        "alternativas": [
+            "Criar todo o conteúdo do zero, sem usar fontes externas.",
+            "Apenas indicar o livro didático que será utilizado.",
+            "Selecionar, organizar e disponibilizar materiais e recursos de aprendizagem de qualidade (vídeos, textos, sites, jogos) relevantes para os alunos.",
+            "Corrigir os erros ortográficos dos textos produzidos pelos alunos.",
+            "Limitar o acesso dos alunos a fontes de informação."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Qual das metodologias apresentadas na obra envolve a organização dos alunos em pequenos grupos heterogêneos onde o sucesso de um depende do sucesso de todos, promovendo a interdependência positiva?",
+        "alternativas": [
+            "Instrução por pares (Peer Instruction).",
+            "Sala de aula invertida (Flipped Classroom).",
+            "Aprendizagem Cooperativa.",
+            "Gamificação.",
+            "Rotação por estações."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "No modelo de Rotação por Estações, uma forma de aplicar o Ensino Híbrido, como a aula é tipicamente organizada?",
+        "alternativas": [
+            "Os alunos rodam por diferentes escolas da rede.",
+            "Os alunos, em grupos, passam por diferentes 'estações' de aprendizagem na sala, sendo pelo menos uma delas online.",
+            "O professor de cada disciplina roda pelas salas de aula.",
+            "A sala é organizada em uma única grande estação de trabalho colaborativo.",
+            "O professor 'gira' o conteúdo, alternando entre atividades online e offline para todos ao mesmo tempo."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "O que significa 'personalização do ensino' na perspectiva de Lilian Bacich?",
+        "alternativas": [
+            "Dar uma aula particular para cada aluno da turma.",
+            "Criar um plano de ensino individualizado (PEI) para todos.",
+            "Permitir que o aluno tenha mais autonomia para escolher seus próprios percursos e ritmos de aprendizagem.",
+            "Aplicar a mesma prova para todos, mas com tempos diferentes.",
+            "Separar os alunos em turmas de nível (fracos, médios, fortes)."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) Qual é a essência da Gamificação aplicada à educação, segundo o livro?",
+        "alternativas": [
+            "Substituir todas as aulas por jogos de videogame.",
+            "Usar elementos e mecânicas de jogos (pontos, fases, medalhas, rankings) em contextos que não são jogos, para aumentar o engajamento.",
+            "Realizar competições e gincanas entre as turmas ao final do bimestre.",
+            "Avaliar os alunos exclusivamente através de um jogo digital.",
+            "Proibir o uso de jogos na escola para manter o foco."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Qual é um dos principais benefícios da aplicação de metodologias ativas, segundo a perspectiva geral da obra de Lilian Bacich?",
+        "alternativas": [
+            "Reduzir o tempo de planejamento do professor.",
+            "Garantir que todos os alunos aprendam o mesmo conteúdo no mesmo ritmo.",
+            "Desenvolver, além do conhecimento conceitual, competências socioemocionais como colaboração, comunicação e pensamento crítico.",
+            "Aumentar a quantidade de conteúdo transmitido em menos tempo.",
+            "Tornar a avaliação mais simples, baseada apenas na entrega de um produto final."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de FGV) Lilian Bacich e José Moran destacam que as metodologias ativas visam superar qual modelo de ensino tradicional?",
+        "alternativas": [
+            "O foco excessivo em atividades práticas.",
+            "A ênfase na colaboração, que gera indisciplina.",
+            "O modelo baseado na transmissão de informações do professor para um aluno passivo.",
+            "A utilização exagerada de recursos tecnológicos.",
+            "A flexibilidade excessiva nos currículos."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de IBFC) No Ensino Híbrido, como se caracteriza o modelo de Laboratório Rotacional?",
+        "alternativas": [
+            "Os alunos passam todo o período de aula em um laboratório de informática.",
+            "Um grupo faz atividades práticas na sala enquanto outro vai a um laboratório para atividades online, havendo rodízio.",
+            "Todos os professores se revezam para dar aulas no laboratório de ciências.",
+            "Os alunos realizam a teoria em casa e usam o laboratório para tirar dúvidas.",
+            "A escola inteira para suas atividades para usar o laboratório de informática."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "A 'Aprendizagem baseada em Times' (Team-Based Learning - TBL) é uma metodologia ativa que possui uma estrutura básica. Qual é ela?",
+        "alternativas": [
+            "O professor expõe o conteúdo e aplica uma prova individual.",
+            "Os alunos pesquisam um tema livre e apresentam um seminário.",
+            "Os alunos estudam o material antes, fazem um teste individual, refazem o teste em equipe e aplicam o conhecimento em problemas.",
+            "Os alunos são divididos em times para competir em um jogo de perguntas e respostas.",
+            "O professor divide a matéria e cada time ensina uma parte para a turma."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) Qual a diferença fundamental entre 'personalização' e 'individualização' do ensino, segundo Lilian Bacich?",
+        "alternativas": [
+            "Não há diferença, são termos sinônimos.",
+            "A individualização adapta o ritmo do mesmo percurso para todos, enquanto a personalização permite ao aluno escolher seus próprios percursos.",
+            "A personalização é focada apenas em alunos com necessidades especiais.",
+            "A individualização usa tecnologia, enquanto a personalização não.",
+            "A personalização agrupa os alunos por nível, enquanto a individualização mantém a turma heterogênea."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "A metodologia de 'Instrução por Pares' (Peer Instruction), discutida na obra, é especialmente útil para:",
+        "alternativas": [
+            "Aprofundar a compreensão de conceitos complexos através da discussão e argumentação entre colegas.",
+            "Realizar projetos práticos de longa duração.",
+            "Treinar a memorização de fórmulas através da repetição em duplas.",
+            "Ensinar habilidades motoras em educação física.",
+            "Substituir completamente a figura do professor."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "Qual é o papel da avaliação em um contexto de metodologias ativas, segundo a perspectiva de Bacich?",
+        "alternativas": [
+            "Ser apenas somativa, realizada no final do processo para gerar uma nota.",
+            "Ser principalmente classificatória, para criar um ranking dos melhores alunos.",
+            "Ser parte integrante e contínua do processo (avaliação formativa), fornecendo feedback constante para aluno e professor.",
+            "Ser desnecessária, pois o engajamento já é um indicador de sucesso.",
+            "Ser feita exclusivamente pelos próprios alunos (autoavaliação)."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "No modelo de Ensino Híbrido chamado Rotação Individual, como o percurso de aprendizagem do aluno é determinado?",
+        "alternativas": [
+            "O professor define uma sequência fixa de estações para todos.",
+            "Os alunos, em grupo, decidem qual estação visitar.",
+            "O percurso é personalizado para cada aluno, geralmente guiado por um software adaptativo ou um roteiro individualizado.",
+            "Todos os alunos realizam a mesma atividade online ao mesmo tempo.",
+            "O aluno escolhe aleatoriamente seu percurso a cada dia."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) Lilian Bacich argumenta que a implementação de metodologias ativas exige uma mudança na cultura escolar. Isso implica, entre outras coisas:",
+        "alternativas": [
+            "Manter a estrutura física da sala de aula tradicional.",
+            "Fortalecer a hierarquia entre professor e aluno.",
+            "Que a escola se torne um ambiente mais flexível, colaborativo e que encare o erro como parte do processo de aprendizagem.",
+            "Aumentar a competição entre os alunos para estimular a excelência.",
+            "Focar exclusivamente no cumprimento do currículo."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "O que a metodologia de 'Estudo de Caso' propõe essencialmente?",
+        "alternativas": [
+            "A leitura e o resumo de casos de sucesso de personalidades famosas.",
+            "A análise aprofundada de uma situação ou problema real, na qual os alunos aplicam conceitos teóricos para propor soluções.",
+            "A criação de um caso fictício pelos alunos para ser apresentado como teatro.",
+            "A memorização das soluções de casos já resolvidos por especialistas.",
+            "Uma competição para ver quem resolve o caso mais rapidamente."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Qual é a principal diferença entre a 'Aprendizagem Baseada em Problemas' (PBL - Problem-Based Learning) e a 'Aprendizagem Baseada em Projetos' (Project-Based Learning)?",
+        "alternativas": [
+            "A Baseada em Problemas é individual, enquanto a de Projetos é em grupo.",
+            "Não há diferença, são a mesma metodologia.",
+            "A Baseada em Problemas foca no processo de resolver um problema, enquanto a de Projetos culmina na criação de um produto ou apresentação concreta.",
+            "A Baseada em Projetos usa tecnologia, enquanto a Baseada em Problemas não.",
+            "A Baseada em Problemas é usada em Humanas, e a de Projetos em Exatas."
+        ],
+        "correta_idx": 2
+    }
+]
