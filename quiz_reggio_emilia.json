@@ -1,0 +1,222 @@
+[
+    {
+        "pergunta": "(Adaptada de VUNESP) O título 'As Cem Linguagens da Criança' refere-se a uma ideia central de Reggio Emilia. O que este conceito significa?",
+        "alternativas": [
+            "Que as crianças devem aprender a falar cem idiomas diferentes.",
+            "Que existem cem formas corretas e padronizadas de ensinar.",
+            "Que as crianças se expressam e constroem conhecimento através de múltiplas formas (desenho, argila, música, dança, etc.), e todas devem ser valorizadas.",
+            "Que a linguagem verbal e a escrita são as mais importantes, e as outras 98 são secundárias.",
+            "Que o currículo da Educação Infantil deve ser dividido em cem matérias distintas."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Na abordagem de Reggio Emilia, qual é a concepção de criança que fundamenta toda a prática pedagógica?",
+        "alternativas": [
+            "Uma criança frágil e dependente, que precisa ser constantemente protegida.",
+            "Uma 'folha em branco' que precisa ser preenchida com conhecimento.",
+            "Uma criança potente, protagonista, curiosa, cheia de potencial e portadora de direitos, que constrói ativamente seu aprendizado.",
+            "Um ser que se desenvolve em estágios universais e previsíveis.",
+            "Uma criança que aprende melhor sozinha, através da exploração individual."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de FCC) Um dos conceitos mais conhecidos de Reggio Emilia é a ideia do 'ambiente como terceiro educador'. O que isso significa?",
+        "alternativas": [
+            "Que a escola deve ter três professores por turma.",
+            "Que o ambiente da sala deve ser ricamente planejado, belo e provocador para promover interações, explorações e aprendizados.",
+            "Que as crianças devem passar a maior parte do tempo em ambientes externos.",
+            "Que a decoração da sala com murais feitos pelo professor é o principal elemento educativo.",
+            "Que o ambiente deve ser neutro e com poucos estímulos para não distrair as crianças."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Qual é o papel da documentação pedagógica na abordagem de Reggio Emilia?",
+        "alternativas": [
+            "É um registro burocrático para comprovar o cumprimento do currículo e avaliar o desempenho com notas.",
+            "É uma ferramenta de pesquisa para os professores, que torna visíveis os processos de aprendizagem, permitindo a reflexão e o planejamento.",
+            "É um álbum de fotos e trabalhos para ser entregue aos pais no final do ano como recordação.",
+            "É um relatório diário sobre o comportamento, focado em apontar problemas.",
+            "É uma forma de decorar as paredes da escola sem uma reflexão aprofundada."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) O profissional conhecido como 'atelierista' é uma figura central em Reggio Emilia. Qual é a sua principal função?",
+        "alternativas": [
+            "É o professor responsável exclusivamente pelas aulas de artes.",
+            "É um artista que trabalha em um ateliê, em colaboração com os professores, para apoiar os projetos das crianças através das linguagens expressivas.",
+            "É o coordenador pedagógico, responsável por todo o planejamento.",
+            "É um artesão encarregado de construir os móveis e brinquedos.",
+            "É um terapeuta que atende crianças com necessidades especiais."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Como a abordagem de Reggio Emilia entende o currículo?",
+        "alternativas": [
+            "Como uma lista de conteúdos e habilidades a serem ensinados de forma sequencial e pré-definida.",
+            "Como algo que emerge dos próprios projetos e investigações das crianças, sendo flexível e dinâmico.",
+            "Como um documento fixo elaborado pela secretaria de educação.",
+            "Como um conjunto de atividades lúdicas e recreativas para passar o tempo.",
+            "Como uma apostila que deve ser preenchida pelas crianças ao longo do ano."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "A figura do 'pedagogista' nas escolas de Reggio Emilia desempenha um papel crucial de:",
+        "alternativas": [
+            "Dar aulas de reforço para as crianças com dificuldades.",
+            "Cuidar da administração financeira e da matrícula dos alunos.",
+            "Substituir os professores quando eles faltam.",
+            "Atuar como um coordenador pedagógico que promove a formação contínua dos professores e a conexão com as famílias.",
+            "Ensinar exclusivamente as disciplinas de leitura e escrita."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "(Adaptada de FGV) Na abordagem de Reggio Emilia, a participação das famílias na vida da escola é:",
+        "alternativas": [
+            "Considerada desnecessária, pois pode interferir na autonomia dos professores.",
+            "Restrita a reuniões bimestrais para receber o relatório de avaliação.",
+            "Vista como um direito e um componente essencial do projeto educativo, com participação ativa no dia a dia.",
+            "Limitada à participação em eventos festivos e à contribuição financeira.",
+            "Encorajada apenas se os pais tiverem formação na área de educação."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "O que é um 'progetto' (projeto) na perspectiva de Reggio Emilia?",
+        "alternativas": [
+            "Uma atividade de uma semana com começo, meio e fim pré-definidos.",
+            "Um tema gerador escolhido pelo professor no início do ano.",
+            "Uma investigação aprofundada sobre um tema, que nasce do interesse das próprias crianças e se desenvolve de forma flexível.",
+            "Um conjunto de exercícios sobre um determinado conteúdo do livro didático.",
+            "Uma feira de ciências com apresentação de trabalho individual."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "A organização do trabalho dos professores em Reggio Emilia valoriza intensamente:",
+        "alternativas": [
+            "O trabalho individual e isolado de cada professor.",
+            "A competição entre professores para ver quem tem os melhores resultados.",
+            "A colaboração e o trabalho em pares, com momentos constantes de discussão e reflexão sobre a documentação pedagógica.",
+            "A hierarquia rígida, onde o professor mais experiente define o trabalho dos outros.",
+            "A divisão de tarefas entre professor do pedagógico e professor do cuidado."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "A estética e a beleza do ambiente e dos materiais são muito valorizadas na abordagem de Reggio Emilia. Por quê?",
+        "alternativas": [
+            "Apenas para tornar a escola mais atraente para os pais.",
+            "Porque um ambiente belo e organizado é visto como uma forma de respeito à criança e um convite à investigação.",
+            "Para justificar o uso de materiais mais caros e importados.",
+            "Porque a beleza é um critério de avaliação para o desempenho dos professores.",
+            "Para que as crianças aprendam desde cedo os padrões da arte clássica."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) O que significa a prática da 'escuta' na pedagogia de Reggio Emilia?",
+        "alternativas": [
+            "Refere-se apenas à capacidade de ouvir o que as crianças falam.",
+            "É uma postura do educador de estar atento a todas as 'cem linguagens' da criança para compreender seus pensamentos e teorias.",
+            "É um método para ensinar as crianças a ficarem em silêncio.",
+            "Refere-se à escuta das solicitações dos pais para definir o currículo.",
+            "É uma técnica de gravação de áudio para registrar as conversas."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "O conceito de 'protagonismo infantil' em Reggio Emilia implica que:",
+        "alternativas": [
+            "As crianças devem fazer o que quiserem, sem nenhuma intervenção do adulto.",
+            "As crianças são vistas como as principais autoras de seu aprendizado, com o professor atuando como guia e colaborador.",
+            "Cada turma deve eleger uma criança para ser a líder do grupo.",
+            "As crianças devem ser protagonistas de peças de teatro para os pais.",
+            "Apenas as crianças mais extrovertidas são consideradas protagonistas."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Qual o papel do 'erro' na perspectiva de Reggio Emilia?",
+        "alternativas": [
+            "Um desvio que deve ser corrigido imediatamente.",
+            "Um indicador de que a criança não está prestando atenção.",
+            "Uma valiosa oportunidade de aprendizagem, pois revela o processo de pensamento da criança.",
+            "Um problema que deve ser resolvido com aulas de reforço.",
+            "Uma falha no planejamento do professor."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "A ideia de que o professor também é um 'pesquisador' é fundamental em Reggio Emilia. Isso significa que o professor:",
+        "alternativas": [
+            "Deve ter um doutorado e publicar artigos científicos.",
+            "Conduz pesquisas formais com as crianças como objetos de estudo.",
+            "Está em constante observação, reflexão e estudo sobre sua própria prática e sobre a aprendizagem das crianças.",
+            "Deve pesquisar na internet atividades prontas para aplicar em sala.",
+            "Passa a maior parte do tempo na biblioteca da escola."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Os ateliês e mini-ateliês nas escolas de Reggio Emilia são espaços projetados para:",
+        "alternativas": [
+            "Apenas as crianças com talento artístico especial.",
+            "As aulas de artes tradicionais, com foco em técnicas.",
+            "A exploração, a experimentação e a expressão através das 'cem linguagens', com diversidade de materiais.",
+            "O armazenamento de materiais pedagógicos.",
+            "A realização de atividades de relaxamento."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Como a abordagem de Reggio Emilia se posiciona em relação à avaliação das crianças?",
+        "alternativas": [
+            "Através da aplicação de provas bimestrais com notas.",
+            "Por meio de relatórios que comparam a criança com uma norma de desenvolvimento.",
+            "Através da documentação pedagógica, que narra e interpreta os processos de aprendizagem, focando nos progressos.",
+            "A avaliação não é considerada importante.",
+            "Através de uma conversa informal com os pais."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "O trabalho com projetos em Reggio Emilia difere de muitas abordagens tradicionais porque:",
+        "alternativas": [
+            "Os temas dos projetos são sempre definidos pelo currículo nacional.",
+            "Os projetos têm uma duração fixa de uma semana.",
+            "Os projetos nascem da escuta dos interesses e teorias das crianças e não têm um caminho pré-determinado.",
+            "Apenas o professor é responsável por pesquisar as informações.",
+            "Ao final de cada projeto, os alunos recebem uma nota."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "O termo 'pedagogia da relação', frequentemente associado a Reggio Emilia, enfatiza a importância:",
+        "alternativas": [
+            "Das relações hierárquicas e do respeito à autoridade.",
+            "Apenas da relação da criança com os materiais.",
+            "Da densa rede de relações e interações (criança-criança, criança-adulto, etc.) como base para a aprendizagem.",
+            "Da relação da escola com empresas privadas.",
+            "Das relações virtuais, através de plataformas online."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "A frase 'A criança é feita de cem. A criança tem cem mãos, cem pensamentos...' pertence a um famoso poema de qual educador, inspiração da abordagem de Reggio Emilia?",
+        "alternativas": [
+            "Jean Piaget.",
+            "Lev Vygotsky.",
+            "Paulo Freire.",
+            "Célestin Freinet.",
+            "Loris Malaguzzi."
+        ],
+        "correta_idx": 4
+    }
+]
