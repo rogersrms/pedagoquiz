@@ -1,0 +1,222 @@
+[
+    {
+        "pergunta": "O título da obra de Telma Weisz, 'O Diálogo entre o Ensino e a Aprendizagem', sugere a ideia central do livro. Qual é essa ideia?",
+        "alternativas": [
+            "Que o ensino e a aprendizagem são processos idênticos e simultâneos.",
+            "Que a aprendizagem é um resultado direto e garantido do ensino.",
+            "Que o ensino e a aprendizagem são processos distintos e a aprendizagem não é um reflexo direto do que o professor ensina, exigindo uma interação.",
+            "Que o diálogo em sala de aula é importante apenas para manter a disciplina.",
+            "Que o ensino deve ser focado no diálogo do professor com os pais."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Na perspectiva de Telma Weisz, qual é o papel do professor na sala de aula?",
+        "alternativas": [
+            "Atuar como um transmissor de informações que preenche a mente 'vazia' do aluno.",
+            "Ser um mediador entre o aluno e o objeto de conhecimento, intervindo para desestabilizar as hipóteses dos alunos e promover novos saberes.",
+            "Aplicar provas e avaliações para classificar os alunos de acordo com seu desempenho.",
+            "Manter a ordem e o silêncio, garantindo que os alunos copiem o conteúdo.",
+            "Seguir rigorosamente o livro didático, sem desvios ou adaptações."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) Telma Weisz, ao discutir a alfabetização, critica como os 'erros' são tradicionalmente tratados. Para a autora, o que o erro representa?",
+        "alternativas": [
+            "Um sinal de desatenção ou preguiça que deve ser punido.",
+            "Uma falha no método de ensino do professor.",
+            "Um indicador precioso de como o aluno está pensando, revelando a lógica e a hipótese que ele utiliza para resolver um problema.",
+            "Um desvio que precisa ser corrigido imediatamente com a resposta certa.",
+            "A prova de que a criança ainda não tem 'prontidão' para ser alfabetizada."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "A obra de Telma Weisz enfatiza a importância de o professor conhecer profundamente dois aspectos para poder mediar a aprendizagem. Quais são eles?",
+        "alternativas": [
+            "A história da educação e as políticas públicas educacionais.",
+            "O conteúdo que se propõe a ensinar e as hipóteses dos alunos sobre esse conteúdo.",
+            "A gestão escolar e a legislação de ensino.",
+            "A psicologia do desenvolvimento и as técnicas de dinâmica de grupo.",
+            "O manual do professor e o livro didático do aluno."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Qual das seguintes práticas de sala de aula é MAIS coerente com os princípios defendidos por Telma Weisz?",
+        "alternativas": [
+            "O professor passa uma atividade e, enquanto os alunos trabalham, ele circula, observa, faz perguntas e propõe reflexões.",
+            "O professor passa um ditado de palavras e corrige na lousa, pedindo para todos copiarem a forma correta.",
+            "O professor dedica a maior parte da aula a uma exposição oral, enquanto os alunos copiam em silêncio.",
+            "O professor separa os alunos em grupos de nível (fortes, fracos) e oferece atividades simplificadas para os 'fracos'.",
+            "O professor foca o ensino em cartilhas com famílias silábicas."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "(Adaptada de FCC) Telma Weisz argumenta que o planejamento do professor, em uma perspectiva construtivista, deve ser:",
+        "alternativas": [
+            "Fixo e imutável, para garantir que todo o conteúdo seja coberto.",
+            "Inexistente, pois as atividades devem surgir espontaneamente.",
+            "Focado em uma lista de atividades divertidas para manter os alunos motivados.",
+            "Flexível e pautado na observação contínua da aprendizagem dos alunos, permitindo ajustar as propostas.",
+            "Baseado exclusivamente nas exigências das avaliações externas."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "A ideia de 'conteúdos como pretextos', discutida na obra, significa que:",
+        "alternativas": [
+            "Os conteúdos curriculares não são importantes e podem ser ignorados.",
+            "Os conteúdos servem como um 'pretexto' ou meio para desenvolver a capacidade de pensar e aprender a aprender.",
+            "O professor deve usar o conteúdo apenas como desculpa para aplicar provas.",
+            "Os conteúdos devem ser trabalhados de forma lúdica, mas sem aprofundamento.",
+            "O único conteúdo que importa é aquele que o aluno já traz de casa."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Telma Weisz, baseada em Piaget, considera a interação um fator fundamental. Que tipo de interação é mais valorizada?",
+        "alternativas": [
+            "A interação do aluno com o computador.",
+            "A interação entre alunos do mesmo nível de conhecimento.",
+            "A interação do professor com os alunos mais avançados.",
+            "A interação entre alunos com diferentes hipóteses e pontos de vista (conflito sociocognitivo).",
+            "A interação silenciosa do aluno com o livro didático."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) O que significa a afirmação de que 'a informação não se transforma em conhecimento de forma automática'?",
+        "alternativas": [
+            "Que a maioria dos alunos tem dificuldade de memorização.",
+            "Que a informação só se torna conhecimento quando o aluno consegue processá-la e integrá-la às suas estruturas de pensamento.",
+            "Que o conhecimento só pode ser adquirido através de experiências práticas.",
+            "Que a informação da internet nem sempre é confiável.",
+            "Que o conhecimento é inato e a informação externa tem pouco impacto."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Na obra de Telma Weisz, a organização da sala de aula deve:",
+        "alternativas": [
+            "Ser sempre com carteiras enfileiradas para facilitar o controle.",
+            "Ser flexível, permitindo diferentes arranjos (círculo, duplas, grupos) de acordo com a atividade.",
+            "Ter um espaço para cada aluno trabalhar individualmente, sem contato.",
+            "Ser decorada com o alfabeto e as famílias silábicas.",
+            "Seguir um modelo único definido pela direção da escola."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "A avaliação na perspectiva construtivista defendida por Telma Weisz tem como principal objetivo:",
+        "alternativas": [
+            "Classificar e comparar os alunos, definindo os melhores e os piores.",
+            "Fornecer uma nota final para o boletim.",
+            "Compreender o processo de aprendizagem do aluno para regular a ação pedagógica do professor.",
+            "Verificar se o aluno memorizou o conteúdo ensinado.",
+            "Selecionar os alunos que precisarão de reforço escolar."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) Por que, segundo Telma Weisz, a prática de ensinar 'famílias silábicas' (ba-be-bi-bo-bu) é problemática?",
+        "alternativas": [
+            "Porque é uma atividade muito difícil para as crianças.",
+            "Porque as sílabas são apresentadas de forma descontextualizada e sem significado.",
+            "Porque gasta muito tempo de aula que poderia ser usado para brincadeiras.",
+            "Porque essa prática não utiliza recursos tecnológicos.",
+            "Porque foca excessivamente em consoantes."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "O que Telma Weisz quer dizer com o 'não-paralelismo' entre o ensino e a aprendizagem?",
+        "alternativas": [
+            "Que o ensino e a aprendizagem ocorrem em momentos separados.",
+            "Que a aprendizagem é uma construção particular do aluno que não corresponde ponto a ponto ao ensino.",
+            "Que o ensino deve sempre estar à frente da aprendizagem.",
+            "Que a aprendizagem de alguns alunos nunca alcançará o ritmo do ensino.",
+            "Que o ensino e a aprendizagem devem seguir caminhos paralelos e nunca se encontrar."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Para promover o avanço de um aluno no nível silábico, qual intervenção seria mais adequada segundo Telma Weisz?",
+        "alternativas": [
+            "Mostrar a forma correta para ele copiar várias vezes.",
+            "Pedir que ele leia em voz alta o que escreveu, para que perceba a falta de letras e entre em conflito cognitivo.",
+            "Elogiar o esforço, mas dar a ele uma atividade mais simples.",
+            "Ignorar a escrita da criança, pois a correção pode bloqueá-la.",
+            "Passar um ditado com as mesmas palavras para ele comparar com o colega."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "A importância da 'problematização' no trabalho do professor, segundo Weisz, reside no fato de que:",
+        "alternativas": [
+            "O professor deve criar problemas de disciplina para testar os alunos.",
+            "A aprendizagem é mais significativa quando o aluno é desafiado a pensar sobre um problema, em vez de receber uma resposta pronta.",
+            "O professor deve mostrar que todos os conteúdos são problemáticos.",
+            "A vida dos alunos já é cheia de problemas, e a escola deve ser um refúgio.",
+            "Problematizar é o mesmo que fazer muitas perguntas de verificação."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Qual a importância de se trabalhar com diferentes gêneros textuais desde o início da alfabetização, na perspectiva discutida por Telma Weisz?",
+        "alternativas": [
+            "Nenhuma, pois a criança deve focar apenas em sílabas isoladas.",
+            "Serve apenas para tornar a aula mais divertida.",
+            "É fundamental para que a criança perceba que a escrita tem diferentes funções sociais e estruturas.",
+            "Só deve ser feito após a criança dominar o sistema alfabético.",
+            "Serve para que a criança treine sua caligrafia."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "A concepção de que o conhecimento prévio do aluno é o ponto de partida para a ação pedagógica significa que o professor deve:",
+        "alternativas": [
+            "Ignorar o conhecimento prévio se ele for 'errado'.",
+            "Realizar uma sondagem para identificar o que os alunos já sabem e planejar suas intervenções a partir daí.",
+            "Considerar apenas o conhecimento de experiências escolares anteriores.",
+            "Aceitar o conhecimento prévio do aluno como uma verdade final.",
+            "Aplicar uma prova no início do ano e usar essa nota como único diagnóstico."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "O 'diálogo' entre o ensino e a aprendizagem, proposto por Telma Weisz, implica uma relação de:",
+        "alternativas": [
+            "Mão única, onde o professor ensina e o aluno aprende.",
+            "Conflito constante, onde as ideias do professor e do aluno estão sempre em oposição.",
+            "Respeito mútuo, onde o professor considera as hipóteses do aluno e o aluno considera os desafios propostos.",
+            "Distanciamento, onde o professor não interfere no processo.",
+            "Subordinação, onde as ideias do aluno devem se submeter às do professor."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Por que a organização da turma em duplas produtivas, com crianças em diferentes níveis, é coerente com a teoria de Telma Weisz?",
+        "alternativas": [
+            "Porque a criança mais avançada pode dar a resposta correta para a outra.",
+            "Porque a interação entre pontos de vista diferentes gera um conflito sociocognitivo que força ambas a refletirem.",
+            "Porque essa organização facilita o controle da disciplina.",
+            "Porque os alunos mais avançados assumem o papel de 'monitores'.",
+            "Porque permite ao professor dar atenção apenas às duplas com mais dificuldade."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) A conclusão fundamental da obra 'O Diálogo entre o Ensino e a Aprendizagem' é que a prática pedagógica eficaz deve:",
+        "alternativas": [
+            "Ser baseada em um método de ensino único para todos.",
+            "Priorizar a transmissão de um grande volume de conteúdo.",
+            "Considerar o aluno como centro e o professor como um observador passivo.",
+            "Estar em constante diálogo com o processo de aprendizagem do aluno, sendo o ensino uma ação de mediação que visa transformar o saber.",
+            "Focar na memorização de informações."
+        ],
+        "correta_idx": 3
+    }
+]
