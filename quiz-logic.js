@@ -134,7 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
         randomQuizButton.disabled = true;
         randomQuizButton.textContent = "Gerando quiz...";
         const allQuizUrls = Object.values(allQuizzes).flat().map(quiz => quiz.url);
-
         try {
             const allFetches = allQuizUrls.map(url => fetch(url).then(res => {
                 if (!res.ok) {
@@ -144,22 +143,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 return res.json();
             }).catch(error => {
                 console.warn(`Erro ao buscar ${url}:`, error);
-                return []; // Ignora arquivos que falham no fetch
+                return [];
             }));
-            
             const results = await Promise.all(allFetches);
             const megaPoolOfQuestions = results.flat();
-            
             if (megaPoolOfQuestions.length === 0) {
                 alert("Não foi possível carregar nenhuma pergunta para o quiz aleatório.");
                 return;
             }
-
             shuffle(megaPoolOfQuestions);
             const randomQuizSelection = megaPoolOfQuestions.slice(0, 20);
             currentQuizData = randomQuizSelection;
             startQuiz();
-
         } catch (error) {
             alert("Ocorreu um erro ao gerar o quiz aleatório: " + error.message);
         } finally {
@@ -254,97 +249,70 @@ document.addEventListener('DOMContentLoaded', () => {
             countElement.innerHTML = '';
             countElement.appendChild(badgeImage);
         }
-        
+    }
+
     function generateQuizPDF() {
         if (!currentPlayQuestions || currentPlayQuestions.length === 0) {
-        alert("Não há quiz em andamento para baixar.");
-        return;
-    }
-
-    // Desestrutura o objeto jsPDF para facilitar o uso
-    const { jsPDF } = window.jspdf;
-    
-    // Cria um novo documento PDF
-    const doc = new jsPDF({
-        orientation: 'p', // p = retrato (portrait)
-        unit: 'mm',       // unidade em milímetros
-        format: 'a4'      // formato A4
-    });
-        
-    }
-
-        // --- Configurações de layout do PDF ---
-    let y_position = 20; // Posição vertical inicial (margem do topo)
-    const left_margin = 15;
-    const line_height = 7;
-    const question_spacing = 15;
-    const max_width = 180; // Largura máxima do texto antes de quebrar a linha
-
-         // Título do Quiz (Exemplo)
-    doc.setFont("helvetica", "bold");
-    doc.setFontSize(18);
-    doc.text("Pedagoquiz - Simulado", 105, y_position, { align: 'center' });
-    y_position += question_spacing;
-
-    // Itera sobre cada pergunta do quiz atual
-    currentPlayQuestions.forEach((question, index) => {
-        // Verifica se a próxima pergunta cabe na página, se não, adiciona uma nova
-        if (y_position > 260) { // Margem inferior de segurança
+            alert("Não há quiz em andamento para baixar.");
+            return;
+        }
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' });
+        let y_position = 20;
+        const left_margin = 15;
+        const line_height = 7;
+        const question_spacing = 15;
+        const max_width = 180;
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(18);
+        doc.text("Pedagoquiz - Simulado", 105, y_position, { align: 'center' });
+        y_position += question_spacing;
+        currentPlayQuestions.forEach((question, index) => {
+            if (y_position > 260) {
+                doc.addPage();
+                y_position = 20;
+            }
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(12);
+            const questionLines = doc.splitTextToSize(`${index + 1}. ${question.pergunta}`, max_width);
+            doc.text(questionLines, left_margin, y_position);
+            y_position += (questionLines.length * line_height);
+            y_position += line_height / 2;
+            doc.setFont("helvetica", "normal");
+            doc.setFontSize(11);
+            const alternatives = ['(A)', '(B)', '(C)', '(D)', '(E)'];
+            question.alternativas.forEach((alt, alt_index) => {
+                const alternativeLines = doc.splitTextToSize(`${alternatives[alt_index]} ${alt}`, max_width - 5);
+                doc.text(alternativeLines, left_margin + 5, y_position);
+                y_position += (alternativeLines.length * (line_height - 1)) + 2; // +2 for spacing
+            });
+            y_position += question_spacing / 2;
+        });
+        if (y_position > 250) {
             doc.addPage();
             y_position = 20;
         }
-
-        // --- Pergunta ---
         doc.setFont("helvetica", "bold");
-        doc.setFontSize(12);
-        // O método 'splitTextToSize' quebra o texto longo em várias linhas
-        const questionLines = doc.splitTextToSize(`${index + 1}. ${question.pergunta}`, max_width);
-        doc.text(questionLines, left_margin, y_position);
-        y_position += (questionLines.length * line_height); // Aumenta a posição Y
-
-        y_position += line_height / 2; // Espaço extra antes das alternativas
-
-        // --- Alternativas ---
+        doc.setFontSize(14);
+        doc.text("Gabarito", left_margin, y_position);
+        y_position += line_height;
         doc.setFont("helvetica", "normal");
-        doc.setFontSize(11);
-        const alternatives = ['(A)', '(B)', '(C)', '(D)', '(E)'];
-        question.alternativas.forEach((alt, alt_index) => {
-            const alternativeLines = doc.splitTextToSize(`${alternatives[alt_index]} ${alt}`, max_width - 5); // Um pouco menos de largura
-            doc.text(alternativeLines, left_margin + 5, y_position);
-            y_position += (alternativeLines.length * (line_height - 1));
+        doc.setFontSize(10);
+        let gabaritoText = "";
+        currentPlayQuestions.forEach((q, i) => {
+            const respostaCorreta = String.fromCharCode(65 + q.correta_idx);
+            gabaritoText += `${i + 1}. ${respostaCorreta}   `;
+            if ((i + 1) % 10 === 0) {
+                gabaritoText += "\n";
+            }
         });
-
-        y_position += question_spacing; // Espaço entre as questões
-    });
-
-    // --- Gabarito no Final ---
-    if (y_position > 250) { // Verifica se precisa de uma nova página para o gabarito
-        doc.addPage();
-        y_position = 20;
+        doc.text(gabaritoText, left_margin, y_position);
+        doc.save('Pedagoquiz_Simulado.pdf');
     }
-    doc.setFont("helvetica", "bold");
-    doc.setFontSize(14);
-    doc.text("Gabarito", left_margin, y_position);
-    y_position += line_height;
 
-    doc.setFont("helvetica", "normal");
-    doc.setFontSize(10);
-    let gabaritoText = "";
-    currentPlayQuestions.forEach((q, i) => {
-        const respostaCorreta = String.fromCharCode(65 + q.correta_idx); // Converte 0->A, 1->B, etc.
-        gabaritoText += `${i + 1}. ${respostaCorreta}   `;
-        if ((i + 1) % 10 === 0) { // Quebra a linha a cada 10 respostas
-             gabaritoText += "\n";
-        }
-    });
-    doc.text(gabaritoText, left_margin, y_position);
-
-
-    // Salva o arquivo PDF
-    doc.save('Pedagoquiz_Simulado.pdf');
-}
-
+    // ===============================================================
     // 5. INICIALIZAÇÃO DO PROGRAMA
+    // ===============================================================
     confirmButton.addEventListener('click', confirmAnswer);
     nextButton.addEventListener('click', nextQuestion);
     playAgainButton.addEventListener('click', startQuiz);
@@ -352,10 +320,10 @@ document.addEventListener('DOMContentLoaded', () => {
     backToMenuButton.addEventListener('click', () => {
         if (confirm("Tem certeza que deseja sair do quiz? Seu progresso atual será perdido.")) {
             resetToInitialScreen();
-    downloadQuizButton.addEventListener('click', generateQuizPDF);
         }
     });
     randomQuizButton.addEventListener('click', startRandomSuperQuiz);
+    downloadQuizButton.addEventListener('click', generateQuizPDF);
 
     updateVisitorCount();
     displayCategoryButtons();
