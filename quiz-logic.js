@@ -1,49 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ===============================================================
-    // 1. CONFIGURAÇÃO DO FIREBASE (COLE SUAS CHAVES AQUI)
-    // ===============================================================
+    // 1. CONFIGURAÇÃO DO FIREBASE (Suas chaves aqui)
     const firebaseConfig = {
-    apiKey: "AIzaSyCIVI68yNAWDrPVviqXFnJ6PuQUgO_fphk",
-    authDomain: "pedagoquiz-app.firebaseapp.com",
-    projectId: "pedagoquiz-app",
-    storageBucket: "pedagoquiz-app.firebasestorage.app",
-    messagingSenderId: "945736237028",
-    appId: "1:945736237028:web:71797b15545257721c51f1"
+      apiKey: "AIzaSyCIVI68yNAWDrPVviqXFnJ6PuQUgO_fphk",
+      authDomain: "pedagoquiz-app.firebaseapp.com",
+      projectId: "pedagoquiz-app",
+      storageBucket: "pedagoquiz-app.firebasestorage.app",
+      messagingSenderId: "945736237028",
+      appId: "1:945736237028:web:71797b15545257721c51f1"
     };
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
 
-    // ===============================================================
-    // 2. MAPEAMENTO DE TODOS OS ELEMENTOS DA UI
-    // ===============================================================
-    const userInfoArea = document.getElementById('user-info-area');
-    const loginScreen = document.getElementById('login-screen');
-    const signupScreen = document.getElementById('signup-screen');
-    const loginForm = document.getElementById('login-form');
-    const signupForm = document.getElementById('signup-form');
-    const goToSignupLink = document.getElementById('go-to-signup');
-    const goToLoginLink = document.getElementById('go-to-login');
-    // ... Mapeamentos antigos continuam aqui ...
-    const initialScreen = document.getElementById('initial-screen');
-    const quizScreen = document.getElementById('quiz-screen');
-    const resultsScreen = document.getElementById('results-screen');
-    const selectionContainer = document.getElementById('selection-container');
-    const questionText = document.getElementById('question-text');
-    const optionsContainer = document.getElementById('options-container');
-    const feedbackText = document.getElementById('feedback-text');
-    const confirmButton = document.getElementById('confirm-button');
-    const nextButton = document.getElementById('next-button');
-    const scoreText = document.getElementById('score-text');
-    const playAgainButton = document.getElementById('play-again-button');
-    const loadAnotherButton = document.getElementById('load-another-button');
-    const backToMenuButton = document.getElementById('back-to-menu-button');
-    const randomQuizButton = document.getElementById('random-quiz-button');
-    const downloadQuizButton = document.getElementById('download-quiz-button');
-
-    // ===============================================================
-    // 3. DEFINIR OS QUIZZES E VARIÁVEIS DE ESTADO
-    // ===============================================================
+    // 2. DEFINIR OS QUIZZES DISPONÍVEIS
     const allQuizzes = {
         pedagogico: [
             { name: "FERREIRO - Reflexões sobre a Alfabetização", url: "quiz_ferreiro_alfabetizacao.json" },
@@ -63,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: "FOCHI - O que os bebês fazem no berçário?", url: "quiz_fochi_bercario.json" },
             { name: "BERBEL - As metodologias ativas e a promoção da autonomia de estudantes", url: "berbel_metodologias.json" },
             { name: "LA TAILLE - Piaget, Vygotsky e Wallon: teorias psicogenéticas em discussão", url: "lataille_piaget_vigotsky_walon.json" },
-        
         ],
         legislacao: [
             { name: "LDB", url: "quiz_ldb_completo.json" },
@@ -73,68 +41,46 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: "ECA - Artigos 131 a 138", url: "quiz_eca_art131a138.json" },
         ]
     };
-	// 3. VARIÁVEIS DE ESTADO DO JOGO
-            let currentQuizTitle = "";
-			let currentQuizData = [];
-			let currentPlayQuestions = [];
-			let currentQuestionIndex = 0;
-			let score = 0;
-			let currentCorrectAnswerText = '';
-			let currentDisplayedAlternatives = [];
+
+    // 3. MAPEAMENTO DE TODOS OS ELEMENTOS DA UI
+    const userInfoArea = document.getElementById('user-info-area');
+    const loginScreen = document.getElementById('login-screen');
+    const signupScreen = document.getElementById('signup-screen');
+    const loginForm = document.getElementById('login-form');
+    const signupForm = document.getElementById('signup-form');
+    const goToSignupLink = document.getElementById('go-to-signup');
+    const goToLoginLink = document.getElementById('go-to-login');
+    const initialScreen = document.getElementById('initial-screen');
+    const quizScreen = document.getElementById('quiz-screen');
+    const resultsScreen = document.getElementById('results-screen');
+    const selectionContainer = document.getElementById('selection-container');
+    const questionText = document.getElementById('question-text');
+    const optionsContainer = document.getElementById('options-container');
+    const feedbackText = document.getElementById('feedback-text');
+    const confirmButton = document.getElementById('confirm-button');
+    const nextButton = document.getElementById('next-button');
+    const scoreText = document.getElementById('score-text');
+    const playAgainButton = document.getElementById('play-again-button');
+    const loadAnotherButton = document.getElementById('load-another-button');
+    const backToMenuButton = document.getElementById('back-to-menu-button');
+    const randomQuizButton = document.getElementById('random-quiz-button');
+    const downloadQuizButton = document.getElementById('download-quiz-button');
+    const countElement = document.getElementById('visitor-count-badge');
+
+    // 4. VARIÁVEIS DE ESTADO DO JOGO
+    let currentQuizTitle = "";
+    let currentQuizData = [];
+    let currentPlayQuestions = [];
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let currentCorrectAnswerText = '';
+    let currentDisplayedAlternatives = [];
 
     // ===============================================================
-    // 4. LÓGICA DE AUTENTICAÇÃO E CONTROLE DE TELAS
-    // ===============================================================
-    
-    auth.onAuthStateChanged(user => {
-        if (user) {
-            // USUÁRIO LOGADO
-            userInfoArea.innerHTML = `
-                <span class="username">Olá, ${user.displayName || user.email}!</span>
-                <button id="logout-button" class="btn-tertiary">Sair</button>
-            `;
-            document.getElementById('logout-button').addEventListener('click', () => auth.signOut());
-            resetToInitialScreen(); // Mostra a seleção de quizzes
-        } else {
-            // USUÁRIO DESLOGADO
-            userInfoArea.innerHTML = `
-                <a href="#" id="login-link">Login</a>
-                <a href="#" id="signup-link">Cadastre-se</a>
-            `;
-            document.getElementById('login-link').addEventListener('click', () => showScreen('login-screen'));
-            document.getElementById('signup-link').addEventListener('click', () => showScreen('signup-screen'));
-            showScreen('login-screen'); // Tela padrão para quem não está logado
-        }
-    });
-
-    loginForm.addEventListener('submit', event => {
-        event.preventDefault();
-        const email = document.getElementById('login-email').value;
-        const password = document.getElementById('login-password').value;
-        auth.signInWithEmailAndPassword(email, password)
-            .catch(error => alert("Erro ao fazer login: " + error.message));
-    });
-
-    signupForm.addEventListener('submit', event => {
-        event.preventDefault();
-        const name = document.getElementById('signup-name').value;
-        const email = document.getElementById('signup-email').value;
-        const password = document.getElementById('signup-password').value;
-        auth.createUserWithEmailAndPassword(email, password)
-            .then(userCredential => {
-                return userCredential.user.updateProfile({ displayName: name });
-            })
-            .catch(error => alert("Erro ao cadastrar: " + error.message));
-    });
-
-    goToSignupLink.addEventListener('click', (e) => { e.preventDefault(); showScreen('signup-screen'); });
-    goToLoginLink.addEventListener('click', (e) => { e.preventDefault(); showScreen('login-screen'); });
-    
-    // ===============================================================
-    // 5. FUNÇÕES DO QUIZ (COLE TODAS AS SUAS FUNÇÕES AQUI)
+    // 5. DEFINIÇÃO DE TODAS AS FUNÇÕES
     // ===============================================================
 
-   function shuffle(array) {
+    function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
@@ -208,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetToInitialScreen() {
         showScreen('initial-screen');
         displayCategoryButtons();
-	updateVisitorCount();
+        updateVisitorCount();
     }
 
     async function startRandomSuperQuiz() {
@@ -216,18 +162,11 @@ document.addEventListener('DOMContentLoaded', () => {
         randomQuizButton.textContent = "Gerando quiz...";
         currentQuizTitle = "Quiz Aleatório (20 Questões)";
         const allQuizUrls = Object.values(allQuizzes).flat().map(quiz => quiz.url);
-
         try {
             const allFetches = allQuizUrls.map(url => fetch(url).then(res => {
-                if (!res.ok) {
-                    console.warn(`Aviso: Não foi possível carregar o quiz ${url}. Ele será ignorado.`);
-                    return [];
-                }
+                if (!res.ok) { console.warn(`Aviso: Quiz ${url} ignorado.`); return []; }
                 return res.json();
-            }).catch(error => {
-                console.warn(`Erro ao buscar ${url}:`, error);
-                return [];
-            }));
+            }).catch(error => { console.warn(`Erro ao buscar ${url}:`, error); return []; }));
             const results = await Promise.all(allFetches);
             const megaPoolOfQuestions = results.flat();
             if (megaPoolOfQuestions.length === 0) {
@@ -439,19 +378,11 @@ document.addEventListener('DOMContentLoaded', () => {
         doc.save(`Pedagoquiz_${safeTitle}.pdf`);
     }
 
-    
-    function resetToInitialScreen() {
-        showScreen('initial-screen');
-        
-	    
-    }
-
-
     // ===============================================================
     // 6. INICIALIZAÇÃO E GATILHOS DE EVENTOS
     // ===============================================================
     
-    // Botões do Quiz
+    // Gatilhos de eventos dos botões do Quiz
     confirmButton.addEventListener('click', confirmAnswer);
     nextButton.addEventListener('click', nextQuestion);
     playAgainButton.addEventListener('click', startQuiz);
@@ -463,8 +394,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     randomQuizButton.addEventListener('click', startRandomSuperQuiz);
     downloadQuizButton.addEventListener('click', generateQuizPDF);
-	
 
-    // O programa agora inicia controlado pelo onAuthStateChanged
-    // A chamada inicial a displayCategoryButtons() é feita de dentro do listener
+    // O programa inicia controlado pelo onAuthStateChanged. Nenhuma chamada direta é necessária aqui.
 });
