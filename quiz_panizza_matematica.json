@@ -218,5 +218,38 @@
             "A substituição de todas as aulas por jogos livres."
         ],
         "correta_idx": 2
+    },
+    {
+        "pergunta": "Mabel Panizza, em Ensinar matemática na educação infantil e nas séries iniciais: análise e propostas, mostra que, a uma longa tradição escolar que propunha aos alunos grandes quantidades de contas, seguiu-se uma nova corrente baseada na resolução de problemas. A autora traz o seguinte problema de adição: “Nesta caixa tenho 3 bolinhas e nesta outra, 42. Quantas bolinhas tenho ao todo?”. Para resolvê-lo, trata-se de encontrar a operação numérica adequada e calcular a soma. Conforme a autora, quando a professora intervém na escolha da operação adequada, respondendo afirmativamente a pergunta tão conhecida: “O sinal é de mais?”, pode-se dizer que",
+        "alternativas": [
+            "o cálculo da soma põe em prática, por si só, o conhecimento do aspecto cardinal do número.",
+            "as crianças resolvem a conta, mas não o problema.",
+            "ela supre uma falha do problema, que deveria ter sugerido a operação a ser usada.",
+            "isso auxilia as crianças em seu desenvolvimento matemático.",
+            "ela está ensinando o valor posicional dos números."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Em relação aos conteúdos de Matemática, Mabel Panizza (In: PANIZZA et al.) apresenta reflexões gerais sobre o ensino dessa disciplina, nas quais analisa como necessários ao professor, para esse ensino, os “saberes relativos ao edifício matemático”, os “saberes relativos à aprendizagem” e os “saberes didáticos”. Essa pesquisadora afirma que esses saberes oferecem recursos ao professor para que ele",
+        "alternativas": [
+            "escolha situações adequadas ao saber matemático para o qual se aponte em determinado momento e para uma gestão da classe que favoreça a construção de sentido por parte dos alunos.",
+            "organize o ensino dos conteúdos matemáticos sem ilusões de relações interdisciplinares, porque eles fazem parte dos conhecimentos de uma disciplina pura, cuja lógica é dedutiva.",
+            "avalie, meticulosamente, os conteúdos que cada aluno já domina, podendo, assim, organizar duplas ou grupos de três, nos quais um dos alunos opere como monitor de seu(s) colega(s).",
+            "entenda profundamente como se dá o processo de aprendizagem, podendo, assim, selecionar diferentes estratégias para transmitir um mesmo conteúdo matemático a diferentes alunos.",
+            "compreenda que não é possível ensinar o conteúdo matemático da série atual do aluno, se ele não domina o conteúdo da série ou séries anteriores."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "A partir da leitura do livro Ensinar matemática na educação infantil e nas séries iniciais: análise e propostas (PANIZZA, 2006), no que se refere às interpretações numéricas das crianças observadas na pesquisa, assinale a alternativa correta.",
+        "alternativas": [
+            "As crianças aprendem os números um a um, e respeitando a ordem na série numérica, utilizando o conhecimento dos números escritos.",
+            "As crianças utilizam seus conhecimentos sobre numeração falada para se apoiar em suas interpretações das escritas numéricas.",
+            "Os erros que as crianças cometem ao ler ou escrever os números são atribuídos principalmente a uma ausência de conhecimentos.",
+            "O conhecimento do nome dos dígitos não contribui para que a criança leia um número de dois algarismos.",
+            "As crianças utilizam seus conhecimentos sobre numeração escrita para se apoiar em suas interpretações das escritas numéricas."
+        ],
+        "correta_idx": 1
     }
 ]
