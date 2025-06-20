@@ -15,16 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. DEFINIÇÃO DOS QUIZZES
     const allQuizzes = {
         pedagogico: [
-            { name: "FERREIRO - Reflexões sobre a Alfabetização", url: "quiz_ferreiro_alfabetizacao.json" },
+           { name: "FERREIRO - Reflexões sobre a Alfabetização", url: "quiz_ferreiro_alfabetizacao.json" },
             { name: "BACICH - Metodologias ativas para uma educação inovadora", url: "quiz_bacich_metodologias.json" },
+            { name: "VEIGA - Projeto Político-Pedagógico e Gestão Democrática", url: "Veiga_ppp.json" },
+            { name: "FREIRE - Professora Sim, Tia Não", url: "Professora Sim Tia Não.json" },
             { name: "WEISZ - O diálogo entre o ensino e a aprendizagem", url: "quiz_weisz_dialogo.json" },
             { name: "CAROLYN - As Cem Linguagens da Criança", url: "quiz_reggio_emilia.json" },
             { name: "PANIZZA - Ensinar matemática na educação infantil e nas séries iniciais", url: "quiz_panizza_matematica.json" },
-             // Adicione outros quizzes pedagógicos aqui
+            { name: "SOARES - Letramento e Alfabetização: as muitas facetas", url: "SOARES - Letramento e alfabetização.json" },
+            { name: "LEMOV - Aula nota 10 3.0", url: "lemov_aula_nota_10.json" },
+            { name: "CARVALHO - Sucesso e fracasso escolar: uma questão de gênero", url: "quiz_carvalho_genero.json" },
+            { name: "BARBOSA - Culturas escolares, culturas de infância e culturas familiares", url: "barbosa_culturas.json" },
+            { name: "BENEVIDES - Educação para a democracia", url: "benevides_epd.json" },
+            { name: "AINSCOW - Tornar a educação inclusiva", url: "ainscow_eduinclus.json" },
+            { name: "SASSERON - Alfabetização científica", url: "sasseron_alfabcien.json" },
+            { name: "FOCHI - O que os bebês fazem no berçário?", url: "quiz_fochi_bercario.json" },
+            { name: "BERBEL - As metodologias ativas e a promoção da autonomia de estudantes", url: "berbel_metodologias.json" },
+            { name: "LA TAILLE - Piaget, Vygotsky e Wallon: teorias psicogenéticas em discussão", url: "lataille_piaget_vigotsky_walon.json" },
         ],
         legislacao: [
-            { name: "LDB - 40 Questões de Concurso", url: "quiz_ldb_completo.json" },
-            { name: "ECA - 40 Questões de Concurso", url: "quiz_eca_completo.json" },
+            { name: "LDB", url: "quiz_ldb_completo.json" },
             { name: "ECA - Artigos 1 a 6", url: "quiz_eca_art1a6.json" },
             { name: "ECA - Artigos 15 a 18-B", url: "quiz_eca_art15a18.json" },
             { name: "ECA - Artigos 53 a 59", url: "quiz_eca_art53a59.json" },
@@ -265,28 +275,140 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- FUNÇÃO DE TESTE PARA O PDF ---
+    // Função auxiliar para converter a imagem do logo para o formato que o PDF entende
+    function getBase64Image(imgElement) {
+        try {
+            const canvas = document.createElement("canvas");
+            canvas.width = imgElement.naturalWidth;
+            canvas.height = imgElement.naturalHeight;
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(imgElement, 0, 0);
+            const dataURL = canvas.toDataURL("image/png");
+            return dataURL;
+        } catch (e) {
+            console.error("Erro ao converter imagem para Base64:", e);
+            return null;
+        }
+    }
+
+    // Função final e completa para gerar o PDF
     function generateQuizPDF() {
-        if (!confirm("Deseja baixar um PDF de teste?")) {
+        if (!confirm("Deseja baixar este quiz em formato PDF?")) {
             return;
         }
-        try {
-            if (typeof window.jspdf === 'undefined') {
-                alert("Erro: A biblioteca de geração de PDF (jsPDF) não foi carregada.");
-                return;
-            }
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-            doc.setFontSize(16);
-            doc.text("Teste de Geração de PDF", 10, 20);
-            doc.setFontSize(12);
-            doc.text("Se você está vendo isso, a função de download está funcionando.", 10, 30);
-            doc.save("teste_pedagoquiz.pdf");
-            console.log("Comando doc.save() executado com sucesso.");
-        } catch (e) {
-            alert("Ocorreu um erro técnico ao tentar gerar o PDF:\n" + e.message);
-            console.error("Erro detalhado ao gerar PDF:", e);
+        if (!currentPlayQuestions || currentPlayQuestions.length === 0) {
+            alert("Não há quiz em andamento para baixar.");
+            return;
         }
+        
+        try {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' });
+
+            // Configurações de layout
+            let yPosition = 15;
+            const leftMargin = 15;
+            const pageHeight = doc.internal.pageSize.getHeight();
+            const bottomMargin = 20;
+            const usableWidth = doc.internal.pageSize.getWidth() - leftMargin * 2;
+
+            // 1. Adiciona o Logo
+            const logoElement = document.querySelector('.app-logo');
+            // Verifica se o elemento da imagem existe e se já foi carregado pelo navegador
+            if (logoElement && logoElement.complete && logoElement.naturalHeight !== 0) {
+                const logoData = getBase64Image(logoElement);
+                if (logoData) {
+                    const logoHeight = 15; // Altura do logo em mm no PDF
+                    const logoAspectRatio = logoElement.naturalWidth / logoElement.naturalHeight;
+                    const logoWidth = logoHeight * logoAspectRatio;
+                    const logoX = (doc.internal.pageSize.getWidth() - logoWidth) / 2; // Centraliza
+                    doc.addImage(logoData, 'PNG', logoX, yPosition, logoWidth, logoHeight);
+                    yPosition += logoHeight + 10; // Espaço após o logo
+                }
+            }
+
+            // 2. Adiciona o Título Dinâmico
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(16);
+            const titleLines = doc.splitTextToSize(currentQuizTitle, usableWidth);
+            doc.text(titleLines, doc.internal.pageSize.getWidth() / 2, yPosition, { align: 'center' });
+            yPosition += (titleLines.length * 7) + 15; // Espaço após o título
+
+            // 3. Adiciona as Perguntas e Alternativas
+            currentPlayQuestions.forEach((question, index) => {
+                // Estima a altura do bloco da questão para evitar quebras de página ruins
+                const questionBlockHeight = estimateBlockHeight(doc, question, usableWidth);
+                if (yPosition + questionBlockHeight > pageHeight - bottomMargin) {
+                    doc.addPage();
+                    yPosition = 20;
+                }
+
+                // Escreve a Pergunta
+                doc.setFont("helvetica", "bold");
+                doc.setFontSize(11);
+                const questionLines = doc.splitTextToSize(`${index + 1}. ${question.pergunta}`, usableWidth);
+                doc.text(questionLines, leftMargin, yPosition);
+                yPosition += (questionLines.length * 6) + 4; // Espaço após a pergunta
+
+                // Escreve as Alternativas
+                doc.setFont("helvetica", "normal");
+                doc.setFontSize(10);
+                const alternativesPrefix = ['(A)', '(B)', '(C)', '(D)', '(E)'];
+                question.alternativas.forEach((alt, alt_index) => {
+                    const alternativeLines = doc.splitTextToSize(`${alternativesPrefix[alt_index]} ${alt}`, usableWidth - 5);
+                    doc.text(alternativeLines, leftMargin + 5, yPosition);
+                    yPosition += (alternativeLines.length * 5) + 3; // Cálculo corrigido para o espaçamento
+                });
+                yPosition += 10; // Espaço extra entre as questões
+            });
+
+            // 4. Adiciona o Gabarito no final
+            if (yPosition > pageHeight - bottomMargin - 30) { // Verifica se precisa de página nova para o gabarito
+                doc.addPage();
+                yPosition = 20;
+            }
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(14);
+            doc.text("Gabarito", leftMargin, yPosition);
+            yPosition += 8;
+
+            doc.setFont("helvetica", "normal");
+            doc.setFontSize(10);
+            let gabaritoText = "";
+            currentPlayQuestions.forEach((q, i) => {
+                const respostaCorreta = String.fromCharCode(65 + q.correta_idx);
+                gabaritoText += `${i + 1}. ${respostaCorreta}   `;
+                if ((i + 1) % 10 === 0) { // Quebra a linha a cada 10 respostas
+                    gabaritoText += "\n";
+                }
+            });
+            doc.text(gabaritoText, leftMargin, yPosition);
+            
+            // Cria um nome de arquivo seguro
+            const safeTitle = currentQuizTitle.replace(/[^a-zA-Z0-9]/g, '_').substring(0, 50);
+            doc.save(`Pedagoquiz_${safeTitle}.pdf`);
+
+        } catch(e) {
+            alert("Ocorreu um erro ao gerar o PDF: " + e.message);
+            console.error("Erro detalhado no jsPDF:", e);
+        }
+    }
+    
+    // Função auxiliar para estimar a altura de um bloco de questão
+    function estimateBlockHeight(doc, question, usableWidth) {
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(11);
+        const questionLines = doc.splitTextToSize(question.pergunta, usableWidth);
+        
+        let alternativesHeight = 0;
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(10);
+        question.alternativas.forEach(alt => {
+            const alternativeLines = doc.splitTextToSize(alt, usableWidth - 5);
+            alternativesHeight += (alternativeLines.length * 5) + 3;
+        });
+
+        return (questionLines.length * 6) + alternativesHeight + 15;
     }
 
     // ===============================================================
