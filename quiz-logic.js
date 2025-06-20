@@ -3,26 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. DEFINIR OS QUIZZES DISPONÍVEIS
     const allQuizzes = {
         pedagogico: [
-            { name: "FERREIRO - Reflexões sobre a Alfabetização", url: "quiz_ferreiro_alfabetizacao.json" },
-            { name: "BACICH - Metodologias ativas para uma educação inovadora", url: "quiz_bacich_metodologias.json" },
-            { name: "VEIGA - Projeto Político-Pedagógico e Gestão Democrática", url: "Veiga_ppp.json" },
-            { name: "FREIRE - Professora Sim, Tia Não", url: "Professora Sim Tia Não.json" },
-            { name: "WEISZ - O diálogo entro o ensino e a aprendizagem", url: "quiz_weisz_dialogo.json" },
-            { name: "CAROLYN - As Cem Linguagens da Criança", url: "quiz_reggio_emilia.json" },
-            { name: "PANIZZA - Ensinar matemática na educação infantil e nas séries iniciais", url: "quiz_panizza_matematica.json" },
-            { name: "SOARES - Letramento e Alfabetização: as muitas facetas", url: "SOARES - Letramento e alfabetização.json" },
-            { name: "LEMOV - Aula nota 10 3.0", url: "lemov_aula_nota_10.json" },
+            { name: "As Cem Linguagens da Criança (Reggio Emilia)", url: "quiz_reggio_emilia.json" },
+            { name: "BACICH - Metodologias Ativas", url: "quiz_bacich_metodologias.json" },
+            { name: "BENEVIDES - Educação para a Democracia", url: "quiz_democracia_benevides.json" },
             { name: "CARVALHO - Sucesso e fracasso escolar: uma questão de gênero", url: "quiz_carvalho_genero.json" },
-            { name: "BARBOSA - Culturas escolares, culturas de infância e culturas familiares", url: "barbosa_culturas.json" },
-            { name: "BENEVIDES - Educação para a democracia", url: "benevides_epd.json" },
-            { name: "AINSCOW - Tornar a educação inclusiva", url: "ainscow_eduinclus.json" },
-            { name: "SASSERON - Alfabetização científica", url: "sasseron_alfabcien.json" },
+            { name: "FERREIRO - Reflexões sobre a Alfabetização", url: "quiz_ferreiro_alfabetizacao.json" },
             { name: "FOCHI - O que os bebês fazem no berçário?", url: "quiz_fochi_bercario.json" },
-            { name: "BERBEL - As metodologias ativas e a promoção da autonomia de estudantes", url: "berbel_metodologias.json" },
-            { name: "LA TAILLE - Piaget, Vygotsky e Wallon: teorias psicogenéticas em discussão", url: "lataille_piaget_vigotsky_walon.json" },
+            { name: "PANIZZA - Ensinar matemática na educação infantil e nas séries iniciais", url: "quiz_panizza_matematica.json" },
         ],
         legislacao: [
-            { name: "LDB", url: "quiz_ldb_completo.json" },
+            { name: "LDB - 40 Questões de Concurso", url: "quiz_ldb_completo.json" },
+            { name: "ECA - 40 Questões de Concurso", url: "quiz_eca_completo.json" },
             { name: "ECA - Artigos 1 a 6", url: "quiz_eca_art1a6.json" },
             { name: "ECA - Artigos 15 a 18-B", url: "quiz_eca_art15a18.json" },
             { name: "ECA - Artigos 53 a 59", url: "quiz_eca_art53a59.json" },
@@ -31,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // 2. MAPEAMENTO DE TODOS OS ELEMENTOS DA UI
-    const downloadQuizButton = document.getElementById('download-quiz-button');
     const initialScreen = document.getElementById('initial-screen');
     const quizScreen = document.getElementById('quiz-screen');
     const resultsScreen = document.getElementById('results-screen');
@@ -47,8 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToMenuButton = document.getElementById('back-to-menu-button');
     const countElement = document.getElementById('visitor-count-badge');
     const randomQuizButton = document.getElementById('random-quiz-button');
+    const downloadQuizButton = document.getElementById('download-quiz-button');
 
     // 3. VARIÁVEIS DE ESTADO DO JOGO
+    let currentQuizTitle = "";
     let currentQuizData = [];
     let currentPlayQuestions = [];
     let currentQuestionIndex = 0;
@@ -101,7 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const quizButton = document.createElement('button');
             quizButton.textContent = quiz.name;
             quizButton.className = 'btn btn-secondary';
-            quizButton.addEventListener('click', () => loadQuizFromURL(quiz.url));
+            quizButton.addEventListener('click', () => {
+                currentQuizTitle = quiz.name;
+                loadQuizFromURL(quiz.url);
+            });
             quizListContainer.appendChild(quizButton);
         });
         selectionContainer.appendChild(quizListContainer);
@@ -133,7 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
     async function startRandomSuperQuiz() {
         randomQuizButton.disabled = true;
         randomQuizButton.textContent = "Gerando quiz...";
+        currentQuizTitle = "Quiz Aleatório (20 Questões)";
         const allQuizUrls = Object.values(allQuizzes).flat().map(quiz => quiz.url);
+
         try {
             const allFetches = allQuizUrls.map(url => fetch(url).then(res => {
                 if (!res.ok) {
@@ -251,6 +248,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function getBase64Image(imgElement) {
+        try {
+            const canvas = document.createElement("canvas");
+            canvas.width = imgElement.naturalWidth;
+            canvas.height = imgElement.naturalHeight;
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(imgElement, 0, 0);
+            const dataURL = canvas.toDataURL("image/png");
+            return dataURL;
+        } catch (e) {
+            console.error("Erro ao converter imagem para Base64:", e);
+            return null;
+        }
+    }
+
     function generateQuizPDF() {
         if (!currentPlayQuestions || currentPlayQuestions.length === 0) {
             alert("Não há quiz em andamento para baixar.");
@@ -258,61 +270,87 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' });
-        let y_position = 20;
-        const left_margin = 15;
-        const line_height = 7;
-        const question_spacing = 15;
-        const max_width = 180;
+        let yPosition = 15;
+        const leftMargin = 15;
+        const rightMargin = 15;
+        const pageHeight = doc.internal.pageSize.getHeight();
+        const bottomMargin = 20;
+        const usableWidth = doc.internal.pageSize.getWidth() - leftMargin - rightMargin;
+        const logoElement = document.querySelector('.app-logo');
+        if (logoElement) {
+            const logoData = getBase64Image(logoElement);
+            if (logoData) {
+                const logoHeight = 15;
+                const logoAspectRatio = logoElement.naturalWidth / logoElement.naturalHeight;
+                const logoWidth = logoHeight * logoAspectRatio;
+                const logoX = (doc.internal.pageSize.getWidth() - logoWidth) / 2;
+                doc.addImage(logoData, 'PNG', logoX, yPosition, logoWidth, logoHeight);
+                yPosition += logoHeight + 10;
+            }
+        }
         doc.setFont("helvetica", "bold");
-        doc.setFontSize(18);
-        doc.text("Pedagoquiz - Simulado", 105, y_position, { align: 'center' });
-        y_position += question_spacing;
+        doc.setFontSize(16);
+        const titleLines = doc.splitTextToSize(currentQuizTitle, usableWidth);
+        doc.text(titleLines, 105, yPosition, { align: 'center' });
+        yPosition += (titleLines.length * 7) + 10;
         currentPlayQuestions.forEach((question, index) => {
-            if (y_position > 260) {
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(11);
+            const questionLines = doc.splitTextToSize(`${index + 1}. ${question.pergunta}`, usableWidth);
+            let alternativesHeight = 0;
+            doc.setFont("helvetica", "normal");
+            doc.setFontSize(10);
+            question.alternativas.forEach(alt => {
+                const alternativeLines = doc.splitTextToSize(`(A) ${alt}`, usableWidth - 5);
+                alternativesHeight += (alternativeLines.length * 5) + 3;
+            });
+            const totalBlockHeight = (questionLines.length * 6) + alternativesHeight + 5;
+            if (yPosition + totalBlockHeight > pageHeight - bottomMargin) {
                 doc.addPage();
-                y_position = 20;
+                yPosition = 20;
             }
             doc.setFont("helvetica", "bold");
-            doc.setFontSize(12);
-            const questionLines = doc.splitTextToSize(`${index + 1}. ${question.pergunta}`, max_width);
-            doc.text(questionLines, left_margin, y_position);
-            y_position += (questionLines.length * line_height);
-            y_position += line_height / 2;
-            doc.setFont("helvetica", "normal");
             doc.setFontSize(11);
-            const alternatives = ['(A)', '(B)', '(C)', '(D)', '(E)'];
+            doc.text(questionLines, leftMargin, yPosition);
+            yPosition += (questionLines.length * 6) + 3;
+            doc.setFont("helvetica", "normal");
+            doc.setFontSize(10);
+            const alternativesPrefix = ['(A)', '(B)', '(C)', '(D)', '(E)'];
             question.alternativas.forEach((alt, alt_index) => {
-                const alternativeLines = doc.splitTextToSize(`${alternatives[alt_index]} ${alt}`, max_width - 5);
-                doc.text(alternativeLines, left_margin + 5, y_position);
-                y_position += (alternativeLines.length * (line_height - 1)) + 2; // +2 for spacing
+                const alternativeLines = doc.splitTextToSize(`${alternativesPrefix[alt_index]} ${alt}`, usableWidth - 5);
+                doc.text(alternativeLines, leftMargin + 5, yPosition);
+                yPosition += (alternativeLines.length * 5) + 3;
             });
-            y_position += question_spacing / 2;
+            yPosition += 5;
         });
-        if (y_position > 250) {
+        if (yPosition > pageHeight - bottomMargin - 20) {
             doc.addPage();
-            y_position = 20;
+            yPosition = 20;
         }
         doc.setFont("helvetica", "bold");
         doc.setFontSize(14);
-        doc.text("Gabarito", left_margin, y_position);
-        y_position += line_height;
+        doc.text("Gabarito", leftMargin, yPosition);
+        yPosition += 8;
         doc.setFont("helvetica", "normal");
         doc.setFontSize(10);
-        let gabaritoText = "";
+        let gabaritoColumns = ["", ""];
+        const questionsPerColumn = Math.ceil(currentPlayQuestions.length / 2);
         currentPlayQuestions.forEach((q, i) => {
             const respostaCorreta = String.fromCharCode(65 + q.correta_idx);
-            gabaritoText += `${i + 1}. ${respostaCorreta}   `;
-            if ((i + 1) % 10 === 0) {
-                gabaritoText += "\n";
+            const gabaritoLine = `${i + 1}. ${respostaCorreta}`;
+            if (i < questionsPerColumn) {
+                gabaritoColumns[0] += `${gabaritoLine}\n`;
+            } else {
+                gabaritoColumns[1] += `${gabaritoLine}\n`;
             }
         });
-        doc.text(gabaritoText, left_margin, y_position);
-        doc.save('Pedagoquiz_Simulado.pdf');
+        doc.text(gabaritoColumns[0], leftMargin, yPosition);
+        doc.text(gabaritoColumns[1], leftMargin + 50, yPosition);
+        const safeTitle = currentQuizTitle.replace(/[^a-zA-Z0-9]/g, '_').substring(0, 50);
+        doc.save(`Pedagoquiz_${safeTitle}.pdf`);
     }
 
-    // ===============================================================
     // 5. INICIALIZAÇÃO DO PROGRAMA
-    // ===============================================================
     confirmButton.addEventListener('click', confirmAnswer);
     nextButton.addEventListener('click', nextQuestion);
     playAgainButton.addEventListener('click', startQuiz);
