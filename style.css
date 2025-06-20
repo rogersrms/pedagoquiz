@@ -168,3 +168,75 @@ body {
     font-size: 0.9rem;
     color: #a0a0a0; /* Um cinza bem claro */
 }
+
+/* --- NOVOS ESTILOS PARA HEADER E AUTENTICAÇÃO --- */
+.app-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px 25px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.user-info a, .user-info button {
+    margin-left: 15px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.user-info button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+.user-info button:hover {
+    text-decoration: underline;
+}
+
+.user-info .username {
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.app-logo-small {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+.form-switch {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.form-switch a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-switch a:hover {
+    text-decoration: underline;
+}
