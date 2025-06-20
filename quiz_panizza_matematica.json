@@ -1,0 +1,222 @@
+[
+    {
+        "pergunta": "(Adaptada de VUNESP) A obra de Mabel Panizza se alinha a uma corrente da Didática da Matemática que critica o ensino tradicional. Qual é a principal crítica a esse modelo?",
+        "alternativas": [
+            "O uso excessivo de jogos e materiais concretos.",
+            "O foco na resolução de problemas abertos, que gera confusão.",
+            "A concepção de que o conhecimento matemático é um objeto pronto, a ser transmitido pelo professor e memorizado pelo aluno.",
+            "A ênfase na interação entre os alunos, que prejudica o trabalho individual.",
+            "A falta de avaliações padronizadas."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Na Teoria das Situações Didáticas de Guy Brousseau, o que é uma situação adidática?",
+        "alternativas": [
+            "Um momento da aula em que não há intencionalidade pedagógica.",
+            "Uma situação em que o professor ensina o conteúdo de forma expositiva.",
+            "Um erro no planejamento do professor.",
+            "Um momento planejado em que o aluno interage com um problema por si mesmo, como se o professor não estivesse presente.",
+            "Uma atividade realizada fora da sala de aula."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) Na Teoria das Situações Didáticas, a situação em que os alunos precisam comunicar uma informação para outros colegas de forma precisa é chamada de:",
+        "alternativas": [
+            "Situação de Ação.",
+            "Situação de Validação.",
+            "Situação de Institucionalização.",
+            "Situação de Formulação.",
+            "Situação de Devolução."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "Ainda na Teoria das Situações Didáticas, qual é o papel do professor no momento da institucionalização?",
+        "alternativas": [
+            "Deixar que os alunos cheguem sozinhos ao conhecimento formal.",
+            "Aplicar uma prova para verificar a aprendizagem.",
+            "Retomar o que foi construído pelos alunos e formalizar o saber, dando nome aos conceitos e conectando-os ao conhecimento matemático.",
+            "Corrigir individualmente todos os erros cometidos.",
+            "Apresentar um novo problema, mais complexo."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de FCC) A obra de Mabel Panizza defende a 'resolução de problemas' como eixo do ensino. O que caracteriza um bom problema?",
+        "alternativas": [
+            "Um exercício de aplicação direta de uma fórmula recém-ensinada.",
+            "Um problema que o aluno ainda não tem ferramentas para resolver.",
+            "Um problema que possa ser resolvido de uma única maneira.",
+            "Um desafio para o qual o aluno não tem uma solução pronta, mas possui conhecimentos para começar a buscar uma estratégia.",
+            "Uma situação com resposta no final do livro."
+        ],
+        "correta_idx": 3
+    },
+    {
+        "pergunta": "No contexto da Teoria das Situações Didáticas, o que é a devolução?",
+        "alternativas": [
+            "O ato do aluno devolver a prova corrigida.",
+            "O momento em que o professor 'entrega' a responsabilidade pela resolução do problema ao aluno.",
+            "A devolução dos materiais utilizados na aula.",
+            "A resposta final que o aluno apresenta.",
+            "A revisão do conteúdo feita pelo professor."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "O que é a 'transposição didática', conceito de Yves Chevallard discutido no campo da Didática da Matemática?",
+        "alternativas": [
+            "A tradução de um problema matemático para a língua portuguesa.",
+            "O processo de transformação do saber sábio (conhecimento acadêmico) em um saber a ser ensinado na escola.",
+            "A mudança de um aluno de uma série para outra.",
+            "A utilização de tecnologia para transpor a aula para o ambiente digital.",
+            "A cópia do conteúdo da lousa para o caderno."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Na Situação de Ação, segundo Brousseau, qual é a principal atividade do aluno?",
+        "alternativas": [
+            "Formular uma teoria e explicá-la.",
+            "Agir sobre um meio material (objetos, etc.), tomando decisões e recebendo feedback desse meio.",
+            "Ouvir atentamente a exposição do professor.",
+            "Discutir com os colegas para validar uma estratégia.",
+            "Esperar que o professor dê a resposta."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Mabel Panizza e os autores do livro defendem que o ensino do sistema de numeração decimal deve:",
+        "alternativas": [
+            "Começar pela memorização e cópia de sequências numéricas.",
+            "Focar exclusivamente no uso do material dourado.",
+            "Se basear na resolução de problemas onde as características do sistema (agrupamentos de 10) aparecem como ferramenta útil.",
+            "Ser adiado até a criança demonstrar total maturidade.",
+            "Priorizar o ensino dos algoritmos ('contas armadas')."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) A Situação de Validação na teoria de Brousseau é o momento em que os alunos precisam:",
+        "alternativas": [
+            "Apenas mostrar o resultado final de seus cálculos.",
+            "Esperar pela validação do professor.",
+            "Explicar e justificar suas estratégias, tentando convencer os colegas da validade de seu raciocínio.",
+            "Receber uma nota pela atividade realizada.",
+            "Aplicar uma fórmula matemática para validar o resultado."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "O que é o 'contrato didático' na Teoria das Situações Didáticas?",
+        "alternativas": [
+            "O contrato de trabalho do professor.",
+            "Um acordo escrito sobre as regras de comportamento.",
+            "O conjunto de regras e expectativas implícitas que regulam as responsabilidades do professor e do aluno em relação a um saber.",
+            "O planejamento anual de conteúdos.",
+            "A lista de materiais que os alunos devem trazer."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Por que o ensino tradicional de 'vai um' no algoritmo da adição é criticado pela perspectiva da Didática da Matemática?",
+        "alternativas": [
+            "Porque é um método muito antigo.",
+            "Porque ele transforma uma propriedade do sistema de numeração (agrupamento de dezenas) em uma regra mecânica e sem sentido.",
+            "Porque os alunos demoram muito para memorizar.",
+            "Porque esse método não pode ser usado para números grandes.",
+            "Porque não utiliza a calculadora."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "Uma prática docente alinhada aos pressupostos de 'Ensinar Matemática...' seria:",
+        "alternativas": [
+            "Apresentar um problema, deixar os alunos tentarem resolvê-lo, promover uma discussão e, por fim, formalizar o conhecimento.",
+            "Ensinar primeiro o algoritmo da divisão e depois passar uma lista de exercícios.",
+            "Corrigir cada passo do aluno enquanto ele resolve um problema.",
+            "Separar os alunos que 'sabem' dos que 'não sabem'.",
+            "Utilizar exclusivamente jogos, sem momentos de discussão."
+        ],
+        "correta_idx": 0
+    },
+    {
+        "pergunta": "Qual a importância dos jogos no ensino da matemática, segundo a perspectiva do livro?",
+        "alternativas": [
+            "Servem apenas como recreação para o final da aula.",
+            "Um jogo pode ser uma excelente situação-problema, desde que vencer dependa da elaboração de uma estratégia matemática.",
+            "O objetivo é apenas tornar a matemática mais divertida.",
+            "São úteis apenas para treinar o cálculo mental repetitivo.",
+            "Apenas jogos digitais são considerados eficazes."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "O que significa a 'despersonalização' e 'descontextualização' do saber matemático?",
+        "alternativas": [
+            "Que o professor não deve conhecer seus alunos pessoalmente.",
+            "Que a matemática deve ser ensinada de forma abstrata.",
+            "Que o conhecimento construído em uma situação particular precisa ser generalizado para ser aplicado em outras situações.",
+            "Que o aluno deve esquecer suas estratégias pessoais.",
+            "Que o contexto do problema não tem importância."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) Uma abordagem coerente com a proposta do livro para o ensino de geometria seria:",
+        "alternativas": [
+            "Apresentar as figuras e seus nomes para memorização.",
+            "Focar no cálculo de áreas e perímetros desde a educação infantil.",
+            "Propor problemas de construção, representação e descrição de figuras, permitindo que as crianças explorem suas propriedades.",
+            "Utilizar apenas formas geométricas planas.",
+            "Ensinar as definições formais da geometria euclidiana."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "Qual o principal obstáculo para a aprendizagem quando o professor 'sopra' a resposta para o aluno?",
+        "alternativas": [
+            "O professor perde a autoridade.",
+            "A aula termina mais rápido.",
+            "O professor impede que o aluno se engaje na situação adidática, retirando dele a responsabilidade de pensar.",
+            "O aluno pode pensar que o professor não confia nele.",
+            "A resposta 'soprada' pode estar incorreta."
+        ],
+        "correta_idx": 2
+    },
+    {
+        "pergunta": "A análise dos erros dos alunos, na perspectiva da Didática da Matemática, é fundamental porque:",
+        "alternativas": [
+            "Permite classificar os alunos em níveis de desempenho.",
+            "Os erros frequentemente revelam obstáculos de origem didática, ou seja, ligados à forma como o conhecimento foi ensinado.",
+            "Ajuda a identificar alunos que precisam de aulas particulares.",
+            "O erro é um sinal de que o aluno não estudou o suficiente.",
+            "A contagem de erros é a principal forma de compor a nota."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "O que diferencia um 'problema' de um 'exercício', na concepção de Mabel Panizza?",
+        "alternativas": [
+            "O problema é mais longo que o exercício.",
+            "O exercício treina um procedimento já ensinado, enquanto o problema exige a criação de uma nova estratégia pelo aluno.",
+            "Problemas são para avaliações, exercícios para lição de casa.",
+            "Não há diferença, são sinônimos.",
+            "O exercício envolve números, o problema pode ser puramente lógico."
+        ],
+        "correta_idx": 1
+    },
+    {
+        "pergunta": "(Adaptada de VUNESP) A Teoria das Situações Didáticas propõe uma dinâmica de aula que pressupõe:",
+        "alternativas": [
+            "Um professor que fala o tempo todo e alunos que ouvem.",
+            "Um aluno que trabalha de forma isolada e silenciosa.",
+            "A sucessão de momentos de interação do aluno com o problema (ação), de debate com colegas (formulação/validação) e de formalização pelo professor (institucionalização).",
+            "Uma aula dividida em teoria e prática, sem conexão entre elas.",
+            "A substituição de todas as aulas por jogos livres."
+        ],
+        "correta_idx": 2
+    }
+]
