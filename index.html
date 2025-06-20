@@ -47,7 +47,7 @@
                  <p class="app-subtitle small">Não sabe qual escolher?</p>
                  <button id="random-quiz-button" class="btn btn-special">Surpreenda-me! (Quiz Aleatório)</button>
             </div>
-            <p class="creator-credit">Desenvolvido por Rodrigo Sousa<br> Encontrou um erro? Tem alguma sugestão?<br> Envie um e-mail: contato@pedagoquiz.com.br</p>
+            <p class="creator-credit">Criado por Rodrigo Sousa<br>contato@pedagoquiz.com.br</p>
             <div class="visitor-counter">
                 <span id="visitor-count-badge"></span>
             </div>
@@ -66,6 +66,7 @@
                 <button id="next-button" class="btn btn-secondary hidden">Próxima Pergunta</button>
             </div>
         </div>
+
         <div id="results-screen" class="screen">
             <h2 class="result-title">Quiz Finalizado!</h2>
             <p id="score-text" class="score"></p>
@@ -76,9 +77,11 @@
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-    
+
     <script src="quiz-logic.js"></script>
 
 </body>
