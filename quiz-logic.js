@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetToInitialScreen() {
         showScreen('initial-screen');
         displayCategoryButtons();
-	updateVisitorCount()
+	updateVisitorCount();
     }
 
     async function startRandomSuperQuiz() {
@@ -442,7 +442,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function resetToInitialScreen() {
         showScreen('initial-screen');
-        displayCategoryButtons();
+        
 	    
     }
 
