@@ -288,35 +288,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-       function generateQuizPDF() {
-        if (!confirm("Deseja baixar este quiz em formato PDF?")) {
-            return;
+      // SUBSTITUA a sua função generateQuizPDF antiga por esta versão de teste:
+    function generateQuizPDF() {
+        if (!confirm("Deseja baixar um PDF de teste?")) {
+            return; // Se o usuário cancelar, a função para aqui.
         }
-        if (!currentPlayQuestions || currentPlayQuestions.length === 0) {
-            alert("Não há quiz em andamento para baixar.");
-            return;
-        }
-        
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' });
-        let yPosition = 15;
-        const leftMargin = 15;
-        const pageHeight = doc.internal.pageSize.getHeight();
-        const bottomMargin = 20;
-        const usableWidth = doc.internal.pageSize.getWidth() - leftMargin * 2;
-        
-        const logoElement = document.querySelector('.app-logo');
-        if (logoElement && logoElement.complete && logoElement.naturalHeight !== 0) {
-            const logoData = getBase64Image(logoElement);
-            if (logoData) {
-                const logoHeight = 15;
-                const logoAspectRatio = logoElement.naturalWidth / logoElement.naturalHeight;
-                const logoWidth = logoHeight * logoAspectRatio;
-                const logoX = (doc.internal.pageSize.getWidth() - logoWidth) / 2;
-                doc.addImage(logoData, 'PNG', logoX, yPosition, logoWidth, logoHeight);
-                yPosition += logoHeight + 10;
+
+        try {
+            // Verifica se a biblioteca jsPDF foi carregada
+            if (typeof window.jspdf === 'undefined') {
+                alert("Erro: A biblioteca de geração de PDF (jsPDF) não foi carregada. Verifique a conexão com a internet.");
+                return;
             }
+            
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Adiciona um texto simples ao PDF
+            doc.setFontSize(16);
+            doc.text("Teste de Geração de PDF", 10, 20);
+            doc.setFontSize(12);
+            doc.text("Se você está vendo este arquivo, a função de download está funcionando.", 10, 30);
+
+            // Tenta salvar o arquivo
+            doc.save("teste_pedagoquiz.pdf");
+            
+            console.log("Comando doc.save() executado com sucesso.");
+
+        } catch (e) {
+            // Mostra um alerta se ocorrer qualquer erro durante a criação do PDF
+            alert("Ocorreu um erro técnico ao tentar gerar o PDF:\n" + e.message);
+            console.error("Erro detalhado ao gerar PDF:", e);
         }
+    }
         
         doc.setFont("helvetica", "bold");
         doc.setFontSize(16);
