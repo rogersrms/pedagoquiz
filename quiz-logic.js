@@ -17,24 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
         pedagogico: [
             { name: "FERREIRO - Reflexões sobre a Alfabetização", url: "quiz_ferreiro_alfabetizacao.json" },
             { name: "BACICH - Metodologias ativas para uma educação inovadora", url: "quiz_bacich_metodologias.json" },
-            { name: "VEIGA - Projeto Político-Pedagógico e Gestão Democrática", url: "Veiga_ppp.json" },
-            { name: "FREIRE - Professora Sim, Tia Não", url: "Professora Sim Tia Não.json" },
             { name: "WEISZ - O diálogo entre o ensino e a aprendizagem", url: "quiz_weisz_dialogo.json" },
             { name: "CAROLYN - As Cem Linguagens da Criança", url: "quiz_reggio_emilia.json" },
             { name: "PANIZZA - Ensinar matemática na educação infantil e nas séries iniciais", url: "quiz_panizza_matematica.json" },
-            { name: "SOARES - Letramento e Alfabetização: as muitas facetas", url: "SOARES - Letramento e alfabetização.json" },
-            { name: "LEMOV - Aula nota 10 3.0", url: "lemov_aula_nota_10.json" },
-            { name: "CARVALHO - Sucesso e fracasso escolar: uma questão de gênero", url: "quiz_carvalho_genero.json" },
-            { name: "BARBOSA - Culturas escolares, culturas de infância e culturas familiares", url: "barbosa_culturas.json" },
-            { name: "BENEVIDES - Educação para a democracia", url: "benevides_epd.json" },
-            { name: "AINSCOW - Tornar a educação inclusiva", url: "ainscow_eduinclus.json" },
-            { name: "SASSERON - Alfabetização científica", url: "sasseron_alfabcien.json" },
-            { name: "FOCHI - O que os bebês fazem no berçário?", url: "quiz_fochi_bercario.json" },
-            { name: "BERBEL - As metodologias ativas e a promoção da autonomia de estudantes", url: "berbel_metodologias.json" },
-            { name: "LA TAILLE - Piaget, Vygotsky e Wallon: teorias psicogenéticas em discussão", url: "lataille_piaget_vigotsky_walon.json" },
+             // Adicione outros quizzes pedagógicos aqui
         ],
         legislacao: [
-            { name: "LDB", url: "quiz_ldb_completo.json" },
+            { name: "LDB - 40 Questões de Concurso", url: "quiz_ldb_completo.json" },
+            { name: "ECA - 40 Questões de Concurso", url: "quiz_eca_completo.json" },
             { name: "ECA - Artigos 1 a 6", url: "quiz_eca_art1a6.json" },
             { name: "ECA - Artigos 15 a 18-B", url: "quiz_eca_art15a18.json" },
             { name: "ECA - Artigos 53 a 59", url: "quiz_eca_art53a59.json" },
@@ -87,8 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showScreen(screenId) {
-        document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
-        document.getElementById(screenId).classList.add('active');
+        document.querySelectorAll('.screen').forEach(screen => {
+            if (screen) screen.classList.remove('active');
+        });
+        const screenToShow = document.getElementById(screenId);
+        if (screenToShow) screenToShow.classList.add('active');
     }
 
     function loadQuizFromURL(url) {
@@ -200,7 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
         currentCorrectAnswerText = questionData.alternativas[questionData.correta_idx];
         let currentDisplayedAlternatives = [...questionData.alternativas];
         shuffle(currentDisplayedAlternatives);
-        
         optionsContainer.innerHTML = '';
         currentDisplayedAlternatives.forEach((alt, index) => {
             const optionId = `option${index}`;
@@ -214,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
             optionsContainer.appendChild(optionDiv);
         });
     }
-    
+
     function confirmAnswer() {
         const selectedRadio = document.querySelector('input[name="answer"]:checked');
         if (!selectedRadio) return;
@@ -262,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateVisitorCount() {
-        const namespace = 'pedagoquiz.rodrigosousa1';
+        const namespace = 'pedagoquiz.rodrigosousa';
         if (countElement) {
             const badgeUrl = `https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fpedagoquiz.com%2F${namespace}&countColor=%237d8da1&label=Visitantes`;
             const badgeImage = document.createElement('img');
@@ -273,129 +265,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function getBase64Image(imgElement) {
-        try {
-            const canvas = document.createElement("canvas");
-            canvas.width = imgElement.naturalWidth;
-            canvas.height = imgElement.naturalHeight;
-            const ctx = canvas.getContext("2d");
-            ctx.drawImage(imgElement, 0, 0);
-            const dataURL = canvas.toDataURL("image/png");
-            return dataURL;
-        } catch (e) {
-            console.error("Erro ao converter imagem para Base64:", e);
-            return null;
-        }
-    }
-
-      // SUBSTITUA a sua função generateQuizPDF antiga por esta versão de teste:
+    // --- FUNÇÃO DE TESTE PARA O PDF ---
     function generateQuizPDF() {
         if (!confirm("Deseja baixar um PDF de teste?")) {
-            return; // Se o usuário cancelar, a função para aqui.
+            return;
         }
-
         try {
-            // Verifica se a biblioteca jsPDF foi carregada
             if (typeof window.jspdf === 'undefined') {
-                alert("Erro: A biblioteca de geração de PDF (jsPDF) não foi carregada. Verifique a conexão com a internet.");
+                alert("Erro: A biblioteca de geração de PDF (jsPDF) não foi carregada.");
                 return;
             }
-            
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
-
-            // Adiciona um texto simples ao PDF
             doc.setFontSize(16);
             doc.text("Teste de Geração de PDF", 10, 20);
             doc.setFontSize(12);
-            doc.text("Se você está vendo este arquivo, a função de download está funcionando.", 10, 30);
-
-            // Tenta salvar o arquivo
+            doc.text("Se você está vendo isso, a função de download está funcionando.", 10, 30);
             doc.save("teste_pedagoquiz.pdf");
-            
             console.log("Comando doc.save() executado com sucesso.");
-
         } catch (e) {
-            // Mostra um alerta se ocorrer qualquer erro durante a criação do PDF
             alert("Ocorreu um erro técnico ao tentar gerar o PDF:\n" + e.message);
             console.error("Erro detalhado ao gerar PDF:", e);
         }
     }
-        
-        doc.setFont("helvetica", "bold");
-        doc.setFontSize(16);
-        const titleLines = doc.splitTextToSize(currentQuizTitle, usableWidth);
-        doc.text(titleLines, doc.internal.pageSize.getWidth() / 2, yPosition, { align: 'center' });
-        yPosition += (titleLines.length * 7) + 10;
-
-        currentPlayQuestions.forEach((question, index) => {
-            doc.setFont("helvetica", "bold");
-            doc.setFontSize(11);
-            const questionLines = doc.splitTextToSize(`${index + 1}. ${question.pergunta}`, usableWidth);
-            
-            let alternativesHeight = 0;
-            doc.setFont("helvetica", "normal");
-            doc.setFontSize(10);
-            question.alternativas.forEach(alt => {
-                const alternativeLines = doc.splitTextToSize(`(A) ${alt}`, usableWidth - 5);
-                alternativesHeight += (alternativeLines.length * 5) + 3;
-            });
-
-            const totalBlockHeight = (questionLines.length * 6) + alternativesHeight + 5;
-            if (yPosition + totalBlockHeight > pageHeight - bottomMargin) {
-                doc.addPage();
-                yPosition = 20;
-            }
-
-            doc.setFont("helvetica", "bold");
-            doc.setFontSize(11);
-            doc.text(questionLines, leftMargin, yPosition);
-            yPosition += (questionLines.length * 6) + 3;
-            
-            doc.setFont("helvetica", "normal");
-            doc.setFontSize(10);
-            const alternativesPrefix = ['(A)', '(B)', '(C)', '(D)', '(E)'];
-            question.alternativas.forEach((alt, alt_index) => {
-                const alternativeLines = doc.splitTextToSize(`${alternativesPrefix[alt_index]} ${alt}`, usableWidth - 5);
-                doc.text(alternativeLines, leftMargin + 5, yPosition);
-                yPosition += (alternativeLines.length * 5) + 3;
-            });
-            yPosition += 5;
-        });
-
-        if (yPosition > pageHeight - bottomMargin - 20) {
-            doc.addPage();
-            yPosition = 20;
-        }
-        doc.setFont("helvetica", "bold");
-        doc.setFontSize(14);
-        doc.text("Gabarito", leftMargin, yPosition);
-        yPosition += 8;
-        doc.setFont("helvetica", "normal");
-        doc.setFontSize(10);
-        let gabaritoColumns = ["", ""];
-        const questionsPerColumn = Math.ceil(currentPlayQuestions.length / 2);
-        currentPlayQuestions.forEach((q, i) => {
-            const respostaCorreta = String.fromCharCode(65 + q.correta_idx);
-            const gabaritoLine = `${i + 1}. ${respostaCorreta}`;
-            if (i < questionsPerColumn) {
-                gabaritoColumns[0] += `${gabaritoLine}\n`;
-            } else {
-                gabaritoColumns[1] += `${gabaritoLine}\n`;
-            }
-        });
-        doc.text(gabaritoColumns[0], leftMargin, yPosition);
-        doc.text(gabaritoColumns[1], leftMargin + 50, yPosition);
-        
-        const safeTitle = currentQuizTitle.replace(/[^a-zA-Z0-9]/g, '_').substring(0, 50);
-        doc.save(`Pedagoquiz_${safeTitle}.pdf`);
-    }
 
     // ===============================================================
-    // 6. INICIALIZAÇÃO E GATILHOS DE EVENTOS
+    // 6. LÓGICA DE AUTENTICAÇÃO E INICIALIZAÇÃO
     // ===============================================================
     
-    // Lógica de Autenticação (Controla o início do app)
     auth.onAuthStateChanged(user => {
         if (user) {
             userInfoArea.innerHTML = `<span class="username">Olá, ${user.displayName || user.email}!</span><button id="logout-button" class="btn-tertiary">Sair</button>`;
@@ -440,5 +337,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     randomQuizButton.addEventListener('click', startRandomSuperQuiz);
     downloadQuizButton.addEventListener('click', generateQuizPDF);
-
 });
