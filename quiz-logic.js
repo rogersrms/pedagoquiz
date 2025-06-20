@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // ===============================================================
-    // 1. CONFIGURAÇÃO DO FIREBASE
+    // 1. CONFIGURAÇÃO DO FIREBASE (Suas chaves aqui)
     // ===============================================================
     const firebaseConfig = {
-      apiKey: "SUA_API_KEY",
-      authDomain: "SEU_AUTH_DOMAIN",
-      projectId: "SEU_PROJECT_ID",
-      storageBucket: "SEU_STORAGE_BUCKET",
-      messagingSenderId: "SEU_SENDER_ID",
-      appId: "SEU_APP_ID"
+      apiKey: "AIzaSyCIVI68yNAWDrPVviqXFnJ6PuQUgO_fphk",
+      authDomain: "pedagoquiz-app.firebaseapp.com",
+      projectId: "pedagoquiz-app",
+      storageBucket: "pedagoquiz-app.firebasestorage.app",
+      messagingSenderId: "945736237028",
+      appId: "1:945736237028:web:71797b15545257721c51f1"
     };
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
@@ -21,19 +21,32 @@ document.addEventListener('DOMContentLoaded', () => {
         pedagogico: [
             { name: "FERREIRO - Reflexões sobre a Alfabetização", url: "quiz_ferreiro_alfabetizacao.json" },
             { name: "BACICH - Metodologias ativas para uma educação inovadora", url: "quiz_bacich_metodologias.json" },
+            { name: "VEIGA - Projeto Político-Pedagógico e Gestão Democrática", url: "Veiga_ppp.json" },
+            { name: "FREIRE - Professora Sim, Tia Não", url: "Professora Sim Tia Não.json" },
             { name: "WEISZ - O diálogo entre o ensino e a aprendizagem", url: "quiz_weisz_dialogo.json" },
-            // ...e os outros quizzes...
+            { name: "CAROLYN - As Cem Linguagens da Criança", url: "quiz_reggio_emilia.json" },
+            { name: "PANIZZA - Ensinar matemática na educação infantil e nas séries iniciais", url: "quiz_panizza_matematica.json" },
+            { name: "SOARES - Letramento e Alfabetização: as muitas facetas", url: "SOARES - Letramento e alfabetização.json" },
+            { name: "LEMOV - Aula nota 10 3.0", url: "lemov_aula_nota_10.json" },
+            { name: "CARVALHO - Sucesso e fracasso escolar: uma questão de gênero", url: "quiz_carvalho_genero.json" },
+            { name: "BARBOSA - Culturas escolares, culturas de infância e culturas familiares", url: "barbosa_culturas.json" },
+            { name: "BENEVIDES - Educação para a democracia", url: "benevides_epd.json" },
+            { name: "AINSCOW - Tornar a educação inclusiva", url: "ainscow_eduinclus.json" },
+            { name: "SASSERON - Alfabetização científica", url: "sasseron_alfabcien.json" },
+            { name: "FOCHI - O que os bebês fazem no berçário?", url: "quiz_fochi_bercario.json" },
+            { name: "BERBEL - As metodologias ativas e a promoção da autonomia de estudantes", url: "berbel_metodologias.json" },
+            { name: "LA TAILLE - Piaget, Vygotsky e Wallon: teorias psicogenéticas em discussão", url: "lataille_piaget_vigotsky_walon.json" },
         ],
         legislacao: [
             { name: "LDB", url: "quiz_ldb_completo.json" },
             { name: "ECA - Artigos 1 a 6", url: "quiz_eca_art1a6.json" },
-            // ...e os outros quizzes...
+            { name: "ECA - Artigos 15 a 18-B", url: "quiz_eca_art15a18.json" },
+            { name: "ECA - Artigos 53 a 59", url: "quiz_eca_art53a59.json" },
+            { name: "ECA - Artigos 131 a 138", url: "quiz_eca_art131a138.json" },
         ]
     };
 
-    // ===============================================================
     // 3. MAPEAMENTO DE TODOS OS ELEMENTOS DA UI
-    // ===============================================================
     const userInfoArea = document.getElementById('user-info-area');
     const loginScreen = document.getElementById('login-screen');
     const signupScreen = document.getElementById('signup-screen');
@@ -45,87 +58,56 @@ document.addEventListener('DOMContentLoaded', () => {
     const quizScreen = document.getElementById('quiz-screen');
     const resultsScreen = document.getElementById('results-screen');
     const selectionContainer = document.getElementById('selection-container');
-    const randomQuizButton = document.getElementById('random-quiz-button');
-    const downloadQuizButton = document.getElementById('download-quiz-button');
-    const backToMenuButton = document.getElementById('back-to-menu-button');
+    const questionText = document.getElementById('question-text');
+    const optionsContainer = document.getElementById('options-container');
+    const feedbackText = document.getElementById('feedback-text');
+    const confirmButton = document.getElementById('confirm-button');
+    const nextButton = document.getElementById('next-button');
+    const scoreText = document.getElementById('score-text');
     const playAgainButton = document.getElementById('play-again-button');
     const loadAnotherButton = document.getElementById('load-another-button');
-    // (outros mapeamentos se necessário)
+    const backToMenuButton = document.getElementById('back-to-menu-button');
+    const randomQuizButton = document.getElementById('random-quiz-button');
+    const downloadQuizButton = document.getElementById('download-quiz-button');
+    const countElement = document.getElementById('visitor-count-badge');
 
-    // ===============================================================
     // 4. VARIÁVEIS DE ESTADO DO JOGO
-    // ===============================================================
-    let currentQuizData = [], currentPlayQuestions = [], currentQuestionIndex = 0, score = 0;
     let currentQuizTitle = "";
+    let currentQuizData = [];
+    let currentPlayQuestions = [];
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let currentCorrectAnswerText = '';
+    let currentDisplayedAlternatives = [];
 
     // ===============================================================
-    // 5. DEFINIÇÃO DE TODAS AS FUNÇÕES (A-Z)
+    // 5. DEFINIÇÃO DE TODAS AS FUNÇÕES
     // ===============================================================
 
-    function confirmAnswer() {
-        const selectedRadio = document.querySelector('input[name="answer"]:checked');
-        if (!selectedRadio) return;
-        const isCorrect = selectedRadio.value === currentCorrectAnswerText; // currentCorrectAnswerText precisa ser definido
-        if (isCorrect) {
-            score++;
-            document.getElementById('feedback-text').textContent = 'Correto!';
-            document.getElementById('feedback-text').className = 'feedback correct';
-            selectedRadio.parentElement.style.borderColor = 'var(--success-color)';
-        } else {
-            document.getElementById('feedback-text').textContent = `Incorreto. A resposta correta era: "${currentCorrectAnswerText}"`;
-            document.getElementById('feedback-text').className = 'feedback incorrect';
-            selectedRadio.parentElement.style.borderColor = 'var(--danger-color)';
-            const correctRadioInput = document.querySelector(`input[value="${CSS.escape(currentCorrectAnswerText)}"]`);
-            if (correctRadioInput) {
-                correctRadioInput.parentElement.style.backgroundColor = '#d4edda';
-            }
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
         }
-        document.querySelectorAll('input[name="answer"]').forEach(radio => radio.disabled = true);
-        document.getElementById('confirm-button').classList.add('hidden');
-        document.getElementById('next-button').classList.remove('hidden');
     }
-    
-    function displayCategoryButtons() {
-        selectionContainer.innerHTML = `
-            <h3 class="app-subtitle">Escolha um assunto:</h3>
-            <div class="category-container">
-                <div class="category-card" id="card-pedagogico">
-                    <h4>Pedagógico</h4>
-                    <p>Teste seus conhecimentos em teorias da educação, didática e práticas pedagógicas.</p>
-                </div>
-                <div class="category-card" id="card-legislacao">
-                    <h4>Legislação</h4>
-                    <p>Questões sobre LDB, ECA, BNCC e outras normas importantes da educação.</p>
-                </div>
-            </div>
-        `;
-        document.getElementById('card-pedagogico').addEventListener('click', () => displayQuizListForCategory('pedagogico'));
-        document.getElementById('card-legislacao').addEventListener('click', () => displayQuizListForCategory('legislacao'));
-    }
-    
-    function displayCurrentQuestion() {
-        resetFeedbackAndButtons();
-        const questionData = currentPlayQuestions[currentQuestionIndex];
-        const questionText = document.getElementById('question-text');
-        const optionsContainer = document.getElementById('options-container');
 
-        questionText.innerHTML = `Pergunta ${currentQuestionIndex + 1}/${currentPlayQuestions.length}:<br><br>${questionData.pergunta}`;
-        currentCorrectAnswerText = questionData.alternativas[questionData.correta_idx];
-        let currentDisplayedAlternatives = [...questionData.alternativas];
-        shuffle(currentDisplayedAlternatives);
-        
-        optionsContainer.innerHTML = '';
-        currentDisplayedAlternatives.forEach((alt, index) => {
-            const optionId = `option${index}`;
-            const optionDiv = document.createElement('div');
-            optionDiv.className = 'option';
-            optionDiv.innerHTML = `<input type="radio" name="answer" id="${optionId}" value="${alt}"><label for="${optionId}">${alt}</label>`;
-            optionDiv.addEventListener('click', () => {
-                optionDiv.querySelector('input[type="radio"]').checked = true;
-                document.getElementById('confirm-button').disabled = false;
-            });
-            optionsContainer.appendChild(optionDiv);
-        });
+    function showScreen(screenId) {
+        document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
+        document.getElementById(screenId).classList.add('active');
+    }
+
+    function loadQuizFromURL(url) {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) throw new Error(`Arquivo não encontrado ou erro de rede (Status: ${response.status})`);
+                return response.json();
+            })
+            .then(data => {
+                if (!Array.isArray(data) || data.length === 0) throw new Error("O arquivo JSON está vazio ou em formato inválido.");
+                currentQuizData = data;
+                startQuiz();
+            })
+            .catch(error => alert(`Não foi possível carregar o quiz: ${error.message}\nVerifique se o nome do arquivo .json está correto e se ele está na mesma pasta do index.html.`));
     }
 
     function displayQuizListForCategory(categoryKey) {
@@ -154,64 +136,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         selectionContainer.appendChild(quizListContainer);
     }
-    
-    function generateQuizPDF() { /* ... (código da função de gerar PDF aqui) ... */ }
-    function getBase64Image(imgElement) { /* ... (código da função de imagem aqui) ... */ }
 
-    function loadQuizFromURL(url) {
-        fetch(url)
-            .then(response => {
-                if (!response.ok) throw new Error(`Arquivo não encontrado (Status: ${response.status})`);
-                return response.json();
-            })
-            .then(data => {
-                if (!Array.isArray(data) || data.length === 0) throw new Error("JSON vazio ou inválido.");
-                currentQuizData = data;
-                startQuiz();
-            })
-            .catch(error => alert(`Erro ao carregar quiz: ${error.message}`));
-    }
-
-    function nextQuestion() {
-        currentQuestionIndex++;
-        if (currentQuestionIndex < currentPlayQuestions.length) {
-            displayCurrentQuestion();
-        } else {
-            showResults();
-        }
-    }
-    
-    function resetFeedbackAndButtons() {
-        document.getElementById('feedback-text').textContent = '';
-        document.getElementById('feedback-text').className = 'feedback';
-        document.getElementById('confirm-button').disabled = true;
-        document.getElementById('confirm-button').classList.remove('hidden');
-        document.getElementById('next-button').classList.add('hidden');
+    function displayCategoryButtons() {
+        selectionContainer.innerHTML = `
+            <h3 class="app-subtitle">Escolha um assunto:</h3>
+            <div class="category-container">
+                <div class="category-card" id="card-pedagogico">
+                    <h4>Pedagógico</h4>
+                    <p>Teste seus conhecimentos em teorias da educação, didática e práticas pedagógicas.</p>
+                </div>
+                <div class="category-card" id="card-legislacao">
+                    <h4>Legislação</h4>
+                    <p>Questões sobre LDB, ECA, BNCC e outras normas importantes da educação.</p>
+                </div>
+            </div>
+        `;
+        document.getElementById('card-pedagogico').addEventListener('click', () => displayQuizListForCategory('pedagogico'));
+        document.getElementById('card-legislacao').addEventListener('click', () => displayQuizListForCategory('legislacao'));
     }
 
     function resetToInitialScreen() {
         showScreen('initial-screen');
         displayCategoryButtons();
         updateVisitorCount();
-    }
-    
-    function showResults() {
-        showScreen('results-screen');
-        const scoreText = document.getElementById('score-text');
-        const percentage = (score / currentPlayQuestions.length) * 100 || 0;
-        scoreText.textContent = `Sua pontuação: ${score} de ${currentPlayQuestions.length} (${percentage.toFixed(2)}%)`;
-    }
-
-    function showScreen(screenId) {
-        document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
-        document.getElementById(screenId).classList.add('active');
-    }
-
-    function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
     }
 
     async function startRandomSuperQuiz() {
@@ -251,9 +198,76 @@ document.addEventListener('DOMContentLoaded', () => {
         nextQuestion();
     }
 
+    function displayCurrentQuestion() {
+        resetFeedbackAndButtons();
+        const questionData = currentPlayQuestions[currentQuestionIndex];
+        questionText.innerHTML = `Pergunta ${currentQuestionIndex + 1}/${currentPlayQuestions.length}:<br><br>${questionData.pergunta}`;
+        currentCorrectAnswerText = questionData.alternativas[questionData.correta_idx];
+        let currentDisplayedAlternatives = [...questionData.alternativas];
+        shuffle(currentDisplayedAlternatives);
+        
+        optionsContainer.innerHTML = '';
+        currentDisplayedAlternatives.forEach((alt, index) => {
+            const optionId = `option${index}`;
+            const optionDiv = document.createElement('div');
+            optionDiv.className = 'option';
+            optionDiv.innerHTML = `<input type="radio" name="answer" id="${optionId}" value="${alt}"><label for="${optionId}">${alt}</label>`;
+            optionDiv.addEventListener('click', () => {
+                optionDiv.querySelector('input[type="radio"]').checked = true;
+                confirmButton.disabled = false;
+            });
+            optionsContainer.appendChild(optionDiv);
+        });
+    }
+    
+    function confirmAnswer() {
+        const selectedRadio = document.querySelector('input[name="answer"]:checked');
+        if (!selectedRadio) return;
+        const isCorrect = selectedRadio.value === currentCorrectAnswerText;
+        if (isCorrect) {
+            score++;
+            feedbackText.textContent = 'Correto!';
+            feedbackText.className = 'feedback correct';
+            selectedRadio.parentElement.style.borderColor = 'var(--success-color)';
+        } else {
+            feedbackText.textContent = `Incorreto. A resposta correta era: "${currentCorrectAnswerText}"`;
+            feedbackText.className = 'feedback incorrect';
+            selectedRadio.parentElement.style.borderColor = 'var(--danger-color)';
+            const correctRadioInput = document.querySelector(`input[value="${CSS.escape(currentCorrectAnswerText)}"]`);
+            if (correctRadioInput) {
+                correctRadioInput.parentElement.style.backgroundColor = '#d4edda';
+            }
+        }
+        document.querySelectorAll('input[name="answer"]').forEach(radio => radio.disabled = true);
+        confirmButton.classList.add('hidden');
+        nextButton.classList.remove('hidden');
+    }
+
+    function nextQuestion() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < currentPlayQuestions.length) {
+            displayCurrentQuestion();
+        } else {
+            showResults();
+        }
+    }
+
+    function showResults() {
+        showScreen('results-screen');
+        const percentage = (score / currentPlayQuestions.length) * 100 || 0;
+        scoreText.textContent = `Sua pontuação: ${score} de ${currentPlayQuestions.length} (${percentage.toFixed(2)}%)`;
+    }
+
+    function resetFeedbackAndButtons() {
+        feedbackText.textContent = '';
+        feedbackText.className = 'feedback';
+        confirmButton.disabled = true;
+        confirmButton.classList.remove('hidden');
+        nextButton.classList.add('hidden');
+    }
+
     function updateVisitorCount() {
         const namespace = 'pedagoquiz.rodrigosousa';
-        const countElement = document.getElementById('visitor-count-badge');
         if (countElement) {
             const badgeUrl = `https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fpedagoquiz.com%2F${namespace}&countColor=%237d8da1&label=Visitantes`;
             const badgeImage = document.createElement('img');
@@ -264,39 +278,135 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function getBase64Image(imgElement) {
+        try {
+            const canvas = document.createElement("canvas");
+            canvas.width = imgElement.naturalWidth;
+            canvas.height = imgElement.naturalHeight;
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(imgElement, 0, 0);
+            const dataURL = canvas.toDataURL("image/png");
+            return dataURL;
+        } catch (e) {
+            console.error("Erro ao converter imagem para Base64:", e);
+            return null;
+        }
+    }
+
+    function generateQuizPDF() {
+        if (!confirm("Deseja baixar este quiz em formato PDF?")) {
+            return;
+        }
+        if (!currentPlayQuestions || currentPlayQuestions.length === 0) {
+            alert("Não há quiz em andamento para baixar.");
+            return;
+        }
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' });
+        let yPosition = 15;
+        const leftMargin = 15;
+        const pageHeight = doc.internal.pageSize.getHeight();
+        const bottomMargin = 20;
+        const usableWidth = doc.internal.pageSize.getWidth() - leftMargin * 2;
+        
+        const logoElement = document.querySelector('.app-logo');
+        if (logoElement && logoElement.complete) {
+            const logoData = getBase64Image(logoElement);
+            if (logoData) {
+                const logoHeight = 15;
+                const logoAspectRatio = logoElement.naturalWidth / logoElement.naturalHeight;
+                const logoWidth = logoHeight * logoAspectRatio;
+                const logoX = (doc.internal.pageSize.getWidth() - logoWidth) / 2;
+                doc.addImage(logoData, 'PNG', logoX, yPosition, logoWidth, logoHeight);
+                yPosition += logoHeight + 10;
+            }
+        }
+        
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(16);
+        const titleLines = doc.splitTextToSize(currentQuizTitle, usableWidth);
+        doc.text(titleLines, 105, yPosition, { align: 'center' });
+        yPosition += (titleLines.length * 7) + 10;
+
+        currentPlayQuestions.forEach((question, index) => {
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(11);
+            const questionLines = doc.splitTextToSize(`${index + 1}. ${question.pergunta}`, usableWidth);
+            doc.setFont("helvetica", "normal");
+            doc.setFontSize(10);
+            let alternativesHeight = 0;
+            question.alternativas.forEach(alt => {
+                const alternativeLines = doc.splitTextToSize(`(A) ${alt}`, usableWidth - 5);
+                alternativesHeight += (alternativeLines.length * 5) + 3;
+            });
+            const totalBlockHeight = (questionLines.length * 6) + alternativesHeight + 5;
+            if (yPosition + totalBlockHeight > pageHeight - bottomMargin) {
+                doc.addPage();
+                yPosition = 20;
+            }
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(11);
+            doc.text(questionLines, leftMargin, yPosition);
+            yPosition += (questionLines.length * 6) + 3;
+            doc.setFont("helvetica", "normal");
+            doc.setFontSize(10);
+            const alternativesPrefix = ['(A)', '(B)', '(C)', '(D)', '(E)'];
+            question.alternativas.forEach((alt, alt_index) => {
+                const alternativeLines = doc.splitTextToSize(`${alternativesPrefix[alt_index]} ${alt}`, usableWidth - 5);
+                doc.text(alternativeLines, leftMargin + 5, yPosition);
+                yPosition += (alternativeLines.length * 5) + 3;
+            });
+            yPosition += 5;
+        });
+
+        if (yPosition > pageHeight - bottomMargin - 20) {
+            doc.addPage();
+            yPosition = 20;
+        }
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(14);
+        doc.text("Gabarito", leftMargin, yPosition);
+        yPosition += 8;
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(10);
+        let gabaritoColumns = ["", ""];
+        const questionsPerColumn = Math.ceil(currentPlayQuestions.length / 2);
+        currentPlayQuestions.forEach((q, i) => {
+            const respostaCorreta = String.fromCharCode(65 + q.correta_idx);
+            const gabaritoLine = `${i + 1}. ${respostaCorreta}`;
+            if (i < questionsPerColumn) {
+                gabaritoColumns[0] += `${gabaritoLine}\n`;
+            } else {
+                gabaritoColumns[1] += `${gabaritoLine}\n`;
+            }
+        });
+        doc.text(gabaritoColumns[0], leftMargin, yPosition);
+        doc.text(gabaritoColumns[1], leftMargin + 50, yPosition);
+        const safeTitle = currentQuizTitle.replace(/[^a-zA-Z0-9]/g, '_').substring(0, 50);
+        doc.save(`Pedagoquiz_${safeTitle}.pdf`);
+    }
+
     // ===============================================================
-    // 6. LÓGICA DE AUTENTICAÇÃO E INICIALIZAÇÃO
+    // 6. INICIALIZAÇÃO DO PROGRAMA
     // ===============================================================
-    
-    // Observa mudanças no estado de autenticação (login/logout)
     auth.onAuthStateChanged(user => {
         if (user) {
-            // Usuário está logado
-            userInfoArea.innerHTML = `
-                <span class="username">Olá, ${user.displayName || user.email}!</span>
-                <button id="logout-button" class="btn-tertiary">Sair</button>
-            `;
+            userInfoArea.innerHTML = `<span class="username">Olá, ${user.displayName || user.email}!</span><button id="logout-button" class="btn-tertiary">Sair</button>`;
             document.getElementById('logout-button').addEventListener('click', () => auth.signOut());
-            resetToInitialScreen(); // Leva o usuário para a tela inicial
+            resetToInitialScreen();
         } else {
-            // Usuário está deslogado
-            userInfoArea.innerHTML = `
-                <a href="#" id="login-link">Login</a>
-                <a href="#" id="signup-link">Cadastre-se</a>
-            `;
+            userInfoArea.innerHTML = `<a href="#" id="login-link">Login</a><a href="#" id="signup-link">Cadastre-se</a>`;
             document.getElementById('login-link').addEventListener('click', () => showScreen('login-screen'));
             document.getElementById('signup-link').addEventListener('click', () => showScreen('signup-screen'));
-            showScreen('login-screen'); // Tela padrão para quem não está logado
+            showScreen('login-screen');
         }
     });
 
-    // Gatilhos para os formulários
     loginForm.addEventListener('submit', event => {
         event.preventDefault();
         const email = document.getElementById('login-email').value;
         const password = document.getElementById('login-password').value;
-        auth.signInWithEmailAndPassword(email, password)
-            .catch(error => alert("Erro ao fazer login: " + error.message));
+        auth.signInWithEmailAndPassword(email, password).catch(error => alert("Erro ao fazer login: " + error.message));
     });
 
     signupForm.addEventListener('submit', event => {
@@ -304,19 +414,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const name = document.getElementById('signup-name').value;
         const email = document.getElementById('signup-email').value;
         const password = document.getElementById('signup-password').value;
-
         auth.createUserWithEmailAndPassword(email, password)
-            .then(userCredential => {
-                return userCredential.user.updateProfile({ displayName: name });
-            })
+            .then(userCredential => userCredential.user.updateProfile({ displayName: name }))
             .catch(error => alert("Erro ao cadastrar: " + error.message));
     });
 
-    // Gatilhos para os links de navegação dos formulários
     goToSignupLink.addEventListener('click', (e) => { e.preventDefault(); showScreen('signup-screen'); });
     goToLoginLink.addEventListener('click', (e) => { e.preventDefault(); showScreen('login-screen'); });
     
-    // Gatilhos de eventos dos botões do Quiz
     confirmButton.addEventListener('click', confirmAnswer);
     nextButton.addEventListener('click', nextQuestion);
     playAgainButton.addEventListener('click', startQuiz);
@@ -328,8 +433,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     randomQuizButton.addEventListener('click', startRandomSuperQuiz);
     downloadQuizButton.addEventListener('click', generateQuizPDF);
-
-    // A inicialização agora é controlada pelo onAuthStateChanged
-    // A única função que podemos chamar no início é a do contador, se quisermos que ele apareça em todas as telas
-    // Mas a lógica atual, de chamá-lo apenas na tela inicial, é melhor.
 });
