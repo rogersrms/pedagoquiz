@@ -128,12 +128,20 @@ body {
 }
 
 /* Cabeçalho do Quiz */
-.quiz-header { display: flex; justify-content: flex-start; margin-bottom: 15px; }
-.btn-tertiary {
-    background-color: transparent; color: var(--secondary-color); border: none; padding: 5px 10px;
-    font-size: 0.9rem; font-weight: 500; width: auto;
+.quiz-header {
+    display: flex;
+    justify-content: space-between; /* Alinha os botões nas extremidades */
+    align-items: center;
+    margin-bottom: 15px;
 }
-.btn-tertiary:hover:not(:disabled) { background-color: #f1f1f1; transform: none; box-shadow: none; }
+.btn-tertiary {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: auto;}
 
 /* Créditos */
 .creator-credit { margin-top: 40px; font-size: 0.8rem; color: var(--secondary-color); text-align: center; }
