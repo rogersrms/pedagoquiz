@@ -208,6 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetToInitialScreen() {
         showScreen('initial-screen');
         displayCategoryButtons();
+	updateVisitorCount()
     }
 
     async function startRandomSuperQuiz() {
@@ -442,7 +443,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetToInitialScreen() {
         showScreen('initial-screen');
         displayCategoryButtons();
-	    updateVisitorCount();
+	    
     }
 
 
@@ -462,7 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     randomQuizButton.addEventListener('click', startRandomSuperQuiz);
     downloadQuizButton.addEventListener('click', generateQuizPDF);
-	updateVisitorCount();
+	
 
     // O programa agora inicia controlado pelo onAuthStateChanged
     // A chamada inicial a displayCategoryButtons() é feita de dentro do listener
