@@ -274,6 +274,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function generateQuizPDF() {
+        if (!confirm("Deseja baixar este quiz em formato PDF?")) {
+            return;
         if (!currentPlayQuestions || currentPlayQuestions.length === 0) {
             alert("Não há quiz em andamento para baixar.");
             return;
