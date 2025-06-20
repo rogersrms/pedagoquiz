@@ -442,6 +442,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetToInitialScreen() {
         showScreen('initial-screen');
         displayCategoryButtons();
+	    updateVisitorCount();
     }
 
 
