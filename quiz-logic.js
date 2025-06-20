@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ===============================================================
-    // 1. CONFIGURAÇÃO DO FIREBASE (Suas chaves aqui)
-    // ===============================================================
+    // 1. CONFIGURAÇÃO DO FIREBASE
     const firebaseConfig = {
       apiKey: "AIzaSyCIVI68yNAWDrPVviqXFnJ6PuQUgO_fphk",
       authDomain: "pedagoquiz-app.firebaseapp.com",
@@ -14,9 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
 
-    // ===============================================================
     // 2. DEFINIÇÃO DOS QUIZZES
-    // ===============================================================
     const allQuizzes = {
         pedagogico: [
             { name: "FERREIRO - Reflexões sobre a Alfabetização", url: "quiz_ferreiro_alfabetizacao.json" },
@@ -78,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentQuestionIndex = 0;
     let score = 0;
     let currentCorrectAnswerText = '';
-    let currentDisplayedAlternatives = [];
 
     // ===============================================================
     // 5. DEFINIÇÃO DE TODAS AS FUNÇÕES
@@ -99,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadQuizFromURL(url) {
         fetch(url)
             .then(response => {
-                if (!response.ok) throw new Error(`Arquivo não encontrado ou erro de rede (Status: ${response.status})`);
+                if (!response.ok) throw new Error(`Arquivo não encontrado (Status: ${response.status})`);
                 return response.json();
             })
             .then(data => {
@@ -109,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => alert(`Não foi possível carregar o quiz: ${error.message}\nVerifique se o nome do arquivo .json está correto e se ele está na mesma pasta do index.html.`));
     }
-
+    
     function displayQuizListForCategory(categoryKey) {
         const quizzes = allQuizzes[categoryKey];
         quizzes.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR', { numeric: true }));
@@ -267,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateVisitorCount() {
-        const namespace = 'pedagoquiz.rodrigosousa';
+        const namespace = 'pedagoquiz.rodrigosousa1';
         if (countElement) {
             const badgeUrl = `https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fpedagoquiz.com%2F${namespace}&countColor=%237d8da1&label=Visitantes`;
             const badgeImage = document.createElement('img');
@@ -301,6 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("Não há quiz em andamento para baixar.");
             return;
         }
+        
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' });
         let yPosition = 15;
@@ -310,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const usableWidth = doc.internal.pageSize.getWidth() - leftMargin * 2;
         
         const logoElement = document.querySelector('.app-logo');
-        if (logoElement && logoElement.complete) {
+        if (logoElement && logoElement.complete && logoElement.naturalHeight !== 0) {
             const logoData = getBase64Image(logoElement);
             if (logoData) {
                 const logoHeight = 15;
@@ -325,29 +321,33 @@ document.addEventListener('DOMContentLoaded', () => {
         doc.setFont("helvetica", "bold");
         doc.setFontSize(16);
         const titleLines = doc.splitTextToSize(currentQuizTitle, usableWidth);
-        doc.text(titleLines, 105, yPosition, { align: 'center' });
+        doc.text(titleLines, doc.internal.pageSize.getWidth() / 2, yPosition, { align: 'center' });
         yPosition += (titleLines.length * 7) + 10;
 
         currentPlayQuestions.forEach((question, index) => {
             doc.setFont("helvetica", "bold");
             doc.setFontSize(11);
             const questionLines = doc.splitTextToSize(`${index + 1}. ${question.pergunta}`, usableWidth);
+            
+            let alternativesHeight = 0;
             doc.setFont("helvetica", "normal");
             doc.setFontSize(10);
-            let alternativesHeight = 0;
             question.alternativas.forEach(alt => {
                 const alternativeLines = doc.splitTextToSize(`(A) ${alt}`, usableWidth - 5);
                 alternativesHeight += (alternativeLines.length * 5) + 3;
             });
+
             const totalBlockHeight = (questionLines.length * 6) + alternativesHeight + 5;
             if (yPosition + totalBlockHeight > pageHeight - bottomMargin) {
                 doc.addPage();
                 yPosition = 20;
             }
+
             doc.setFont("helvetica", "bold");
             doc.setFontSize(11);
             doc.text(questionLines, leftMargin, yPosition);
             yPosition += (questionLines.length * 6) + 3;
+            
             doc.setFont("helvetica", "normal");
             doc.setFontSize(10);
             const alternativesPrefix = ['(A)', '(B)', '(C)', '(D)', '(E)'];
@@ -382,13 +382,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         doc.text(gabaritoColumns[0], leftMargin, yPosition);
         doc.text(gabaritoColumns[1], leftMargin + 50, yPosition);
+        
         const safeTitle = currentQuizTitle.replace(/[^a-zA-Z0-9]/g, '_').substring(0, 50);
         doc.save(`Pedagoquiz_${safeTitle}.pdf`);
     }
 
     // ===============================================================
-    // 6. INICIALIZAÇÃO DO PROGRAMA
+    // 6. INICIALIZAÇÃO E GATILHOS DE EVENTOS
     // ===============================================================
+    
+    // Lógica de Autenticação (Controla o início do app)
     auth.onAuthStateChanged(user => {
         if (user) {
             userInfoArea.innerHTML = `<span class="username">Olá, ${user.displayName || user.email}!</span><button id="logout-button" class="btn-tertiary">Sair</button>`;
@@ -433,4 +436,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     randomQuizButton.addEventListener('click', startRandomSuperQuiz);
     downloadQuizButton.addEventListener('click', generateQuizPDF);
+
 });
