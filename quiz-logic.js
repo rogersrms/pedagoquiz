@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: "FREIRE - Professora Sim, Tia Não", url: "Professora Sim Tia Não.json" },
             { name: "WEISZ - O diálogo entro o ensino e a aprendizagem", url: "quiz_weisz_dialogo.json" },
             { name: "CAROLYN - As Cem Linguagens da Criança", url: "quiz_reggio_emilia.json" },
+            { name: "PANIZZA - Ensinar matemática na educação infantil e nas séries iniciais", url: "questoes_panizza.json" },
             { name: "SOARES - Letramento e Alfabetização: as muitas facetas", url: "SOARES - Letramento e alfabetização.json" },
             { name: "LEMOV - Aula nota 10 3.0", url: "lemov_aula_nota_10.json" },
             { name: "CARVALHO - Sucesso e fracasso escolar: uma questão de gênero", url: "quiz_carvalho_genero.json" },
