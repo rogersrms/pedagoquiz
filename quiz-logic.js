@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+     // --- INÍCIO DO CÓDIGO DO BANNER DE COOKIES ---
+    const consentBanner = document.getElementById('cookie-consent-banner');
+    const acceptButton = document.getElementById('accept-cookies-button');
+
+    // Verifica no armazenamento do navegador se o usuário já aceitou
+    if (!localStorage.getItem('cookieConsent')) {
+        consentBanner.style.display = 'flex'; // Se não aceitou, mostra o banner
+    }
+
+    // Adiciona o evento ao botão de aceite
+    acceptButton.addEventListener('click', () => {
+        // Salva a informação de que o usuário aceitou
+        localStorage.setItem('cookieConsent', 'true');
+        // Esconde o banner com uma transição suave
+        consentBanner.style.transition = 'opacity 0.5s';
+        consentBanner.style.opacity = '0';
+        setTimeout(() => {
+            consentBanner.style.display = 'none';
+        }, 500); // Remove o banner após a transição
+    });
 
     // 1. CONFIGURAÇÃO DO FIREBASE
     const firebaseConfig = {
