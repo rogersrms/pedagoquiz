@@ -240,3 +240,34 @@ body {
 .form-switch a:hover {
     text-decoration: underline;
 }
+
+/* --- NOVOS ESTILOS PARA O BANNER DE COOKIES --- */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--dark-color); /* Fundo escuro para contraste */
+    color: white;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    display: none; /* Começa oculto */
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Garante que fique por cima de tudo */
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cookie-banner p {
+    margin: 0;
+    flex-grow: 1;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.cookie-banner .btn {
+    width: auto; /* O botão não ocupa a largura toda */
+    flex-shrink: 0; /* Impede que o botão encolha */
+    padding: 8px 20px;
+}
